@@ -6,4 +6,4 @@ app.get('/', (req, res) => {
 })
 
 const PORT = process.env.port
-app.listen(PORT || 5000)
+app.listen(PORT || 3000)

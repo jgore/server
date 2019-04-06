@@ -1,4 +1,4 @@
-import {FETCH_USER} from "../actions/types";
+import {FETCH_USER,SEND_EMAIL} from "../actions/types";
 
 export default function (state = null, action) {
   console.log(action)

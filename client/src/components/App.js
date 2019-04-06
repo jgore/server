@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
-import {BrowserRouter, Route, Link} from 'react-router-dom'
+import {BrowserRouter, Route} from 'react-router-dom'
 import materializeCss from 'materialize-css/dist/css/materialize.min.css'
 import {connect} from 'react-redux'
 import * as actions from '../actions'
 
 import Header from './Header';
-import Contact from './Contact'
+import Contact from './contact/Contact'
 import Landing from './Landing'
-
-const Dashboard = () => <h2> Dashboard</h2>
-const SurveyNew = () => <h2>SurveyNew </h2>
+import Footer from './Footer'
+import Account from './account/Account'
+import Training from './training/Training'
 
 class App extends Component {
 
@@ -21,24 +21,16 @@ class App extends Component {
     return (
       <div className={"container"}>
         <BrowserRouter>
-          <div>
+          <div style={{marginBottom: '50px'}}>
             <Header/>
 
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/contact">Contact</Link>
-              </li>
-            </ul>
-
-            <Route exact={true} path="/" component={Landing}/>
-            <Route exact={true} path="/surveys" component={Dashboard}/>
-            <Route path="/surveys/new" component={SurveyNew}/>
+            <Route exact={true} path="/" component={Training}/>
+            <Route exact={true} path="/java" component={Landing}/>
+            <Route exact={true} path="/account" component={Account}/>
             <Route exact={true} path="/contact" component={Contact}/>
           </div>
         </BrowserRouter>
+        <Footer/>
       </div>
     )
   }

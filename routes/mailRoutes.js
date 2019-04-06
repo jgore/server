@@ -8,7 +8,8 @@ module.exports = (app) => {
 
     var options = {
       subject: req.body.subject,
-      text: req.body.text
+      text: req.body.text,
+      email : req.body.email
     }
     sendEmail(options, function (error, info) {
       if (error) {

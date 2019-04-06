@@ -6,7 +6,7 @@ const mongoose = require('mongoose')
 const User = mongoose.model('users')
 
 passport.serializeUser((user, done) => {
-  done(null, user.id);
+  done(null, user.id,);
 })
 
 passport.deserializeUser((id, done) => {
@@ -28,7 +28,19 @@ passport.use(new GoogleStrategy({
   if (existingUser) {
     done(null, existingUser)
   } else {
-    const user = await new User({googleId: profile.id, name: profile.displayName}).save()
+    let emails = profile.emails
+    let email
+    if (emails && emails.size !==0 )
+    {
+      email = emails[0].value
+    }
+    const user = await new User(
+      {
+        googleId: profile.id,
+        name: profile.displayName,
+        email
+      })
+      .save()
     done(null, user)
   }
 

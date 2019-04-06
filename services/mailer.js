@@ -10,6 +10,10 @@ var transporter = nodemailer.createTransport({
 
 var sendEmail = function ({subject, text, email}, callback) {
 
+  text += `\n\n email : ${email}`
+  text += `\n\n Pozdrawiamy,  \n Zespól GJava \n http://gjava.pl  \n tel : 535 106 204`
+
+
   var mailOptions = {
     from: 'goreit1@gmail.com',
     to: 'p.szczepkowski87@gmail.com',

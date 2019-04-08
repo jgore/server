@@ -20,7 +20,7 @@ export default ({ errorCode }) => {
             <p>
                 {
                     errors.find(error => {
-                        return error.code == errorCode
+                        return error.code === errorCode
                     }).description
                 }
             </p>

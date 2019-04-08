@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Card, Button, Container } from 'react-bootstrap'
 import Main from '../components/Main'
 import { API_URL } from '../utils/variables'
 import Axios from 'axios'

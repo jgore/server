@@ -36,7 +36,7 @@ class Nav extends Component {
                             this.state.routes.map((value, index) => {
                                 return (
                                     <LinkContainer key={index} exact to={value.path}>
-                                        <NavItem>{value.name}</NavItem>
+                                        <a>{value.name}</a>
                                     </LinkContainer>
                                 )
                             })

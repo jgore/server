@@ -5,6 +5,7 @@ import { API_URL } from '../utils/variables'
 import Axios from 'axios'
 import Loading from '../components/Loading'
 import Courses from '../components/courses'
+import Error from '../components/Error';
 
 class Home extends Component {
 
@@ -38,16 +39,27 @@ class Home extends Component {
             })
     }
     render() {
+        console.log(this.state)
         return (
             <Main>
                 <div className="Home">
-                    <h1>Kursy</h1>
                     {
                         this.state.isLoading ?
                             <Loading /> :
-                            <Courses
-                                courses={this.state.courses}
-                            />
+                            <React.Fragment>
+                                {
+                                    this.state.error ?
+                                        <Error
+                                            errorCode={this.state.error}
+                                        />
+                                        :
+                                        <Courses
+                                            courses={this.state.courses}
+                                        />
+
+                                }
+                            </React.Fragment>
+
                     }
                 </div>
             </Main>

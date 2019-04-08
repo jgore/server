@@ -21,3 +21,19 @@ code {
 .main {
   margin-top: 4em;
 }
+
+.flexible {
+  display: flex;
+}
+
+.flexible-column {
+  flex-direction: column;
+}
+
+.flexible-horizontal-center {
+  align-items: center;
+}
+
+.flexible-vertical-center {
+  justify-content: center;
+}

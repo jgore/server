@@ -38,7 +38,6 @@ class Home extends Component {
             })
     }
     render() {
-        console.log(this.state)
         return (
             <Main>
                 <div className="Home">
@@ -65,7 +64,5 @@ class Home extends Component {
         )
     }
 }
-
-
 
 export default Home;

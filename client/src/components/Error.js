@@ -1,5 +1,6 @@
 import React from 'react'
 import { Jumbotron, Button } from 'react-bootstrap'
+import PropTypes from 'prop-types'
 
 let errors = [
     {
@@ -12,7 +13,7 @@ let errors = [
     }
 ]
 
-export default ({ errorCode }) => {
+const Error = ({ errorCode }) => {
     console.log(errorCode)
     return (
         <Jumbotron>
@@ -30,3 +31,9 @@ export default ({ errorCode }) => {
         </Jumbotron>
     )
 }
+
+Error.propTypes = {
+    errorCode: PropTypes.number.isRequired
+}
+
+export default Error

@@ -1,10 +1,11 @@
 import React from 'react'
-import { Card, Button, Container, CardDeck, Image } from 'react-bootstrap'
+import { Card, Button, CardDeck } from 'react-bootstrap'
 import { PUBLIC_RESOURSES_URL } from '../utils/variables'
+import PropTypes from 'prop-types';
+
 
 class Courses extends React.Component {
     render() {
-        console.log(this.props)
         return (
             <React.Fragment>
                 <h1>Kursy</h1>
@@ -23,7 +24,8 @@ class Courses extends React.Component {
     }
 }
 
-const Course = ({ index, coruse: { title, image, duration, price, shortDescription } }) => (
+
+const Course = ({ coruse: { title, image, duration, price, shortDescription } }) => (
     <Card border="dark" style={{ minWidth: "40%" }} className="course__card">
         <Card.Img variant="top" src={`${PUBLIC_RESOURSES_URL}/${image}`} />
         <Card.Title>
@@ -46,5 +48,20 @@ const Course = ({ index, coruse: { title, image, duration, price, shortDescripti
         </Card.Footer>
     </Card>
 )
+
+Courses.propTypes = {
+    courses: PropTypes.array.isRequired
+}
+
+Course.propTypes = {
+    course: PropTypes.exact({
+        title: PropTypes.string.isRequired,
+        price: PropTypes.string.isRequired,
+        duration: PropTypes.string.isRequired,
+        shortDescription: PropTypes.string.isRequired,
+        image: PropTypes.string.isRequired
+    })
+}
+
 
 export default Courses

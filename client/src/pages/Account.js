@@ -5,7 +5,7 @@ class Account extends Component {
         return (
             <div className="Account">
                 Account
-      </div>
+            </div>
         );
     }
 }

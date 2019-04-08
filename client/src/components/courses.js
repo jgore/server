@@ -24,11 +24,22 @@ class Courses extends React.Component {
 }
 
 const Course = ({ index, coruse: { title, image, duration, price, shortDescription } }) => (
-    <Card style={{ minWidth: "40%" }} className="course__card">
+    <Card border="dark" style={{ minWidth: "40%" }} className="course__card">
         <Card.Img variant="top" src={`${PUBLIC_RESOURSES_URL}/${image}`} />
         <Card.Title>
             <h3>{title}</h3>
         </Card.Title>
+        <Card.Body>
+            <p>
+                <b>Cena</b>: {price}
+            </p>
+            <p>
+                <b>Czas trwania:</b> {duration}
+            </p>
+            <p>
+                <b>Opis:</b> {shortDescription}
+            </p>
+        </Card.Body>
         <Card.Footer style={{ background: "#343A40" }}>
             <Button variant="warning">Zobacz szczegóły</Button>
             <Button>Opinie</Button>

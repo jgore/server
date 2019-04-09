@@ -88,7 +88,7 @@ const Course = ({ coruse: { title, image, duration, price, shortDescription, rev
                             :
                             <React.Fragment>
                                 <b>Średnia ocena: </b>
-                                "Brak ocen"
+                                Brak ocen
                             </React.Fragment>
 
                     }

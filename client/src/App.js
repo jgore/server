@@ -11,7 +11,7 @@ import Nav from './components/Nav'
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="container">
         <Router>
           <React.Fragment>
             <Nav />

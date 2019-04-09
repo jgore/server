@@ -8,7 +8,7 @@ var transporter = nodemailer.createTransport({
   }
 });
 
-var sendEmail = function ({subject, text, email}, callback) {
+var sendEmail = function ({subject, text, email, phone}, callback) {
 
   text += `\n\n email : ${email}`
   text += `\n\n Pozdrawiamy,  \n Zespól GJava \n http://gjava.pl  \n tel : 535 106 204`
@@ -19,10 +19,11 @@ var sendEmail = function ({subject, text, email}, callback) {
     to: 'p.szczepkowski87@gmail.com',
     subject,
     text,
+    phone
   };
 
   transporter.sendMail(mailOptions, callback)
 }
 
 
-module.exports =  sendEmail
+module.exports = sendEmail

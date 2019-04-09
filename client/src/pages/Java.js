@@ -5,7 +5,7 @@ class Java extends Component {
         return (
             <div className="Java">
                 Java
-      </div>
+            </div>
         );
     }
 }

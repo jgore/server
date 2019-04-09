@@ -12,3 +12,82 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+a {
+  margin-left: .5rem;
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.nav-item {
+  color: white;
+  margin-left: 1em;
+}
+
+.main {
+  margin-top: 6rem;
+}
+
+.flexible {
+  display: flex;
+}
+
+.flexible-column {
+  flex-direction: column;
+}
+
+.flexible-horizontal-center {
+  align-items: center;
+}
+
+.flexible-vertical-center {
+  justify-content: center;
+}
+
+.section {
+  padding-top: 1em;
+}
+
+.card-title {
+ padding: 0.75rem;
+ /* background: #343A40;
+ color: white; */
+}
+
+.card-title h3 {
+  border-bottom: 1px solid #343A40;
+  padding-left: 0.5rem;
+  padding-bottom: 10px;
+}
+
+.card-img-top {
+  border-radius: 0 !important;
+}
+
+.card-body {
+  padding-top: 0.5rem !important;
+}
+
+.card-footer {
+  border-radius: 0 !important;
+}
+
+.card-footer button{
+  margin-left: .5rem;
+}
+
+nav {
+  position: fixed !important;
+  top: 0 !important;
+  width: 100vw !important;
+  padding-right: 1.5rem !important;
+  z-index: 100;
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+}
+

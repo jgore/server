@@ -13,14 +13,16 @@ class App extends Component {
     return (
       <div className="App">
         <Router>
-          <Nav />
-          <Switch>
-            <Route exact path="/" component={Pages.HomePage} />
-            <Route path="/java" component={Pages.JavaPage} />
-            <Route path="/account" component={Pages.AccountPage} />
-            <Route path="/contact" component={Pages.ContactPage} />
-            <Route component={Pages.NotFoundPage} />
-          </Switch>
+          <React.Fragment>
+            <Nav />
+            <Switch>
+              <Route exact path="/" component={Pages.HomePage} />
+              <Route path="/java" component={Pages.JavaPage} />
+              <Route path="/account" component={Pages.AccountPage} />
+              <Route path="/contact" component={Pages.ContactPage} />
+              <Route component={Pages.NotFoundPage} />
+            </Switch>
+          </React.Fragment>
         </Router>
       </div>
     );

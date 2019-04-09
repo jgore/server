@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
+import Error from '../components/Error'
+import Main from '../components/Main';
 
 class NotFound extends Component {
     render() {
         return (
             <div className="NotFound">
-                Not Found - 404
-      </div>
+                <Main>
+                    <Error
+                        errorCode={404}
+                    />
+                </Main>
+            </div>
         );
     }
 }

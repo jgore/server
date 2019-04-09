@@ -3,14 +3,13 @@ import CustomModal from "../CustomModal";
 import PropTypes from 'prop-types'
 import { Image } from 'react-bootstrap';
 import { PUBLIC_RESOURSES_URL } from '../../utils/variables';
-import StarRating from 'react-stars'
+import StarRating from '../ReactStars'
 
 const Header = ({ title }) => (
     <h3>{title}</h3>
 )
 
 const Opinions = ({ reviews }) => {
-    console.log(reviews)
     return (
         <div>
             {
@@ -35,7 +34,7 @@ const Opinion = ({ image, username, content, grade }) => (
         </div>
         <div className="opinion__content">
             <h5>{username}</h5>
-            <StarRating className="opinion__content__stars" size={25} count={5} value={grade} />
+            <StarRating className="opinion__content__stars" size={25} count={5} value={grade} edit={false} />
             <p>{content}</p>
         </div>
     </div>
@@ -55,6 +54,7 @@ Opinions.propTypes = {
 
 export default ({ reviews, ...props }) => {
     console.log(props)
+    // for(let i = 0; i < )
     return (
         <CustomModal
             Body={() => Opinions({ reviews })}

@@ -53,8 +53,6 @@ Opinions.propTypes = {
 
 
 export default ({ reviews, ...props }) => {
-    console.log(props)
-    // for(let i = 0; i < )
     return (
         <CustomModal
             Body={() => Opinions({ reviews })}

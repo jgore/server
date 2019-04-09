@@ -88,3 +88,7 @@
         margin-right: auto;
     }
 }
+
+.offert__stars b{
+    margin-right: 6px;
+}

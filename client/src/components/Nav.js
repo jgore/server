@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { Navbar, Nav as NavComponent, Form, FormControl, Button } from 'react-bootstrap'
+import { Navbar, Nav as NavComponent, Form, FormControl, Button, Container } from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap'
-
+import { FaGoogle } from 'react-icons/fa'
 
 class Nav extends Component {
     state = {
@@ -26,8 +26,8 @@ class Nav extends Component {
     }
     render() {
         return (
-            <div>
-                <Navbar bg="dark" variant="dark">
+            <div className="flexible flexible-vertical-center sticky-nav-top">
+                <Navbar bg="dark" variant="dark" className="custom-container">
                     <Navbar.Brand>
                         GJava
                     </Navbar.Brand>
@@ -43,8 +43,9 @@ class Nav extends Component {
                         }
                     </NavComponent>
                     <Form inline>
-                        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                        <Button variant="outline-info">Search</Button>
+                        <Button className="flexible flexible-horizontal-center google-button">
+                            <FaGoogle /> Login with Google
+                        </Button>
                     </Form>
                 </Navbar>
             </div>

@@ -11,7 +11,7 @@ class Contact extends Component {
         <Jumbotron>
           <div>
             <p>Gjava - Szkolimy Programistów </p>
-            <p>Leszczyńskiego 4 50-078</p>
+            <p>Leszczyńskiego 4, 50-078</p>
             <p>50-078, Wrocław</p>
             <p>Tel : 535 106 204</p>
           </div>

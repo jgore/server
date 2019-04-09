@@ -2,10 +2,18 @@ import React from 'react'
 import { Card, Button, CardDeck } from 'react-bootstrap'
 import { PUBLIC_RESOURSES_URL } from '../utils/variables'
 import PropTypes from 'prop-types';
+import OpinionModal from './modals/OpinionModal';
 
 
 class Courses extends React.Component {
+    state = {
+        isModal: false,
+        reviews: []
+    }
+
     render() {
+        let modalOpen = (reviews) => this.setState({ isModal: true, reviews })
+        let modalClose = () => this.setState({ isModal: false })
         return (
             <React.Fragment>
                 <h1>Kursy</h1>
@@ -15,8 +23,19 @@ class Courses extends React.Component {
                             <Course
                                 key={index}
                                 coruse={value}
+                                modalOpen={modalOpen}
+                                modalClose={modalClose}
                             />
                         ))
+                    }
+                    {
+                        this.state.isModal ?
+                            <OpinionModal
+                                isModal={this.state.isModal}
+                                reviews={this.state.reviews}
+                                handleClose={modalClose}
+                            /> :
+                            ""
                     }
                 </CardDeck>
             </React.Fragment>
@@ -25,7 +44,7 @@ class Courses extends React.Component {
 }
 
 
-const Course = ({ coruse: { title, image, duration, price, shortDescription } }) => (
+const Course = ({ coruse: { title, image, duration, price, shortDescription, reviews }, modalClose, modalOpen }) => (
     <Card border="dark" style={{ minWidth: "40%" }} className="course__card">
         <Card.Img variant="top" src={`${PUBLIC_RESOURSES_URL}/${image}`} />
         <Card.Title>
@@ -44,7 +63,7 @@ const Course = ({ coruse: { title, image, duration, price, shortDescription } })
         </Card.Body>
         <Card.Footer style={{ background: "#343A40" }}>
             <Button variant="warning">Zobacz szczegóły</Button>
-            <Button>Opinie</Button>
+            <Button onClick={() => modalOpen(reviews)}>Opinie</Button>
         </Card.Footer>
     </Card>
 )

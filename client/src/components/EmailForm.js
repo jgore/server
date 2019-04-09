@@ -32,6 +32,7 @@ class EmailForm extends Component {
               <option selected>Wybierz ...</option>
               <option value="java1">Kurs Programowania Java 1 - Company [ 0 lat doświadczenia ]</option>
               <option value="java2">Kurs Programowania Java 2 - Shop [ 0,1,2 lat doświadczenia ]</option>
+              <option value="java2++">Kurs Programowania Java 2++ - FlyWithUs [ rozmowa kwalifikacyjna +  zadanie ] - [ 1,2 lat doświadczenia ]</option>
               <option value="java3">Kurs programowania Java 3 - Tropics 2 [ 2++ lat doświadczenia ]</option>
               <option value="others"> Pozostałe</option>
             </select>
@@ -64,7 +65,7 @@ class EmailForm extends Component {
             </small>
           </div>
 
-          <button type="submit" className="btn btn-primary">Wyślij</button>
+          <button style={{margin:20}} type="submit" className="btn btn-primary">Wyślij</button>
         </form>
       </div>
 

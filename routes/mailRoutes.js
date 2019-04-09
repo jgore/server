@@ -26,7 +26,8 @@ module.exports = (app) => {
     var options = {
       subject: req.body.subject,
       text: req.body.text,
-      email: req.body.email
+      email: req.body.email,
+      phone : req.body.phone
     }
     sendEmail(options, function (error, info) {
       if (error) {

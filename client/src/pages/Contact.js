@@ -7,7 +7,7 @@ class Contact extends Component {
 
   render() {
     return (
-      <div  style={{marginTop:50}} className="Contact">
+      <div  style={{marginTop:20}} className="Contact">
         <Jumbotron>
           <div>
             <p>Gjava - Szkolimy Programistów </p>

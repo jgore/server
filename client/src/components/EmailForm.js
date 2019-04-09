@@ -23,10 +23,10 @@ class EmailForm extends Component {
     return (
       <div style={{marginTop: 50, marginBottom: 50}} className="border border-primary">
 
-        <p> Formularz kontaktowy</p>
         <form onSubmit={this.handleSubmit}>
 
           <div className="col-auto my-1">
+            <p> Formularz kontaktowy</p>
             <label className="mr-sm-2" htmlFor="subject">Temat</label>
             <select onChange={this.handleChange} className="custom-select mr-sm-2" id="subject">
               <option selected>Wybierz ...</option>
@@ -38,9 +38,9 @@ class EmailForm extends Component {
             </select>
           </div>
 
-          <div className="form-group">
-            <label htmlFor="text">Text</label>
-            <textarea required value={this.state.text} onChange={this.handleChange} cols={40} rows={10}
+          <div style={{ margin:20}} className="form-group">
+            <label htmlFor="text">Treść</label>
+            <textarea  required value={this.state.text} onChange={this.handleChange} cols={40} rows={10}
                    className="form-control" id="text"
                    placeholder="text"/>
           </div>

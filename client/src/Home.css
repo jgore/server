@@ -7,3 +7,51 @@
     border: none !important;
 }
 
+.opinion {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .opinion {
+        flex-direction: column;
+        justify-content: center;
+        -webkit-box-shadow: 0px 3px 2px -2px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 3px 2px -2px rgba(0,0,0,0.75);
+box-shadow: 0px 3px 2px -2px rgba(0,0,0,0.75);
+       padding: 1.5rem 0.5rem;
+        min-height: 420px;
+    }
+
+    .opinion__content {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .opinion h5 {
+        text-align: center;
+        margin-top: 1.5rem;
+    }
+
+    .opinion p {
+        text-align: justify;
+        font-style: italic;
+        line-height: 18px;
+    }
+
+    .opinion__content__stars {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .opinion__image img {
+        max-width: 50%;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

@@ -1,0 +1,253 @@
+{
+    "courses": [
+        {
+            "title": "Kurs programowania Java 1",
+            "content": "",
+            "image": "asd.jpeg",
+            "duration": "16 tygodni",
+            "price": "1 weekend 276PLN + VAT",
+            "shortDescription": "Jeśli stawiasz swoje pierwsze kroki w programowaniu i chciałbyś się nauczyć od najlepszych to jest właśnie kurs dla Ciebie",
+            "technologies": [
+                {
+                    "name": "java-technologies",
+                    "technologies": [
+                        "Java",
+                        "Spring",
+                        "Hibernate",
+                        "SQL",
+                        "REST",
+                        "JSON",
+                        "JUnit",
+                        "Mockito",
+                        "Maven",
+                        "Git"
+                    ]
+                },
+                {
+                    "name": "javascript-technologies",
+                    "technologies": [
+                        "React + Redux",
+                        "NodeJS",
+                        "Express"
+                    ]
+                }
+            ],
+            "reviews": [
+                {
+                    "image": "qwe1.jpeg",
+                    "username": "Stefan Batorski",
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
+                    "grade": 4
+                },
+                {
+                    "image": "qwe2.jpeg",
+                    "username": "Janusz Batorski",
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae ",
+                    "grade": 5
+                },
+                {
+                    "image": "qwe4.jpeg",
+                    "username": "Stefan Batorski",
+                    "content": "Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
+                    "grade": 4
+                },
+                {
+                    "image": "qwe3.jpeg",
+                    "username": "Stefan Batorski",
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
+                    "grade": 5
+                }
+            ]
+        },
+        {
+            "title": "Kurs programowania Java 2 (junior-mid)",
+            "content": "",
+            "image": "asd2.jpeg",
+            "duration": "16 tygodni",
+            "price": "1 weekend 276PLN + VAT",
+            "shortDescription": "Jeśli stawiasz swoje pierwsze kroki w programowaniu i chciałbyś się nauczyć od najlepszych to jest właśnie kurs dla Ciebie",
+            "technologies": [
+                {
+                    "name": "java-technologies",
+                    "technologies": [
+                        "Java",
+                        "Spring",
+                        "Hibernate",
+                        "SQL",
+                        "REST",
+                        "JSON",
+                        "JUnit",
+                        "Mockito",
+                        "Maven",
+                        "Git"
+                    ]
+                }
+            ],
+            "reviews": [
+                {
+                    "image": "qwe1.jpeg",
+                    "username": "Stefan Batorski",
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
+                    "grade": 4
+                },
+                {
+                    "image": "qwe2.jpeg",
+                    "username": "Janusz Batorski",
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae ",
+                    "grade": 5
+                },
+                {
+                    "image": "qwe4.jpeg",
+                    "username": "Stefan Batorski",
+                    "content": "Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
+                    "grade": 4
+                },
+                {
+                    "image": "qwe3.jpeg",
+                    "username": "Stefan Batorski",
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
+                    "grade": 5
+                }
+            ]
+        },
+        {
+            "title": "Kurs programowania Java 2 (junior-mid)",
+            "content": "",
+            "image": "asd3.jpeg",
+            "duration": "16 tygodni",
+            "price": "1 weekend 276PLN + VAT",
+            "shortDescription": "Jeśli stawiasz swoje pierwsze kroki w programowaniu i chciałbyś się nauczyć od najlepszych to jest właśnie kurs dla Ciebie",
+            "technologies": [
+                {
+                    "name": "java-technologies",
+                    "technologies": [
+                        "Java",
+                        "Spring",
+                        "Hibernate",
+                        "SQL",
+                        "REST",
+                        "JSON",
+                        "JUnit",
+                        "Mockito",
+                        "Maven",
+                        "Git"
+                    ]
+                }
+            ],
+            "reviews": [
+                {
+                    "image": "qwe1.jpeg",
+                    "username": "Stefan Batorski",
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
+                    "grade": 4
+                },
+                {
+                    "image": "qwe2.jpeg",
+                    "username": "Janusz Batorski",
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae ",
+                    "grade": 5
+                },
+                {
+                    "image": "qwe4.jpeg",
+                    "username": "Stefan Batorski",
+                    "content": "Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
+                    "grade": 4
+                },
+                {
+                    "image": "qwe3.jpeg",
+                    "username": "Stefan Batorski",
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
+                    "grade": 5
+                }
+            ]
+        },
+        {
+            "title": "Kurs programowania Java 2 (junior-mid)",
+            "content": "",
+            "image": "asd4.jpeg",
+            "duration": "16 tygodni",
+            "price": "1 weekend 276PLN + VAT",
+            "shortDescription": "Jeśli stawiasz swoje pierwsze kroki w programowaniu i chciałbyś się nauczyć od najlepszych to jest właśnie kurs dla Ciebie",
+            "technologies": [
+                {
+                    "name": "java-technologies",
+                    "technologies": [
+                        "Java",
+                        "Spring",
+                        "Hibernate",
+                        "SQL",
+                        "REST",
+                        "JSON",
+                        "JUnit",
+                        "Mockito",
+                        "Maven",
+                        "Git"
+                    ]
+                }
+            ],
+            "reviews": [
+                {
+                    "image": "qwe1.jpeg",
+                    "username": "asd",
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
+                    "grade": 4
+                },
+                {
+                    "image": "qwe2.jpeg",
+                    "username": "Janusz Batorski",
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae ",
+                    "grade": 5
+                },
+                {
+                    "image": "qwe4.jpeg",
+                    "username": "Stefan Batorski",
+                    "content": "Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
+                    "grade": 4
+                },
+                {
+                    "image": "qwe3.jpeg",
+                    "username": "Stefan Batorski",
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
+                    "grade": 5
+                },
+                {
+                    "image": "qwe3.jpeg",
+                    "username": "Stefan Batorski",
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
+                    "grade": 5
+                },
+                {
+                    "image": "qwe3.jpeg",
+                    "username": "Stefan Batorski",
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
+                    "grade": 5
+                },
+                {
+                    "image": "qwe3.jpeg",
+                    "username": "Stefan Batorski",
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
+                    "grade": 5
+                },
+                {
+                    "image": "qwe3.jpeg",
+                    "username": "Stefan Batorski",
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
+                    "grade": 5
+                },
+                {
+                    "image": "qwe3.jpeg",
+                    "username": "Stefan Batorski",
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
+                    "grade": 5
+                },
+                {
+                    "image": "qwe3.jpeg",
+                    "username": "Stefan Batorski",
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
+                    "grade": 5
+                }
+            ]
+        }
+    ],
+    "mails": []
+}

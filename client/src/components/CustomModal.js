@@ -1,6 +1,6 @@
 import React from 'react'
 import { Modal, Button } from 'react-bootstrap'
-import { IconBase } from 'react-icons/lib/iconBase';
+import { MdClose } from 'react-icons/md'
 import PropTypes from 'prop-types'
 
 const CustomModal = ({ Body, Header, Footer, isModal, handleClose, ...options }) => {
@@ -28,7 +28,7 @@ const CustomModal = ({ Body, Header, Footer, isModal, handleClose, ...options })
                     Footer ?
                         <Footer /> :
                         <Button className="google-button" onClick={() => handleClose()}>
-                            <IconBase /> Zamknij
+                            <MdClose /> Zamknij
                     </Button>
                 }
             </Modal.Footer>

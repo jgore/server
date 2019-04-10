@@ -14,7 +14,7 @@ class Java extends Component {
   }
 
   componentDidMount() {
-    Axios(`${API_URL}/videos`)
+    Axios(`${API_URL}/api/videos`)
       .then((res) => {
         this.setState({
           videos: res.data

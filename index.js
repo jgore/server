@@ -1,5 +1,5 @@
 const express = require('express');
-
+const cors = require("cors")
 const cookieSession = require('cookie-session')
 const passport = require('passport')
 const connectToDb = require("./config/connectToDb")
@@ -13,6 +13,7 @@ connectToDb(keys.mongoURI)
 const app = express();
 const bodyParser = require('body-parser');
 
+app.use(cors())
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true

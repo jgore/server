@@ -14,7 +14,7 @@ class Contact extends Component {
             <Image className="img-thumbnail" src={`${PUBLIC_RESOURSES_URL}/lesz.jpg`} alt="Gjava building"/>
             <div style={{margin: 20}} className="media-body">
               <h5 className="mt-0">Gjava - Szkolimy Programistów</h5>
-              <p>Leszczyńskiego 4, 50-078 <br/>
+              <p>Leszczyńskiego 4 <br/>
                 50-078, Wrocław
               </p>
               <p>Tel : 535 106 204</p>

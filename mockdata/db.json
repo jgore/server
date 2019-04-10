@@ -1,11 +1,11 @@
 {
     "courses": [
         {
-            "title": "Kurs programowania Java 1",
+            "title": "Kurs programowania Java 0",
             "content": "",
             "image": "asd.jpeg",
-            "duration": "16 tygodni",
-            "price": "1 weekend 276PLN + VAT",
+            "duration": "6 tygodni",
+            "price": "1 weekend 236PLN  [ 59 PLN / H ]",
             "shortDescription": "Jeśli stawiasz swoje pierwsze kroki w programowaniu i chciałbyś się nauczyć od najlepszych to jest właśnie kurs dla Ciebie",
             "technologies": [
                 {
@@ -60,11 +60,11 @@
             ]
         },
         {
-            "title": "Kurs programowania Java 2 (junior-mid)",
+            "title": "Kurs programowania Java 1 (junior)",
             "content": "",
             "image": "asd2.jpeg",
-            "duration": "16 tygodni",
-            "price": "1 weekend 276PLN + VAT",
+            "duration": "12 tygodni",
+            "price": "1 weekend 236PLN [59 PLN / H] [ Sobota 8-12 ]",
             "shortDescription": "Jeśli stawiasz swoje pierwsze kroki w programowaniu i chciałbyś się nauczyć od najlepszych to jest właśnie kurs dla Ciebie",
             "technologies": [
                 {
@@ -111,12 +111,12 @@
             ]
         },
         {
-            "title": "Kurs programowania Java 2 (junior-mid)",
+            "title": "Kurs programowania Java 1++ (junior++)",
             "content": "",
             "image": "asd3.jpeg",
-            "duration": "16 tygodni",
-            "price": "1 weekend 276PLN + VAT",
-            "shortDescription": "Jeśli stawiasz swoje pierwsze kroki w programowaniu i chciałbyś się nauczyć od najlepszych to jest właśnie kurs dla Ciebie",
+            "duration": "6 tygodni",
+            "price": "1 weekend 236PLN [59 PLN / H] [ Sobota 8-12 ]",
+            "shortDescription": "Przygotowanie stricte pod rozmowe kwalifikacyjną bazując na zdobytej wiedzy",
             "technologies": [
                 {
                     "name": "java-technologies",
@@ -162,11 +162,11 @@
             ]
         },
         {
-            "title": "Kurs programowania Java 2 (junior-mid)",
+            "title": "Kurs programowania Java 2 (mid++)",
             "content": "",
             "image": "asd4.jpeg",
-            "duration": "16 tygodni",
-            "price": "1 weekend 276PLN + VAT",
+            "duration": "30 tygodni",
+            "price": "1 weekend 236PLN [59 PLN / H] [ Sobota 8-12 ]",
             "shortDescription": "Jeśli stawiasz swoje pierwsze kroki w programowaniu i chciałbyś się nauczyć od najlepszych to jest właśnie kurs dla Ciebie",
             "technologies": [
                 {

@@ -15,7 +15,7 @@ class Home extends Component {
   }
 
   componentDidMount() {
-    Axios(`${API_URL}/courses`)
+    Axios(`${API_URL}/api/courses`)
       .then((res) => {
         this.setState({
           courses: res.data,

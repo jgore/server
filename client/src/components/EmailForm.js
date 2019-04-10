@@ -89,7 +89,7 @@ class EmailForm extends Component {
 
   handleSubmit(event) {
 
-    Axios.post(`${API_URL}/sendEmail`, {
+    Axios.post(`${API_URL}/api/sendEmail`, {
       subject: this.state.subject,
       text: this.state.text,
       email: this.state.email,

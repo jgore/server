@@ -30,6 +30,7 @@ app.use(passport.session())
 
 require('./routes/authRoutes')(app);
 require('./routes/mailRoutes')(app);
+require("./routes/publicRoutes")(app)
 
 var port = process.env.PORT || 5000;
 

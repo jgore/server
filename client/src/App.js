@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -7,20 +7,23 @@ import {
 } from 'react-router-dom'
 import Pages from './pages'
 import Nav from './components/Nav'
+import Main from './components/Main'
 
 class App extends Component {
   render() {
     return (
       <Router>
         <React.Fragment>
-          <Nav />
-          <Switch>
-            <Route exact path="/" component={Pages.HomePage} />
-            <Route path="/java" component={Pages.JavaPage} />
-            <Route path="/account" component={Pages.AccountPage} />
-            <Route path="/contact" component={Pages.ContactPage} />
-            <Route component={Pages.NotFoundPage} />
-          </Switch>
+          <Nav/>
+          <Main>
+            <Switch>
+              <Route exact path="/" component={Pages.HomePage}/>
+              <Route path="/java" component={Pages.JavaPage}/>
+              <Route path="/account" component={Pages.AccountPage}/>
+              <Route path="/contact" component={Pages.ContactPage}/>
+              <Route component={Pages.NotFoundPage}/>
+            </Switch>
+          </Main>
         </React.Fragment>
       </Router>
     );

@@ -1,16 +1,15 @@
 const express = require('express');
-const mongoose = require('mongoose')
+
 const cookieSession = require('cookie-session')
 const passport = require('passport')
-
+const connectToDb = require("./config/connectToDb")
 const keys = require('./config/keys')
 
 require('./models/User')
 require('./models/Message')
 require('./services/passport');
 
-mongoose.connect(keys.mongoURI)
-
+connectToDb(keys.mongoURI)
 const app = express();
 const bodyParser = require('body-parser');
 
@@ -21,7 +20,7 @@ app.use(bodyParser.urlencoded({
 
 app.use(
   cookieSession({
-    maxAge: 30*24*60*60*1000,
+    maxAge: 30 * 24 * 60 * 60 * 1000,
     keys: [keys.cookieKey]
   })
 )
@@ -34,5 +33,5 @@ require('./routes/mailRoutes')(app);
 
 var port = process.env.PORT || 5000;
 
-console.log( port )
+console.log(port)
 app.listen(port, "0.0.0.0")

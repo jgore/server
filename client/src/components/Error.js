@@ -26,7 +26,7 @@ const Error = ({ errorCode }) => {
                 }
             </p>
             <p>
-                <Button>Refresh</Button>
+                <Button onClick={() => window.location.reload()}>Refresh</Button>
             </p>
         </Jumbotron>
     )

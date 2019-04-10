@@ -1,39 +1,62 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import Videos from '../components/Videos';
+import Axios from 'axios';
+import { API_URL } from '../utils/variables';
+import Error from '../components/Error'
+import Loading from '../components/Loading'
 
 class Java extends Component {
+
+  state = {
+    videos: [],
+    isLoading: true,
+    error: null
+  }
+
+  componentDidMount() {
+    Axios(`${API_URL}/videos`)
+      .then((res) => {
+        this.setState({
+          videos: res.data
+        })
+      }).catch((err) => {
+        if (err.response) {
+          this.setState({
+            error: err.response.status
+          })
+        } else {
+          this.setState({
+            error: 500
+          })
+        }
+      }).finally(() => {
+        this.setState({
+          isLoading: false
+        })
+      })
+  }
+
   render() {
     return (
+      <div className="Java">
+        {
+          this.state.isLoading ?
+            <Loading /> :
+            <React.Fragment>
+              {
+                this.state.error ?
+                  <Error
+                    errorCode={this.state.error}
+                  />
+                  :
+                  <Videos
+                    videos={this.state.videos}
+                  />
 
-      <div>
+              }
+            </React.Fragment>
 
-        <div class="card" >
-          <img src="..." class="card-img-top" alt="..."/>
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">1. GJava - widelki finansowe - Junior, Mid, Senior</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-
-
-        <div class="card">
-          <img src="..." class="card-img-top" alt="..."/>
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text"> 2. Gjava - fundamentalna struktura warstwowa projektów w JAVA</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="..." class="card-img-top" alt="..."/>
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text"> 3. Gjava - Scrum i jego znaczenie w developmencie</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-
+        }
       </div>
     )
 

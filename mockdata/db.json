@@ -249,5 +249,22 @@
             ]
         }
     ],
-    "mails": []
+    "mails": [],
+    "videos": [
+        {
+            "link": "https://www.youtube.com/embed/Jatq9-00y88",
+            "title": "GJava - Wprowadzenie kurs Java",
+            "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis sit amet purus vitae pellentesque. Quisque sed justo enim. Donec eget tempor sapien, ac facilisis orci. Ut consequat, sapien et porttitor sollicitudin, tortor arcu varius dui, at ultricies erat tortor vitae diam. Cras finibus nunc et mollis sodales. Etiam mollis purus nec nisl vehicula, eget tempus odio facilisis. Mauris neque tortor, consectetur ac tempus ornare, tincidunt ut risus. "
+        },
+        {
+            "link": "https://www.youtube.com/embed/Jatq9-00y88",
+            "title": "GJava - Java dev - junior, mid, senior - zarobki",
+            "shortDescription": " Duis eget dui lobortis, semper nisi vel, pulvinar erat. Suspendisse sed ipsum quis magna finibus bibendum. Aenean eget volutpat nunc. Curabitur arcu nisl, tincidunt sit amet mollis a, aliquet eget eros. Suspendisse imperdiet leo non massa vulputate cursus."
+        },
+        {
+            "link": "https://www.youtube.com/embed/QZik32VwmXI",
+            "title": "GJava - Czym jest Scrum",
+            "shortDescription": "Ut consequat, sapien et porttitor sollicitudin, tortor arcu varius dui, at ultricies erat tortor vitae diam. Cras finibus nunc et mollis sodales. Etiam mollis purus nec nisl vehicula, eget tempus odio facilisis. Mauris neque tortor, consectetur ac tempus ornare, tincidunt ut risus. Duis eget dui lobortis, semper nisi vel, pulvinar erat. Suspendisse sed ipsum quis magna finibus bibendum. Aenean eget volutpat nunc."
+        }
+    ]
 }

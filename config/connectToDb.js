@@ -2,6 +2,7 @@ const mongoose = require('mongoose')
 const fs = require("fs")
 const path = require("path")
 const CourseCollection = require("../models/Course")
+const VideoCollection = require("../models/Video")
 
 module.exports = (mongoURI) => {
     mongoose.connect(mongoURI, { useNewUrlParser: true }, (err) => {
@@ -17,17 +18,21 @@ module.exports = (mongoURI) => {
                 }
 
                 const parsed = JSON.parse(data)
-                const { courses } = parsed
-                //CourseCollection.deleteMany({})
-                // CourseCollection.insertMany(courses)
+                const { courses, videos } = parsed
+
                 CourseCollection.countDocuments({}, (err, count) => {
                     if (count === 0) {
                         CourseCollection.insertMany(courses)
                     }
                 })
 
+                VideoCollection.countDocuments({}, (err, count) => {
+                    if (count === 0) {
+                        VideoCollection.insertMany(videos)
+                    }
+                })
+
             })
         }
-        // mongoose.model("courses").insertMany
     })
 }

@@ -94,6 +94,10 @@ a:hover {
   width: 100%;
 }
 
+.header {
+  margin-bottom: 2rem;
+}
+
 nav {
   width: 100%;
   padding-right: 1.5rem !important;

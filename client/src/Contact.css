@@ -1,6 +1,7 @@
 .custom-contact {
     padding: 2rem 1rem;
     background: lightblue;
+    border-radius: 5px;
 }
 
 @media screen and (max-width: 768px) {
@@ -10,4 +11,8 @@
         align-items: center;
         margin-top: 2rem;
     }
+}
+
+.Contact form {
+    margin-top: 4rem;
 }

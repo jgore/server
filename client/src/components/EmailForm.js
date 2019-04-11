@@ -1,7 +1,7 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import Axios from "axios/index";
 import ReCaptcha from 'react-recaptcha'
-import {Alert} from 'react-bootstrap'
+import { Alert } from 'react-bootstrap'
 
 class EmailForm extends Component {
 
@@ -37,12 +37,12 @@ class EmailForm extends Component {
 
   render() {
     return (
-      <div style={{ marginTop: 50, marginBottom: 50 }} className="border border-primary">
+      <div style={{ marginTop: 50, marginBottom: 50 }}>
 
         <form onSubmit={this.handleSubmit}>
 
           <div className="col-auto my-1">
-            <p> Formularz kontaktowy</p>
+            <h2 className="header">Formularz kontaktowy</h2>
             <label className="mr-sm-2" htmlFor="subject">Temat</label>
             <select onChange={this.handleChange} className="custom-select mr-sm-2" id="subject">
               <option selected>Wybierz ...</option>
@@ -80,12 +80,14 @@ class EmailForm extends Component {
             <small id="emailHelp" className="form-text text-muted">We will call you back if you will leave phone number.
             </small>
           </div>
-          <ReCaptcha
-            sitekey="6LcsdZ0UAAAAAITDsNQyr6m-aGF5fDbF7O0AbByG"
-            render="explicit"
-            onloadCallback={this.recaptchaLoaded.bind(this)}
-            verifyCallback={this.handleCaptcha}
-          />
+          <div style={{ margin: 20 }} className="form-group">
+            <ReCaptcha
+              sitekey="6LcsdZ0UAAAAAITDsNQyr6m-aGF5fDbF7O0AbByG"
+              render="explicit"
+              onloadCallback={this.recaptchaLoaded.bind(this)}
+              verifyCallback={this.handleCaptcha}
+            />
+          </div>
           {
             this.state.isVerified === null ?
               "" :

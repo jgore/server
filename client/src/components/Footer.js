@@ -11,7 +11,7 @@ export default () => (
         // className="flexible flexible-column flexible-vertical-center flexible-horizontal-center"
       >
         <p> <span>"What is the difference between <b>Hero</b> and <b>Coward</b> ? <br/>
-          There is no difference - they feel the same <br/> but Her  <b>do</b> what coward <b>doesn't"</b> </span></p>
+          There is no difference - they feel the same <br/> but Hero  <b>do</b> what coward <b>doesn't "</b> </span></p>
       </Col>
       <Col
         sm={12}

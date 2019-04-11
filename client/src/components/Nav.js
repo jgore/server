@@ -10,7 +10,7 @@ class Nav extends Component {
 
 
   state = {
-    auth : false,
+    auth: false,
     routes: [
       {
         name: "Home",
@@ -36,24 +36,24 @@ class Nav extends Component {
       case null:
         return 'still logging'
       case false:
-        return <a className={"waves-effect waves-light green btn"} href="/auth/google">
+        return <a className={"waves-effect waves-light green btn"} href={"/auth/google"}>
           <Button className="flexible flexible-horizontal-center google-button">
-          <FaGoogle /> Login with Google
-        </Button></a>
+            <FaGoogle/> Login with Google
+          </Button></a>
       default:
-        return (<ul>
-          <li>Hello, {this.state.auth.name}</li>
-          <li>
-            <a className={"waves-effect waves-light btn red"} href="/logout">
-              <Button className="flexible flexible-horizontal-center google-button">
-                <FaGoogle /> Logout
-              </Button> </a></li>
-        </ul>)
+        return (<div style={{color: "white"}}>
+          Hello, {this.state.auth.name}
+
+          <a className={"waves-effect waves-light btn red"} href={"/api/logout"}>
+            <Button className="flexible flexible-horizontal-center google-button">
+              <FaGoogle/> Logout
+            </Button> </a>
+        </div>)
     }
   }
 
   componentDidMount() {
-    Axios(`${API_URL}/api/current_user`)
+    Axios(`/api/current_user`)
       .then((res) => {
         this.setState({
           auth: res.data || false,

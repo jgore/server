@@ -12,16 +12,18 @@ import Main from './components/Main'
 import Footer from './components/Footer'
 import WindowEvents from './utils/WindowEvents'
 
-// let GlobalContext = React.createContext()
+let GlobalContext = React.createContext()
 
 class App extends Component {
   constructor(props) {
     super(props)
-    // this.windowEvents = new WindowEvents()
+    this.state = {
+      windowEvents: new WindowEvents()
+    }
   }
   render() {
     return (
-      
+      <GlobalContext.Provider value={{ windowEvents: this.state.windowEvents }}>
         <Router>
           <React.Fragment>
             <Nav />
@@ -37,8 +39,10 @@ class App extends Component {
             <Footer />
           </React.Fragment>
         </Router>
+      </GlobalContext.Provider>
     );
   }
 }
 
 export default App;
+export { GlobalContext } 

@@ -53,6 +53,10 @@ a:hover {
   justify-content: space-around;
 }
 
+.flexible-vertical-space-between {
+  justify-content: space-between;
+}
+
 .section {
   padding-top: 1em;
 }
@@ -156,4 +160,19 @@ margin-top: 4rem;
 
 .blue {
   color: #007bff;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    font-size: 1.1rem;
+  }
+  nav a {
+    text-align: left;
+    margin-left: 0;
+  }
+  .navbar-nav {
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid white;
+  }
 }

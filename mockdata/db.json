@@ -1,275 +1,275 @@
 {
-    "courses": [
+  "courses": [
+    {
+      "title": "Kurs programowania Java 0 [ Company ]",
+      "content": "",
+      "image": "biuro_brillante.jpg",
+      "duration": "6 tygodni",
+      "price": "1 weekend 276PLN  [ 69 PLN / H ]",
+      "shortDescription": "Jeśli stawiasz swoje pierwsze kroki w programowaniu i chciałbyś się nauczyć od najlepszych to jest właśnie kurs dla Ciebie. Tutaj spokojnie uczymy się pracy z IntelliJ, Git, JAVA. Stopniowo podnosimy poziom trudności, abyś mógł zapisać się na kurs Junior",
+      "technologies": [
         {
-            "title": "Kurs programowania Java 0 [ Company ]",
-            "content": "",
-            "image": "biuro_brillante.jpg",
-            "duration": "6 tygodni",
-            "price": "1 weekend 276PLN  [ 69 PLN / H ]",
-            "shortDescription": "Jeśli stawiasz swoje pierwsze kroki w programowaniu i chciałbyś się nauczyć od najlepszych to jest właśnie kurs dla Ciebie. Tutaj spokojnie uczymy się pracy z IntelliJ, Git, JAVA. Stopniowo podnosimy poziom trudności, abyś mógł zapisać się na kurs Junior",
-            "technologies": [
-                {
-                    "name": "java-technologies",
-                    "technologies": [
-                        "Java",
-                        "Spring",
-                        "Hibernate",
-                        "SQL",
-                        "REST",
-                        "JSON",
-                        "JUnit",
-                        "Mockito",
-                        "Maven",
-                        "Git"
-                    ]
-                },
-                {
-                    "name": "javascript-technologies",
-                    "technologies": [
-                        "React + Redux",
-                        "NodeJS",
-                        "Express"
-                    ]
-                }
-            ],
-            "reviews": [
-                {
-                    "image": "qwe1.jpeg",
-                    "username": "Stefan Batorski",
-                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
-                    "grade": 4
-                },
-                {
-                    "image": "qwe2.jpeg",
-                    "username": "Janusz Batorski",
-                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae ",
-                    "grade": 5
-                },
-                {
-                    "image": "qwe4.jpeg",
-                    "username": "Stefan Batorski",
-                    "content": "Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
-                    "grade": 4
-                },
-                {
-                    "image": "qwe3.jpeg",
-                    "username": "Stefan Batorski",
-                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
-                    "grade": 5
-                }
-            ]
+          "name": "java-technologies",
+          "technologies": [
+            "Java",
+            "Spring",
+            "Hibernate",
+            "SQL",
+            "REST",
+            "JSON",
+            "JUnit",
+            "Mockito",
+            "Maven",
+            "Git"
+          ]
         },
         {
-            "title": "Kurs programowania Java 1 (junior)  [ Shop ]",
-            "content": "",
-            "image": "sala.jpg",
-            "duration": "12 tygodni",
-            "price": "1 weekend 276PLN [ 69 PLN / H ] [ Sobota 8-12 ]",
-            "shortDescription": "To jest kurs dla ludzi którzy już ukończyli kurs pierwszy bądź przeszli pozytywnie naszą rozmowę techniczną. To jest pierwsza prawdziwa, rzeczywista aplikacja w JAVA + Node.JS + React.JS. No bullshit. Piszesz projekt, który realnie już jest wdrożony na produkcji. ",
-            "technologies": [
-                {
-                    "name": "java-technologies",
-                    "technologies": [
-                        "Java",
-                        "Spring",
-                        "Hibernate",
-                        "SQL",
-                        "REST",
-                        "JSON",
-                        "JUnit",
-                        "Mockito",
-                        "Maven",
-                        "Git"
-                    ]
-                }
-            ],
-            "reviews": [
-                {
-                    "image": "qwe1.jpeg",
-                    "username": "Stefan Batorski",
-                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
-                    "grade": 4
-                },
-                {
-                    "image": "qwe2.jpeg",
-                    "username": "Janusz Batorski",
-                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae ",
-                    "grade": 5
-                },
-                {
-                    "image": "qwe4.jpeg",
-                    "username": "Stefan Batorski",
-                    "content": "Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
-                    "grade": 4
-                },
-                {
-                    "image": "qwe3.jpeg",
-                    "username": "Stefan Batorski",
-                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
-                    "grade": 5
-                }
-            ]
-        },
-        {
-            "title": "Kurs programowania Java 1++ (junior++) [ FlyWithUs ]",
-            "content": "",
-            "image": "macbook.jpg",
-            "duration": "6 tygodni",
-            "price": "1 weekend 396 PLN [99 PLN / H] [ Sobota 8-12 ]",
-            "shortDescription": "Przygotowanie stricte pod rozmowę kwalifikacyjną bazując na zdobytej wiedzy. Kurs uzupełniający do kursu Junior",
-            "technologies": [
-                {
-                    "name": "java-technologies",
-                    "technologies": [
-                        "Java",
-                        "Spring",
-                        "Hibernate",
-                        "SQL",
-                        "REST",
-                        "JSON",
-                        "JUnit",
-                        "Mockito",
-                        "Maven",
-                        "Git"
-                    ]
-                }
-            ],
-            "reviews": [
-                {
-                    "image": "qwe1.jpeg",
-                    "username": "Stefan Batorski",
-                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
-                    "grade": 4
-                },
-                {
-                    "image": "qwe2.jpeg",
-                    "username": "Janusz Batorski",
-                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae ",
-                    "grade": 5
-                },
-                {
-                    "image": "qwe4.jpeg",
-                    "username": "Stefan Batorski",
-                    "content": "Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
-                    "grade": 4
-                },
-                {
-                    "image": "qwe3.jpeg",
-                    "username": "Stefan Batorski",
-                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
-                    "grade": 5
-                }
-            ]
-        },
-        {
-            "title": "Kurs programowania Java 2 (mid++) [ Tropics 2 ]",
-            "content": "",
-            "image": "corpo.jpg",
-            "duration": "30 tygodni",
-            "price": "1 weekend 476 PLN [119 PLN / H] [ Sobota 8-12 ]",
-            "shortDescription": "Dla Ciebie nazwa Tropics nic nie znaczy, ale dla wielu ludzi to jedno z najgorszych słow jakie istnieją na ziemi. Wielu programistów odeszlo z powodu Tropicsa. W tym  miejscu będziemy sprawiać aby świat stał się lepszym miejscem i napiszemy Tropicsa 2 ",
-            "technologies": [
-                {
-                    "name": "java-technologies",
-                    "technologies": [
-                        "Java",
-                        "Spring",
-                        "Hibernate",
-                        "SQL",
-                        "REST",
-                        "JSON",
-                        "JUnit",
-                        "Mockito",
-                        "Maven",
-                        "Git"
-                    ]
-                }
-            ],
-            "reviews": [
-                {
-                    "image": "qwe1.jpeg",
-                    "username": "asd",
-                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
-                    "grade": 4
-                },
-                {
-                    "image": "qwe2.jpeg",
-                    "username": "Janusz Batorski",
-                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae ",
-                    "grade": 5
-                },
-                {
-                    "image": "qwe4.jpeg",
-                    "username": "Stefan Batorski",
-                    "content": "Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
-                    "grade": 4
-                },
-                {
-                    "image": "qwe3.jpeg",
-                    "username": "Stefan Batorski",
-                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
-                    "grade": 5
-                },
-                {
-                    "image": "qwe3.jpeg",
-                    "username": "Stefan Batorski",
-                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
-                    "grade": 5
-                },
-                {
-                    "image": "qwe3.jpeg",
-                    "username": "Stefan Batorski",
-                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
-                    "grade": 5
-                },
-                {
-                    "image": "qwe3.jpeg",
-                    "username": "Stefan Batorski",
-                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
-                    "grade": 5
-                },
-                {
-                    "image": "qwe3.jpeg",
-                    "username": "Stefan Batorski",
-                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
-                    "grade": 5
-                },
-                {
-                    "image": "qwe3.jpeg",
-                    "username": "Stefan Batorski",
-                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
-                    "grade": 5
-                },
-                {
-                    "image": "qwe3.jpeg",
-                    "username": "Stefan Batorski",
-                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
-                    "grade": 5
-                }
-            ]
+          "name": "javascript-technologies",
+          "technologies": [
+            "React + Redux",
+            "NodeJS",
+            "Express"
+          ]
         }
-    ],
-    "mails": [],
-    "videos": [
+      ],
+      "reviews": [
         {
-            "link": "https://www.youtube.com/embed/Jatq9-00y88",
-            "title": "GJava - Java dev - junior, mid, senior - zarobki",
-            "shortDescription": "Ile powinieneś zarabiać jako junior, mid albo senior Java Developer ? Skąd wiadomo na jakim jestes poziomie ? O tym wszystkim powinieneś dowiedzieć sie tutaj."
+          "image": "qwe1.jpeg",
+          "username": "Stefan Batorski",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
+          "grade": 4
         },
         {
-            "link": "https://www.youtube.com/embed/c95Yysdfuts",
-            "title": "GJava - Wprowadzenie do Architektury projektów w JAVA",
-            "shortDescription": "Opowiadamy o nowoczesnej architekturze tworzenia projektów w JAVA  i nie tylko. Taką architekture ma większość projektów w Java, .NET itp stąd jest kluczowa w zrozu "
+          "image": "qwe2.jpeg",
+          "username": "Janusz Batorski",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae ",
+          "grade": 5
         },
         {
-            "link": "https://www.youtube.com/embed/QZik32VwmXI",
-            "title": "GJava - Czym jest Scrum ?",
-            "shortDescription": "Scrum jest tak zwaną zwinną metodologią tworzenia oprogramownia (Agile). W naszych zajęciach wdrażamy SCRUM-a. Opowiadamy jak wygląda i staramy się nasz Workflow właśnie budować na tej metodologii."
+          "image": "qwe4.jpeg",
+          "username": "Stefan Batorski",
+          "content": "Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
+          "grade": 4
         },
         {
-            "link": "https://www.youtube.com/embed/aA8uRIm71Yw",
-            "title": "GJava - short introduction in english - maybe you will want to try course in English ?",
-            "shortDescription": "Czasami na zajęciach pojawiają się części po angielsku. Czasem na rozmowie kwalifikacyjnej rowniez stąd warto ten język znać."
+          "image": "qwe3.jpeg",
+          "username": "Stefan Batorski",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
+          "grade": 5
         }
-    ]
+      ]
+    },
+    {
+      "title": "Kurs programowania Java 1 (junior)  [ Shop ]",
+      "content": "",
+      "image": "sala.jpg",
+      "duration": "12 tygodni",
+      "price": "1 weekend 276PLN [ 69 PLN / H ] [ Sobota 8-12 ]",
+      "shortDescription": "To jest kurs dla ludzi którzy już ukończyli kurs pierwszy bądź przeszli pozytywnie naszą rozmowę techniczną. To jest pierwsza prawdziwa, rzeczywista aplikacja w JAVA + Node.JS + React.JS. No bullshit. Piszesz projekt, który realnie już jest wdrożony na produkcji. ",
+      "technologies": [
+        {
+          "name": "java-technologies",
+          "technologies": [
+            "Java",
+            "Spring",
+            "Hibernate",
+            "SQL",
+            "REST",
+            "JSON",
+            "JUnit",
+            "Mockito",
+            "Maven",
+            "Git"
+          ]
+        }
+      ],
+      "reviews": [
+        {
+          "image": "qwe1.jpeg",
+          "username": "Stefan Batorski",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
+          "grade": 4
+        },
+        {
+          "image": "qwe2.jpeg",
+          "username": "Janusz Batorski",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae ",
+          "grade": 5
+        },
+        {
+          "image": "qwe4.jpeg",
+          "username": "Stefan Batorski",
+          "content": "Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
+          "grade": 4
+        },
+        {
+          "image": "qwe3.jpeg",
+          "username": "Stefan Batorski",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
+          "grade": 5
+        }
+      ]
+    },
+    {
+      "title": "Kurs programowania Java 1++ (junior++) [ FlyWithUs ]",
+      "content": "",
+      "image": "macbook.jpg",
+      "duration": "6 tygodni",
+      "price": "1 weekend 396 PLN [99 PLN / H] [ Sobota 8-12 ]",
+      "shortDescription": "Przygotowanie stricte pod rozmowę kwalifikacyjną bazując na zdobytej wiedzy. Kurs uzupełniający do kursu Junior",
+      "technologies": [
+        {
+          "name": "java-technologies",
+          "technologies": [
+            "Java",
+            "Spring",
+            "Hibernate",
+            "SQL",
+            "REST",
+            "JSON",
+            "JUnit",
+            "Mockito",
+            "Maven",
+            "Git"
+          ]
+        }
+      ],
+      "reviews": [
+        {
+          "image": "qwe1.jpeg",
+          "username": "Stefan Batorski",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
+          "grade": 4
+        },
+        {
+          "image": "qwe2.jpeg",
+          "username": "Janusz Batorski",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae ",
+          "grade": 5
+        },
+        {
+          "image": "qwe4.jpeg",
+          "username": "Stefan Batorski",
+          "content": "Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
+          "grade": 4
+        },
+        {
+          "image": "qwe3.jpeg",
+          "username": "Stefan Batorski",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
+          "grade": 5
+        }
+      ]
+    },
+    {
+      "title": "Kurs programowania Java 2 (mid++) [ Tropics 2 ]",
+      "content": "",
+      "image": "corpo.jpg",
+      "duration": "30 tygodni",
+      "price": "1 weekend 476 PLN [119 PLN / H] [ Sobota 8-12 ]",
+      "shortDescription": "Dla Ciebie nazwa Tropics nic nie znaczy, ale dla wielu ludzi to jedno z najgorszych słow jakie istnieją na ziemi. Wielu programistów odeszlo z powodu Tropicsa. W tym  miejscu będziemy sprawiać aby świat stał się lepszym miejscem i napiszemy Tropicsa 2 ",
+      "technologies": [
+        {
+          "name": "java-technologies",
+          "technologies": [
+            "Java",
+            "Spring",
+            "Hibernate",
+            "SQL",
+            "REST",
+            "JSON",
+            "JUnit",
+            "Mockito",
+            "Maven",
+            "Git"
+          ]
+        }
+      ],
+      "reviews": [
+        {
+          "image": "qwe1.jpeg",
+          "username": "asd",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
+          "grade": 4
+        },
+        {
+          "image": "qwe2.jpeg",
+          "username": "Janusz Batorski",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae ",
+          "grade": 5
+        },
+        {
+          "image": "qwe4.jpeg",
+          "username": "Stefan Batorski",
+          "content": "Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
+          "grade": 4
+        },
+        {
+          "image": "qwe3.jpeg",
+          "username": "Stefan Batorski",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
+          "grade": 5
+        },
+        {
+          "image": "qwe3.jpeg",
+          "username": "Stefan Batorski",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
+          "grade": 5
+        },
+        {
+          "image": "qwe3.jpeg",
+          "username": "Stefan Batorski",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
+          "grade": 5
+        },
+        {
+          "image": "qwe3.jpeg",
+          "username": "Stefan Batorski",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
+          "grade": 5
+        },
+        {
+          "image": "qwe3.jpeg",
+          "username": "Stefan Batorski",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
+          "grade": 5
+        },
+        {
+          "image": "qwe3.jpeg",
+          "username": "Stefan Batorski",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
+          "grade": 5
+        },
+        {
+          "image": "qwe3.jpeg",
+          "username": "Stefan Batorski",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
+          "grade": 5
+        }
+      ]
+    }
+  ],
+  "mails": [],
+  "videos": [
+    {
+      "link": "https://www.youtube.com/embed/Jatq9-00y88",
+      "title": "GJava - Java dev - junior, mid, senior - zarobki",
+      "shortDescription": "Ile powinieneś zarabiać jako junior, mid albo senior Java Developer ? Skąd wiadomo na jakim jestes poziomie ? O tym wszystkim powinieneś dowiedzieć sie tutaj."
+    },
+    {
+      "link": "https://www.youtube.com/embed/aA8uRIm71Yw",
+      "title": "GJava - short introduction in english - maybe you will want to try course in English ?",
+      "shortDescription": "Czasami na zajęciach pojawiają się części po angielsku. Czasem na rozmowie kwalifikacyjnej rowniez stąd warto ten język znać."
+    },
+    {
+      "link": "https://www.youtube.com/embed/c95Yysdfuts",
+      "title": "GJava - Wprowadzenie do Architektury projektów w JAVA",
+      "shortDescription": "Opowiadamy o nowoczesnej architekturze tworzenia projektów w JAVA  i nie tylko. Taką architekture ma większość projektów w Java, .NET itp stąd jest kluczowa w zrozu "
+    },
+    {
+      "link": "https://www.youtube.com/embed/QZik32VwmXI",
+      "title": "GJava - Czym jest Scrum ?",
+      "shortDescription": "Scrum jest tak zwaną zwinną metodologią tworzenia oprogramownia (Agile). W naszych zajęciach wdrażamy SCRUM-a. Opowiadamy jak wygląda i staramy się nasz Workflow właśnie budować na tej metodologii."
+    }
+  ]
 }

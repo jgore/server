@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Videos from '../components/Videos';
 import Axios from 'axios';
-import { API_URL } from '../utils/variables';
 import Error from '../components/Error'
 import Loading from '../components/Loading'
 
@@ -14,7 +13,7 @@ class Java extends Component {
   }
 
   componentDidMount() {
-    Axios(`${API_URL}/api/videos`)
+    Axios(`/api/videos`)
       .then((res) => {
         this.setState({
           videos: res.data

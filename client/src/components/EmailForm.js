@@ -1,8 +1,7 @@
-import React, { Component } from 'react'
-import { API_URL } from "../utils/variables";
+import React, {Component} from 'react'
 import Axios from "axios/index";
 import ReCaptcha from 'react-recaptcha'
-import { Alert } from 'react-bootstrap'
+import {Alert} from 'react-bootstrap'
 
 class EmailForm extends Component {
 
@@ -128,7 +127,7 @@ class EmailForm extends Component {
     event.preventDefault();
     console.log(this.state.isVerified)
     if (this.state.isVerified) {
-      Axios.post(`${API_URL}/api/sendEmail`, {
+      Axios.post(`/api/sendEmail`, {
         subject: this.state.subject,
         text: this.state.text,
         email: this.state.email,

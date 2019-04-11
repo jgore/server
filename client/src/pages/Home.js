@@ -1,6 +1,4 @@
-import React, { Component } from 'react';
-import Main from '../components/Main'
-import { API_URL } from '../utils/variables'
+import React, {Component} from 'react';
 import Axios from 'axios'
 import Loading from '../components/Loading'
 import Courses from '../components/courses'
@@ -15,7 +13,7 @@ class Home extends Component {
   }
 
   componentDidMount() {
-    Axios(`${API_URL}/api/courses`)
+    Axios(`/api/courses`)
       .then((res) => {
         this.setState({
           courses: res.data,

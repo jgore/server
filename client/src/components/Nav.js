@@ -1,9 +1,7 @@
 import React, {Component} from 'react'
-import {Navbar, Nav as NavComponent, Form, FormControl, Button, Container} from 'react-bootstrap'
+import {Button, Nav as NavComponent, Navbar} from 'react-bootstrap'
 import {LinkContainer} from 'react-router-bootstrap'
 import {FaGoogle} from 'react-icons/fa'
-import axios from 'axios'
-import {API_URL} from "../utils/variables";
 import Axios from "axios/index";
 
 class Nav extends Component {

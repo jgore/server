@@ -49,7 +49,7 @@ class EmailForm extends Component {
               <option value="java0">Kurs Programowania Java 0 - Company [ 0 lat doświadczenia ]</option>
               <option value="java1">Kurs Programowania Java 1 - Shop [ 0,1,2 lat doświadczenia ]</option>
               <option value="java1++">Kurs Programowania Java 1++ - FlyWithUs [ projekt + rozmowa kwalifikacyjna + zadanie ] - [ 1,2 lat doświadczenia ]</option>
-              <option value="java2">Kurs programowania Java 2 - Tropics 2 [ 2++ lat doświadczenia ]</option>
+              <option value="java2">Kurs programowania Java 2 - Bookify 2 [ 2++ lat doświadczenia ]</option>
               <option value="others"> Pozostałe</option>
             </select>
           </div>

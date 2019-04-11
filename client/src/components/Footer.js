@@ -27,7 +27,7 @@ export default () => (
     </Row>
     <Row>
       <Col>
-        <p> Copyright by GJava 2019 </p>
+        <p> Copyright by <a href={"http://gjava.pl"} > GJava </a> 2019 </p>
       </Col>
     </Row>
   </Container>

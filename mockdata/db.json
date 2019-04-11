@@ -1,12 +1,12 @@
 {
     "courses": [
         {
-            "title": "Kurs programowania Java 0",
+            "title": "Kurs programowania Java 0 [ Company ]",
             "content": "",
-            "image": "asd.jpeg",
+            "image": "biuro_brillante.jpg",
             "duration": "6 tygodni",
-            "price": "1 weekend 236PLN  [ 59 PLN / H ]",
-            "shortDescription": "Jeśli stawiasz swoje pierwsze kroki w programowaniu i chciałbyś się nauczyć od najlepszych to jest właśnie kurs dla Ciebie",
+            "price": "1 weekend 276PLN  [ 69 PLN / H ]",
+            "shortDescription": "Jeśli stawiasz swoje pierwsze kroki w programowaniu i chciałbyś się nauczyć od najlepszych to jest właśnie kurs dla Ciebie. Tutaj spokojnie uczymy się pracy z IntelliJ, Git, JAVA. Stopniowo podnosimy poziom trudności, abyś mógł zapisać się na kurs Junior",
             "technologies": [
                 {
                     "name": "java-technologies",
@@ -60,12 +60,12 @@
             ]
         },
         {
-            "title": "Kurs programowania Java 1 (junior)",
+            "title": "Kurs programowania Java 1 (junior)  [ Shop ]",
             "content": "",
-            "image": "asd2.jpeg",
+            "image": "sala.jpg",
             "duration": "12 tygodni",
-            "price": "1 weekend 236PLN [59 PLN / H] [ Sobota 8-12 ]",
-            "shortDescription": "Jeśli stawiasz swoje pierwsze kroki w programowaniu i chciałbyś się nauczyć od najlepszych to jest właśnie kurs dla Ciebie",
+            "price": "1 weekend 276PLN [ 69 PLN / H ] [ Sobota 8-12 ]",
+            "shortDescription": "To jest kurs dla ludzi którzy już ukończyli kurs pierwszy bądź przeszli pozytywnie naszą rozmowę techniczną. To jest pierwsza prawdziwa, rzeczywista aplikacja w JAVA + Node.JS + React.JS. No bullshit. Piszesz projekt, który realnie już jest wdrożony na produkcji. ",
             "technologies": [
                 {
                     "name": "java-technologies",
@@ -111,12 +111,12 @@
             ]
         },
         {
-            "title": "Kurs programowania Java 1++ (junior++)",
+            "title": "Kurs programowania Java 1++ (junior++) [ FlyWithUs ]",
             "content": "",
-            "image": "asd3.jpeg",
+            "image": "macbook.jpg",
             "duration": "6 tygodni",
-            "price": "1 weekend 236PLN [59 PLN / H] [ Sobota 8-12 ]",
-            "shortDescription": "Przygotowanie stricte pod rozmowe kwalifikacyjną bazując na zdobytej wiedzy",
+            "price": "1 weekend 396 PLN [99 PLN / H] [ Sobota 8-12 ]",
+            "shortDescription": "Przygotowanie stricte pod rozmowę kwalifikacyjną bazując na zdobytej wiedzy. Kurs uzupełniający do kursu Junior",
             "technologies": [
                 {
                     "name": "java-technologies",
@@ -162,12 +162,12 @@
             ]
         },
         {
-            "title": "Kurs programowania Java 2 (mid++)",
+            "title": "Kurs programowania Java 2 (mid++) [ Tropics 2 ]",
             "content": "",
-            "image": "asd4.jpeg",
+            "image": "pantani.jpg",
             "duration": "30 tygodni",
-            "price": "1 weekend 236PLN [59 PLN / H] [ Sobota 8-12 ]",
-            "shortDescription": "Jeśli stawiasz swoje pierwsze kroki w programowaniu i chciałbyś się nauczyć od najlepszych to jest właśnie kurs dla Ciebie",
+            "price": "1 weekend 476 PLN [119 PLN / H] [ Sobota 8-12 ]",
+            "shortDescription": "Dla Ciebie nazwa Tropics nic nie znaczy, ale dla wielu ludzi to jedno z najgorszych słow jakie istnieją na ziemi. Wielu programistów odeszlo z powodu Tropicsa. W tym  miejscu będziemy sprawiać aby świat stał się lepszym miejscem i napiszemy Tropicsa 2 ",
             "technologies": [
                 {
                     "name": "java-technologies",
@@ -253,18 +253,23 @@
     "videos": [
         {
             "link": "https://www.youtube.com/embed/Jatq9-00y88",
-            "title": "GJava - Wprowadzenie kurs Java",
-            "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis sit amet purus vitae pellentesque. Quisque sed justo enim. Donec eget tempor sapien, ac facilisis orci. Ut consequat, sapien et porttitor sollicitudin, tortor arcu varius dui, at ultricies erat tortor vitae diam. Cras finibus nunc et mollis sodales. Etiam mollis purus nec nisl vehicula, eget tempus odio facilisis. Mauris neque tortor, consectetur ac tempus ornare, tincidunt ut risus. "
+            "title": "GJava - Java dev - junior, mid, senior - zarobki",
+            "shortDescription": "Ile powinieneś zarabiać jako junior, mid albo senior Java Developer ? Skąd wiadomo na jakim jestes poziomie ? O tym wszystkim powinieneś dowiedzieć sie tutaj."
         },
         {
-            "link": "https://www.youtube.com/embed/Jatq9-00y88",
-            "title": "GJava - Java dev - junior, mid, senior - zarobki",
-            "shortDescription": " Duis eget dui lobortis, semper nisi vel, pulvinar erat. Suspendisse sed ipsum quis magna finibus bibendum. Aenean eget volutpat nunc. Curabitur arcu nisl, tincidunt sit amet mollis a, aliquet eget eros. Suspendisse imperdiet leo non massa vulputate cursus."
+            "link": "https://www.youtube.com/embed/c95Yysdfuts",
+            "title": "GJava - Wprowadzenie do Architektury projektów w JAVA",
+            "shortDescription": "Opowiadamy o nowoczesnej architekturze tworzenia projektów w JAVA  i nie tylko. Taką architekture ma większość projektów w Java, .NET itp stąd jest kluczowa w zrozu "
         },
         {
             "link": "https://www.youtube.com/embed/QZik32VwmXI",
-            "title": "GJava - Czym jest Scrum",
-            "shortDescription": "Ut consequat, sapien et porttitor sollicitudin, tortor arcu varius dui, at ultricies erat tortor vitae diam. Cras finibus nunc et mollis sodales. Etiam mollis purus nec nisl vehicula, eget tempus odio facilisis. Mauris neque tortor, consectetur ac tempus ornare, tincidunt ut risus. Duis eget dui lobortis, semper nisi vel, pulvinar erat. Suspendisse sed ipsum quis magna finibus bibendum. Aenean eget volutpat nunc."
+            "title": "GJava - Czym jest Scrum ?",
+            "shortDescription": "Scrum jest tak zwaną zwinną metodologią tworzenia oprogramownia (Agile). W naszych zajęciach wdrażamy SCRUM-a. Opowiadamy jak wygląda i staramy się nasz Workflow właśnie budować na tej metodologii."
+        },
+        {
+            "link": "https://www.youtube.com/embed/aA8uRIm71Yw",
+            "title": "GJava - short introduction in english - maybe you will want to try course in English ?",
+            "shortDescription": "Czasami na zajęciach pojawiają się części po angielsku. Czasem na rozmowie kwalifikacyjnej rowniez stąd warto ten język znać."
         }
     ]
 }

@@ -47,7 +47,7 @@ class Courses extends React.Component {
 const Course = ({ coruse: { title, image, duration, price, shortDescription, reviews }, modalOpen }) => {
     let averageRate = null
     for (let i = 0; i < reviews.length; i++) {
-        if (i == 0) {
+        if (i === 0) {
             averageRate = reviews[i].grade
         } else {
             averageRate += reviews[i].grade

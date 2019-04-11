@@ -42,7 +42,7 @@ class Nav extends Component {
           </Button></a>
       default:
         return (<div style={{color: "white"}}>
-          Hello, {this.state.auth.name}
+          Witaj, {this.state.auth.name}
 
           <a className={"waves-effect waves-light btn red"} href={"/api/logout"}>
             <Button className="flexible flexible-horizontal-center google-button">

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Axios from "axios/index";
 import ReCaptcha from 'react-recaptcha'
-import { Alert } from 'react-bootstrap'
+import { Alert, Button } from 'react-bootstrap'
 
 class EmailForm extends Component {
 
@@ -97,7 +97,11 @@ class EmailForm extends Component {
                   Proszę wypełnić Captche !!!
                 </Alert>
           }
-          <button style={{ margin: 20 }} type="submit" className="btn btn-primary">Wyślij</button>
+          <Button
+            style={{ margin: 20 }}
+            variant="primary" size="lg" active
+            type="submit"
+          >Wyślij</Button>
         </form>
       </div>
 

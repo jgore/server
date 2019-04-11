@@ -1,0 +1,13 @@
+.custom-contact {
+    padding: 2rem 1rem;
+    background: lightblue;
+}
+
+@media screen and (max-width: 768px) {
+    .media-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+    }
+}

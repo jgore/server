@@ -74,13 +74,13 @@ class Nav extends Component {
           isLoading: false
         })
       })
-      window.addEventListener("scroll",() => {
-        if(this.state.navExpanded) {
-          this.setState({
-            navExpanded: false
-          })
-        }
-      })
+    window.addEventListener("scroll", () => {
+      if (this.state.navExpanded) {
+        this.setState({
+          navExpanded: false
+        })
+      }
+    })
   }
 
   setNavExpanded(expanded) {

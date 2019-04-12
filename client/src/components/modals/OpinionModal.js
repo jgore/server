@@ -10,7 +10,7 @@ const Header = ({ title }) => (
 )
 
 const Footer = ({ onClick }) => (
-    <Button className="fixed-button" size="lg" onClick={(e) => onClick(e)} style={{minWidth: 200}}>
+    <Button className="fixed-button call-button" size="lg" onClick={(e) => onClick(e)} style={{ minWidth: 200 }}>
         Zamknij
     </Button>
 )

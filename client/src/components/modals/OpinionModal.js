@@ -1,12 +1,18 @@
 import React from 'react'
 import CustomModal from "../CustomModal";
 import PropTypes from 'prop-types'
-import { Image } from 'react-bootstrap';
+import { Image, Button } from 'react-bootstrap';
 import { PUBLIC_RESOURSES_URL } from '../../utils/variables';
 import StarRating from '../ReactStars'
 
 const Header = ({ title }) => (
     <h3>{title}</h3>
+)
+
+const Footer = ({ onClick }) => (
+    <Button className="fixed-button" size="lg" onClick={(e) => onClick(e)} style={{minWidth: 200}}>
+        Zamknij
+    </Button>
 )
 
 const Opinions = ({ reviews }) => {
@@ -58,6 +64,7 @@ export default ({ reviews, ...props }) => {
         <CustomModal
             Body={() => Opinions({ reviews })}
             Header={() => Header({ title: "Opinie o kursie" })}
+            Footer={(props) => Footer(props)}
             size="lg"
             centered
             {...props}

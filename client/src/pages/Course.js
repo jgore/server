@@ -75,7 +75,7 @@ class Course extends React.Component {
                                 </div>
                                 <p><b>Opis: </b>{this.state.course.shortDescription}</p>
                                 <LinkContainer to="/contact">
-                                    <a className="flexible flexible-horizontal-center"><GoMegaphone />Zacznij już dziś !!!</a>
+                                    <a className="flexible flexible-horizontal-center call-button"><GoMegaphone />Zacznij już dziś !!!</a>
                                 </LinkContainer>
                             </Col>
                         </Row>

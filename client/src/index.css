@@ -37,6 +37,20 @@ a:hover {
   display: flex;
 }
 
+.call-button {
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+    background: red;
+    border: none;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.call-button:hover {
+  background: #B23227;
+}
+
 .flexible-column {
   flex-direction: column;
 }

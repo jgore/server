@@ -18,6 +18,7 @@ const Opinions = ({ reviews }) => {
                     return (
                         <Opinion
                             key={index}
+                            path={`${PUBLIC_RESOURSES_URL}/${value.image}`}
                             {...value}
                         />
                     )
@@ -27,10 +28,10 @@ const Opinions = ({ reviews }) => {
     )
 }
 
-const Opinion = ({ image, username, content, grade }) => (
+export const Opinion = ({ image, username, content, grade, path }) => (
     <div className="opinion">
         <div className="opinion__image">
-            <Image src={`${PUBLIC_RESOURSES_URL}/${image}`} rounded />
+            <Image src={path} rounded />
         </div>
         <div className="opinion__content">
             <h5>{username}</h5>

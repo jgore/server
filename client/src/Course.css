@@ -41,6 +41,7 @@
     border-radius: 5px;
 }
 
+
 @media screen and (max-width: 767px) {
     .row:first-child div:first-child {
         margin-bottom: 2rem;

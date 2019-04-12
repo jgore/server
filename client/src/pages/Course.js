@@ -6,10 +6,19 @@ import Loading from '../components/Loading';
 import Stars from '../components/ReactStars'
 import { LinkContainer } from 'react-router-bootstrap'
 import { GoMegaphone } from "react-icons/go";
+import { Opinion } from '../components/modals/OpinionModal'
+import { Toggle } from '../components/Toggle'
 
 class Course extends React.Component {
     state = {
-        course: null
+        course: null,
+        isDrop: false
+    }
+
+    onDropDown() {
+        this.setState({
+            isDrop: !this.state.isDrop
+        })
     }
 
     componentDidMount() {
@@ -100,6 +109,49 @@ class Course extends React.Component {
                             </Col>
                             <Col sm="12" md="7">
                                 <div dangerouslySetInnerHTML={{ __html: this.state.course.content }}></div>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col>
+                                <h3>Opinie</h3>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col sm="12">
+                                {
+                                    this.state.course.reviews.length != 0 ?
+                                        <Opinion
+                                            path={`../${PUBLIC_RESOURSES_URL}/${this.state.course.reviews[0].image}`}
+                                            {...this.state.course.reviews[0]}
+                                        /> :
+                                        ""
+                                }
+                                {
+                                    this.state.course.reviews.length > 0 ?
+                                        <React.Fragment>
+                                            <Toggle
+                                                title={`Rozwiń jeszcze - ${this.state.course.reviews.length - 1} opini`}
+                                                titleOnDrop={`Zwiń - ${this.state.course.reviews.length - 1} opini`}
+                                                isDrop={this.state.isDrop}
+                                                onClick={this.onDropDown.bind(this)}
+                                            >
+                                                {
+                                                    this.state.course.reviews.map((value, index) => (
+                                                        <React.Fragment key={index}>
+                                                            {
+                                                                index != 0 ?
+                                                                    <Opinion
+                                                                        path={`../${PUBLIC_RESOURSES_URL}/${value.image}`}
+                                                                        {...value}
+                                                                    /> :
+                                                                    ""
+                                                            }
+                                                        </React.Fragment>
+                                                    ))
+                                                }
+                                            </Toggle>
+                                        </React.Fragment> : ""
+                                }
                             </Col>
                         </Row>
                     </React.Fragment>

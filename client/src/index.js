@@ -4,6 +4,7 @@ import "./index.css"
 import "./Home.css"
 import "./Java.css"
 import "./Contact.css"
+import "./Course.css"
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 

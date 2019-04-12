@@ -1,0 +1,48 @@
+.Course b {
+    margin-right: 1rem;
+}
+
+.Course .row {
+    margin-top: 2rem;
+}
+
+.Course p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.Course h3 {
+    width: 100%;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid gray;
+}
+
+.Course h6 {
+    margin-top: 1rem;
+}
+
+.Course a {
+    color: white;
+    background: #DB4437;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    max-width: 200px;
+    margin-top: 2rem;
+}
+
+.Course svg {
+    margin-right: 0.75rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+.Course .technologies {
+    border: 5px solid #343A40;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 767px) {
+    .row:first-child div:first-child {
+        margin-bottom: 2rem;
+    }
+}

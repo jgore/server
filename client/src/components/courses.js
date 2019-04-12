@@ -4,6 +4,7 @@ import { PUBLIC_RESOURSES_URL } from '../utils/variables'
 import PropTypes from 'prop-types';
 import OpinionModal from './modals/OpinionModal';
 import Stars from './ReactStars'
+import { LinkContainer } from 'react-router-bootstrap'
 
 class Courses extends React.Component {
     state = {
@@ -44,7 +45,7 @@ class Courses extends React.Component {
 }
 
 
-const Course = ({ coruse: { title, image, duration, price, shortDescription, reviews }, modalOpen }) => {
+const Course = ({ coruse: { title, image, duration, price, shortDescription, reviews, _id }, modalOpen }) => {
     let averageRate = null
     for (let i = 0; i < reviews.length; i++) {
         if (i === 0) {
@@ -94,7 +95,9 @@ const Course = ({ coruse: { title, image, duration, price, shortDescription, rev
                 </div>
             </Card.Body>
             <Card.Footer style={{ background: "#343A40" }}>
-                <Button variant="warning">Zobacz szczegóły</Button>
+                <LinkContainer to={`/course/${_id}`}>
+                    <Button variant="warning">Zobacz szczegóły</Button>
+                </LinkContainer>
                 <Button onClick={() => modalOpen(reviews)}>Opinie ({reviews.length})</Button>
             </Card.Footer>
         </Card>

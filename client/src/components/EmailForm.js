@@ -82,7 +82,7 @@ class EmailForm extends Component {
           </div>
           <div style={{ margin: 20 }} className="form-group">
             <ReCaptcha
-              sitekey="6LcsdZ0UAAAAAITDsNQyr6m-aGF5fDbF7O0AbByG"
+              sitekey="6Ld51Z0UAAAAAOhQITxCyO8Iw69V0h3iD0W9Qtjp"
               render="explicit"
               onloadCallback={this.recaptchaLoaded.bind(this)}
               verifyCallback={this.handleCaptcha}

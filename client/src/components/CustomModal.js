@@ -26,10 +26,10 @@ const CustomModal = ({ Body, Header, Footer, isModal, handleClose, ...options })
             <Modal.Footer>
                 {
                     Footer ?
-                        <Footer /> :
+                        <Footer onClick={handleClose} /> :
                         <Button className="google-button" onClick={() => handleClose()}>
                             <MdClose /> Zamknij
-                    </Button>
+                        </Button>
                 }
             </Modal.Footer>
         </Modal>

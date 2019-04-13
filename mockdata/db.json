@@ -1,6 +1,39 @@
 {
   "courses": [
     {
+      "title": "Kurs programowania Java 00 [ Korepetycje ]",
+      "content": "",
+      "image": "pawel.jpg",
+      "duration": "2-3 tygodnie",
+      "price": "1 tydzień 198 PLN  [99 PLN / H ] [ 2h korki + 5 dni support ]",
+      "shortDescription": "Jeśli chcesz z nami realizować trudniejsze kursy, ale jeszcze brak Ci doświadczenia to jest kurs dla Ciebie. Tutaj zajęcia są 1 na 1 gdzie korepetytor prowadzi Cie kroku po kroku jak zainstalowac IntelliJ, Maven, Git. Jak pracować z JAVA żebyś mógł porobić rzeczy trudniejsze.",
+      "technologies": [
+        {
+          "name": "java-technologies",
+          "technologies": [
+            "Java",
+            "Spring",
+            "Hibernate",
+            "SQL",
+            "REST",
+            "JSON",
+            "JUnit",
+            "Mockito",
+            "Maven",
+            "Git"
+          ]
+        },
+        {
+          "name": "javascript-technologies",
+          "technologies": [
+            "React + Redux",
+            "NodeJS",
+            "Express"
+          ]
+        }
+      ]
+    },
+    {
       "title": "Kurs programowania Java 0 [ Company ]",
       "content": "<h5>Lorem ipsum dolor sit amet</h5>, <p>consectetur adipiscing elit. Cras eu dolor convallis, lobortis risus at, porta ante.</p> <p>Sed finibus urna ut ligula vulputate, et egestas nulla ultrices. Quisque suscipit nisl lacus, quis luctus ante mattis non. Donec pulvinar placerat iaculis. Vivamus id tincidunt leo. <b>Morbi et</b> eros magna.</p> <p> Praesent sit amet lorem ligula. Maecenas accumsan diam vitae dolor tristique pulvinar. Integer pulvinar hendrerit efficitur. Etiam sed lacus urna.</p> <p>Cras cursus, turpis eget ultrices bibendum, nibh <i>lorem ultricies felis, vitae auctor erat</i> enim ut neque.</p>",
       "image": "biuro_brillante.jpg",

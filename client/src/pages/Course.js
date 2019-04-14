@@ -8,6 +8,7 @@ import { LinkContainer } from 'react-router-bootstrap'
 import { GoMegaphone } from "react-icons/go";
 import { Opinion } from '../components/modals/OpinionModal'
 import { Toggle } from '../components/Toggle'
+import {Video}from '../components/Videos'
 
 class Course extends React.Component {
     state = {
@@ -108,7 +109,8 @@ class Course extends React.Component {
                                 </Jumbotron>
                             </Col>
                             <Col sm="12" md="7">
-                                <div dangerouslySetInnerHTML={{ __html: this.state.course.content }}></div>
+                                <Video video = { this.state.course.video }/>
+                                <div dangerouslySetInnerHTML={{ __html: this.state.course.content }}/>
                             </Col>
                         </Row>
                         <Row>

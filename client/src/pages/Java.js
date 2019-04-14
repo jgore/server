@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Videos from '../components/Videos';
+import {Videos} from '../components/Videos';
 import Axios from 'axios';
 import Error from '../components/Error'
 import Loading from '../components/Loading'

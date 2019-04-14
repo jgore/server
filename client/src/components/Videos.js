@@ -55,4 +55,4 @@ const Video = ({ video: { link, title, shortDescription } }) => {
 //     }
 // }
 
-export default Videos
+export  { Videos, Video }

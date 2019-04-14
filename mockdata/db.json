@@ -2,11 +2,16 @@
   "courses": [
     {
       "title": "Kurs programowania Java 00 [ Korepetycje ]",
-      "content": "",
-      "image": "pawel.jpg",
+      "content": "<h5>Korepetycje</h5>, <p> Filmik powyżej dokładnie opisuje jak wyglądają nasze korepetycje. Dla odrobniny utrudnienia nagraliśmy go w jęzku angielskim. </p>",
+      "image": "biuro_brillante.jpg",
       "duration": "2-3 tygodnie",
       "price": "1 tydzień 198 PLN  [99 PLN / H ] [ 2h korki + 5 dni support ]",
       "shortDescription": "Jeśli chcesz z nami realizować trudniejsze kursy, ale jeszcze brak Ci doświadczenia to jest kurs dla Ciebie. Tutaj zajęcia są 1 na 1 gdzie korepetytor prowadzi Cie kroku po kroku jak zainstalowac IntelliJ, Maven, Git. Jak pracować z JAVA żebyś mógł porobić rzeczy trudniejsze.",
+      "video": {
+        "link": "https://www.youtube.com/embed/aA8uRIm71Yw",
+        "title" : "Korepetycje",
+        "shortDescription" : "Filmiki obrazue jak wyglądają nasze korepetycje z programowania."
+      },
       "technologies": [
         {
           "name": "java-technologies",
@@ -36,10 +41,15 @@
     {
       "title": "Kurs programowania Java 0 [ Company ]",
       "content": "<h5>Lorem ipsum dolor sit amet</h5>, <p>consectetur adipiscing elit. Cras eu dolor convallis, lobortis risus at, porta ante.</p> <p>Sed finibus urna ut ligula vulputate, et egestas nulla ultrices. Quisque suscipit nisl lacus, quis luctus ante mattis non. Donec pulvinar placerat iaculis. Vivamus id tincidunt leo. <b>Morbi et</b> eros magna.</p> <p> Praesent sit amet lorem ligula. Maecenas accumsan diam vitae dolor tristique pulvinar. Integer pulvinar hendrerit efficitur. Etiam sed lacus urna.</p> <p>Cras cursus, turpis eget ultrices bibendum, nibh <i>lorem ultricies felis, vitae auctor erat</i> enim ut neque.</p>",
-      "image": "biuro_brillante.jpg",
+      "image": "pawel.jpg",
       "duration": "6 tygodni",
       "price": "1 weekend 276PLN  [ 69 PLN / H ]",
       "shortDescription": "Jeśli stawiasz swoje pierwsze kroki w programowaniu i chciałbyś się nauczyć od najlepszych to jest właśnie kurs dla Ciebie. Tutaj spokojnie uczymy się pracy z IntelliJ, Git, JAVA. Stopniowo podnosimy poziom trudności, abyś mógł zapisać się na kurs Junior",
+      "video": {
+        "link": "https://www.youtube.com/embed/aA8uRIm71Yw",
+        "title" : "Company",
+        "shortDescription" : "Projekt [ Company ] jest projektem wprowadzającym w trudniejsze, większe projekty nie mniej jednak używa tej samej architektury i tych samych narzędzi co projekty trudniejsze nie mniej jednak w mniej skomplikowany sposób. Świetny na start w towrzeniu aplikacji w JAVA. "
+      },
       "technologies": [
         {
           "name": "java-technologies",
@@ -54,14 +64,6 @@
             "Mockito",
             "Maven",
             "Git"
-          ]
-        },
-        {
-          "name": "javascript-technologies",
-          "technologies": [
-            "React + Redux",
-            "NodeJS",
-            "Express"
           ]
         }
       ],
@@ -99,6 +101,11 @@
       "duration": "12 tygodni",
       "price": "1 weekend 276PLN [ 69 PLN / H ] [ Sobota 8-12 ]",
       "shortDescription": "To jest kurs dla ludzi którzy już ukończyli kurs pierwszy bądź przeszli pozytywnie naszą rozmowę techniczną. To jest pierwsza prawdziwa, rzeczywista aplikacja w JAVA + Node.JS + React.JS. No bullshit. Piszesz projekt, który realnie już jest wdrożony na produkcji. ",
+      "video": {
+        "link": "https://www.youtube.com/embed/aA8uRIm71Yw",
+        "title" : "Shop",
+        "shortDescription" : "Projekt [ Shop] Jest już pierwszą realną, prawdziwą, działajacą na prdoukcji, aplikacją jaka stworzysz. Mamy też swoją własną wersję produkcyjna projektu SHOP natomiast tutaj razem z Toba piszemy ja od nowa."
+      },
       "technologies": [
         {
           "name": "java-technologies",
@@ -113,6 +120,14 @@
             "Mockito",
             "Maven",
             "Git"
+          ]
+        },
+        {
+          "name": "javascript-technologies",
+          "technologies": [
+            "React + Redux",
+            "NodeJS",
+            "Express"
           ]
         }
       ],
@@ -150,6 +165,11 @@
       "duration": "4 tygodnie",
       "price": "1 weekend 396 PLN [99 PLN / H] [ Sobota 8-12 ]",
       "shortDescription": "Przygotowanie stricte pod rozmowę kwalifikacyjną bazując na zdobytej wiedzy. Kurs uzupełniający do kursu Junior",
+      "video": {
+        "link": "https://www.youtube.com/embed/aA8uRIm71Yw",
+        "title" : "Flights",
+        "shortDescription" : "Projekt [ Flights]  jest projektem uzupełniającym do poprzednich i jest już stricte przygotowaniem do zdobycia pracy jako Java Developer. Rozmowa rekrutacjna. Odpowiedzi na pytania rekrutacyjne. Projekt rekrutacyjny taki sam jak w firmach do której będziesz aplikował."
+      },
       "technologies": [
         {
           "name": "java-technologies",
@@ -201,6 +221,11 @@
       "duration": "30 tygodni",
       "price": "1 weekend 476 PLN [119 PLN / H] [ Sobota 8-12 ]",
       "shortDescription": "Dla Ciebie nazwa Bookify nic nie znaczy, ale dla wielu ludzi to jedno z najgorszych słow jakie istnieją na ziemi. Wielu programistów odeszlo z powodu Bookify. W tym  miejscu będziemy sprawiać aby świat stał się lepszym miejscem i napiszemy Bookify 2 ",
+      "video": {
+        "link": "https://www.youtube.com/embed/aA8uRIm71Yw",
+        "title" : "Bookify",
+        "shortDescription" : "Projekt [ Bookify]  jest najtudniejszym z naszych projektów gdy już zdobędziesz prace jako Java Developer i chcesz się dalej rozwijać. Tutaj przepisujemy od nowa wielką, potężną, zarabiającą duże miliony dolarów aplikację, która jest się sprzedała, ale jest kompletnie źle napisana."
+      },
       "technologies": [
         {
           "name": "java-technologies",
@@ -288,11 +313,6 @@
       "link": "https://www.youtube.com/embed/Jatq9-00y88",
       "title": "GJava - Java dev - junior, mid, senior - zarobki",
       "shortDescription": "Ile powinieneś zarabiać jako junior, mid albo senior Java Developer ? Skąd wiadomo na jakim jestes poziomie ? O tym wszystkim powinieneś dowiedzieć sie tutaj."
-    },
-    {
-      "link": "https://www.youtube.com/embed/aA8uRIm71Yw",
-      "title": "GJava - short introduction in english - maybe you will want to try course in English ?",
-      "shortDescription": "Czasami na zajęciach pojawiają się części po angielsku. Czasem na rozmowie kwalifikacyjnej rowniez stąd warto ten język znać."
     },
     {
       "link": "https://www.youtube.com/embed/c95Yysdfuts",

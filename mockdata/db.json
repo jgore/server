@@ -1,7 +1,7 @@
 {
   "courses": [
     {
-      "title": "Kurs programowania Java 00 [ Korki ]",
+      "title": "Kurs programowania Java 00 [ Korepetycje ]",
       "content": "<h5>Opis zajęć</h5> <p> Mamy opracowany taki FLOW, który jest najskuteczniejszy do nauki z resztą jest to nasza realizacja SCRUM. <h3>Daily standup</h3> </p> <ul> <li> 1) Co robiłem wczoraj ?</li> <li> 2) Co będę robił dzisiaj ? </li> <li> 3) Czy mam jakiś problem ?</li> </ul> <p> Zwykle koło 9-10 na SLACK piszesz te 3 rzeczy powyżej jak w SCRUM w pracy.  <h3>Zajęcia 2h </h3> <p> W trakcie zajęć robimy sobie CODE REVIEW i TESTING tego co było zrobione w domu. Dalej robimy IN PROGRESS kolejnego zadania i zadajemy sobie zadanie domowe </p> <h3>Praca własna</h3> <p> W domu należy poświęcić w PN-PT min 1-2 h dziennie na zrobienie zadania domowego żeby był realny PROGRESS. W ramach korepetycji jest support patrz punkt 1.</p>",
       "image": "biuro_brillante.jpg",
       "duration": "2-3 tygodnie",

@@ -86,6 +86,8 @@ class Course extends React.Component {
                             </Col>
                         </Row>
                         <Row>
+                        </Row>
+                        <Row>
                             <Col sm="12" md="5">
                                 <Jumbotron fluid className="technologies">
                                     <Container>
@@ -110,7 +112,7 @@ class Course extends React.Component {
                             </Col>
                             <Col sm="12" md="7">
                                 <Video video = { this.state.course.video }/>
-                                <div dangerouslySetInnerHTML={{ __html: this.state.course.content }}/>
+                                <div className={'border border-primary'} style={{padding: 20 }} dangerouslySetInnerHTML={{ __html: this.state.course.content }}/>
                             </Col>
                         </Row>
                         <Row>

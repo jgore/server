@@ -1,16 +1,16 @@
 {
   "courses": [
     {
-      "title": "Kurs programowania Java 00 [ Korepetycje ]",
-      "content": "<h5>Korepetycje</h5>, <p> Filmik powyżej dokładnie opisuje jak wyglądają nasze korepetycje. Dla odrobniny utrudnienia nagraliśmy go w jęzku angielskim. </p>",
+      "title": "Kurs programowania Java 00 [ Korki ]",
+      "content": "<h5>Opis zajęć</h5> <p> Mamy opracowany taki FLOW, który jest najskuteczniejszy do nauki z resztą jest to nasza realizacja SCRUM. <h3>Daily standup</h3> </p> <ul> <li> 1) Co robiłem wczoraj ?</li> <li> 2) Co będę robił dzisiaj ? </li> <li> 3) Czy mam jakiś problem ?</li> </ul> <p> Zwykle koło 9-10 na SLACK piszesz te 3 rzeczy powyżej jak w SCRUM w pracy.  <h3>Zajęcia 2h </h3> <p> W trakcie zajęć robimy sobie CODE REVIEW i TESTING tego co było zrobione w domu. Dalej robimy IN PROGRESS kolejnego zadania i zadajemy sobie zadanie domowe </p> <h3>Praca własna</h3> <p> W domu należy poświęcić w PN-PT min 1-2 h dziennie na zrobienie zadania domowego żeby był realny PROGRESS. W ramach korepetycji jest support patrz punkt 1.</p>",
       "image": "biuro_brillante.jpg",
       "duration": "2-3 tygodnie",
       "price": "1 tydzień 198 PLN  [99 PLN / H ] [ 2h korki + 5 dni support ]",
       "shortDescription": "Jeśli chcesz z nami realizować trudniejsze kursy, ale jeszcze brak Ci doświadczenia to jest kurs dla Ciebie. Tutaj zajęcia są 1 na 1 gdzie korepetytor prowadzi Cie kroku po kroku jak zainstalowac IntelliJ, Maven, Git. Jak pracować z JAVA żebyś mógł porobić rzeczy trudniejsze.",
       "video": {
         "link": "https://www.youtube.com/embed/aA8uRIm71Yw",
-        "title" : "Korepetycje",
-        "shortDescription" : "Filmiki obrazue jak wyglądają nasze korepetycje z programowania."
+        "title": "Korepetycje",
+        "shortDescription": "Filmiki obrazuje jak wyglądają nasze korepetycje z programowania."
       },
       "technologies": [
         {
@@ -36,6 +36,39 @@
             "Express"
           ]
         }
+      ],
+      "reviews": [
+        {
+          "image": "guest.png",
+          "username": "Łukasz",
+          "content": "Z usług Pawła korzystam już od jakiegoś czasu i z czystym sumieniem mogę go polecić, jako nauczyciela i mentora. Prócz potężnej wiedzy, posiada on również umiejętność jej przekazywania, co przełożyło się na znalezienie lepszej oferty pracy ;)",
+          "grade": 5
+        },
+        {
+          "image": "guest.png",
+          "username": "Jacek",
+          "content": "Kiedy poznałem Pawła miałem wiedzę teoretyczną z zakresu Javy, ale brakowało mi rozeznania w zakresie architektury oprogramowania. Paweł z łatwością pomógł mi się ‘ogarnąć’ w kodzie złożonego programu. To prawdziwy pasjonat programowania, mający jednocześnie duże praktyczne doświadczenie w pracy dla największych firm IT. Nie przekazuje oderwanej od praktyki teorii, ale uczy jak pisać kod. Dzięki niemu udało mi się utrzymać w pierwszej pracy w branży i dziś mogę powiedzieć o sobie, że jestem już doświadczonym programistą.",
+          "grade": 5
+        },
+        {
+          "image": "guest.png",
+          "username": "Pawel",
+          "content": "Już od pierwszych zajęć dało się wyczuć, że Paweł bardzo angażuje się w pomoc przy nauce Javy, a swój poziom dopasowuje do poziomu kursanta. Pomoc ze strony Pawła jest dostępna w zasadzie bez przerwy - komunikacja odbywa się za pomocą komunikatora slack, co daje poczucie oparcia przez cały czas trwania kursu.Na zajęciach wspólnie realizujemy projekt od podstaw co pozwala na przejście przez wszystkie etapy nauki. Bardzo polecam zajęcia z Pawłem.",
+          "grade": 5
+        },
+        {
+          "image": "guest.png",
+          "username": "Łukasz",
+          "content" : "Paweł jest bardzo pozytywną osobą z ogromną wiedzą. Potrafi tę wiedzę przekazać, a co więcej widać u niego duże zaangażowanie jeśli chodzi o pomoc w zrozumieniu omawianej na korepetycjach tematyki. Polecam :-)",
+          "grade": 5
+        },
+        {
+          "image": "guest.png",
+          "username" : "Filip",
+          "content" : "Zajęcia z Pawłem są prowadzone w świetny sposób. Szczególnie ciekawe jest to, że od początku realizujemy projekt dzięki czemu pomijamy realizowanie bezsensownych zadań. Jak najbardziej polecam :)",
+          "grade": 5
+        }
+
       ]
     },
     {
@@ -43,12 +76,12 @@
       "content": "<h5>Lorem ipsum dolor sit amet</h5>, <p>consectetur adipiscing elit. Cras eu dolor convallis, lobortis risus at, porta ante.</p> <p>Sed finibus urna ut ligula vulputate, et egestas nulla ultrices. Quisque suscipit nisl lacus, quis luctus ante mattis non. Donec pulvinar placerat iaculis. Vivamus id tincidunt leo. <b>Morbi et</b> eros magna.</p> <p> Praesent sit amet lorem ligula. Maecenas accumsan diam vitae dolor tristique pulvinar. Integer pulvinar hendrerit efficitur. Etiam sed lacus urna.</p> <p>Cras cursus, turpis eget ultrices bibendum, nibh <i>lorem ultricies felis, vitae auctor erat</i> enim ut neque.</p>",
       "image": "pawel.jpg",
       "duration": "6 tygodni",
-      "price": "1 weekend 276PLN  [ 69 PLN / H ]",
+      "price": "1 tydzień 276PLN  [ 69 PLN / H ]",
       "shortDescription": "Jeśli stawiasz swoje pierwsze kroki w programowaniu i chciałbyś się nauczyć od najlepszych to jest właśnie kurs dla Ciebie. Tutaj spokojnie uczymy się pracy z IntelliJ, Git, JAVA. Stopniowo podnosimy poziom trudności, abyś mógł zapisać się na kurs Junior",
       "video": {
         "link": "https://www.youtube.com/embed/aA8uRIm71Yw",
-        "title" : "Company",
-        "shortDescription" : "Projekt [ Company ] jest projektem wprowadzającym w trudniejsze, większe projekty nie mniej jednak używa tej samej architektury i tych samych narzędzi co projekty trudniejsze nie mniej jednak w mniej skomplikowany sposób. Świetny na start w towrzeniu aplikacji w JAVA. "
+        "title": "Company",
+        "shortDescription": "Projekt [ Company ] jest projektem wprowadzającym w trudniejsze, większe projekty nie mniej jednak używa tej samej architektury i tych samych narzędzi co projekty trudniejsze nie mniej jednak w mniej skomplikowany sposób. Świetny na start w towrzeniu aplikacji w JAVA. "
       },
       "technologies": [
         {
@@ -68,30 +101,6 @@
         }
       ],
       "reviews": [
-        {
-          "image": "qwe1.jpeg",
-          "username": "Stefan Batorski",
-          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
-          "grade": 4
-        },
-        {
-          "image": "qwe2.jpeg",
-          "username": "Janusz Batorski",
-          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae ",
-          "grade": 5
-        },
-        {
-          "image": "qwe4.jpeg",
-          "username": "Stefan Batorski",
-          "content": "Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
-          "grade": 4
-        },
-        {
-          "image": "qwe3.jpeg",
-          "username": "Stefan Batorski",
-          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
-          "grade": 5
-        }
       ]
     },
     {
@@ -99,12 +108,12 @@
       "content": "<h5>Lorem ipsum dolor sit amet</h5>, <p>consectetur adipiscing elit. Cras eu dolor convallis, lobortis risus at, porta ante.</p> <p>Sed finibus urna ut ligula vulputate, et egestas nulla ultrices. Quisque suscipit nisl lacus, quis luctus ante mattis non. Donec pulvinar placerat iaculis. Vivamus id tincidunt leo. <b>Morbi et</b> eros magna.</p> <p> Praesent sit amet lorem ligula. Maecenas accumsan diam vitae dolor tristique pulvinar. Integer pulvinar hendrerit efficitur. Etiam sed lacus urna.</p> <p>Cras cursus, turpis eget ultrices bibendum, nibh <i>lorem ultricies felis, vitae auctor erat</i> enim ut neque.</p>",
       "image": "sala.jpg",
       "duration": "12 tygodni",
-      "price": "1 weekend 276PLN [ 69 PLN / H ] [ Sobota 8-12 ]",
+      "price": "1 tydzień 276PLN [ 69 PLN / H ] [ Sobota 8-12 ]",
       "shortDescription": "To jest kurs dla ludzi którzy już ukończyli kurs pierwszy bądź przeszli pozytywnie naszą rozmowę techniczną. To jest pierwsza prawdziwa, rzeczywista aplikacja w JAVA + Node.JS + React.JS. No bullshit. Piszesz projekt, który realnie już jest wdrożony na produkcji. ",
       "video": {
         "link": "https://www.youtube.com/embed/aA8uRIm71Yw",
-        "title" : "Shop",
-        "shortDescription" : "Projekt [ Shop] Jest już pierwszą realną, prawdziwą, działajacą na prdoukcji, aplikacją jaka stworzysz. Mamy też swoją własną wersję produkcyjna projektu SHOP natomiast tutaj razem z Toba piszemy ja od nowa."
+        "title": "Shop",
+        "shortDescription": "Projekt [ Shop] Jest już pierwszą realną, prawdziwą, działajacą na prdoukcji, aplikacją jaka stworzysz. Mamy też swoją własną wersję produkcyjna projektu SHOP natomiast tutaj razem z Toba piszemy ja od nowa."
       },
       "technologies": [
         {
@@ -131,44 +140,19 @@
           ]
         }
       ],
-      "reviews": [
-        {
-          "image": "qwe1.jpeg",
-          "username": "Stefan Batorski",
-          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
-          "grade": 4
-        },
-        {
-          "image": "qwe2.jpeg",
-          "username": "Janusz Batorski",
-          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae ",
-          "grade": 5
-        },
-        {
-          "image": "qwe4.jpeg",
-          "username": "Stefan Batorski",
-          "content": "Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
-          "grade": 4
-        },
-        {
-          "image": "qwe3.jpeg",
-          "username": "Stefan Batorski",
-          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
-          "grade": 5
-        }
-      ]
+      "reviews": []
     },
     {
       "title": "Kurs programowania Java 1++ (junior++) [ Flights ]",
       "content": "<h5>Lorem ipsum dolor sit amet</h5>, <p>consectetur adipiscing elit. Cras eu dolor convallis, lobortis risus at, porta ante.</p> <p>Sed finibus urna ut ligula vulputate, et egestas nulla ultrices. Quisque suscipit nisl lacus, quis luctus ante mattis non. Donec pulvinar placerat iaculis. Vivamus id tincidunt leo. <b>Morbi et</b> eros magna.</p> <p> Praesent sit amet lorem ligula. Maecenas accumsan diam vitae dolor tristique pulvinar. Integer pulvinar hendrerit efficitur. Etiam sed lacus urna.</p> <p>Cras cursus, turpis eget ultrices bibendum, nibh <i>lorem ultricies felis, vitae auctor erat</i> enim ut neque.</p>",
       "image": "macbook.jpg",
       "duration": "4 tygodnie",
-      "price": "1 weekend 396 PLN [99 PLN / H] [ Sobota 8-12 ]",
+      "price": "1 tydzień 396 PLN [99 PLN / H] [ Sobota 8-12 ]",
       "shortDescription": "Przygotowanie stricte pod rozmowę kwalifikacyjną bazując na zdobytej wiedzy. Kurs uzupełniający do kursu Junior",
       "video": {
         "link": "https://www.youtube.com/embed/aA8uRIm71Yw",
-        "title" : "Flights",
-        "shortDescription" : "Projekt [ Flights]  jest projektem uzupełniającym do poprzednich i jest już stricte przygotowaniem do zdobycia pracy jako Java Developer. Rozmowa rekrutacjna. Odpowiedzi na pytania rekrutacyjne. Projekt rekrutacyjny taki sam jak w firmach do której będziesz aplikował."
+        "title": "Flights",
+        "shortDescription": "Projekt [ Flights]  jest projektem uzupełniającym do poprzednich i jest już stricte przygotowaniem do zdobycia pracy jako Java Developer. Rozmowa rekrutacjna. Odpowiedzi na pytania rekrutacyjne. Projekt rekrutacyjny taki sam jak w firmach do której będziesz aplikował."
       },
       "technologies": [
         {
@@ -187,44 +171,19 @@
           ]
         }
       ],
-      "reviews": [
-        {
-          "image": "qwe1.jpeg",
-          "username": "Stefan Batorski",
-          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
-          "grade": 4
-        },
-        {
-          "image": "qwe2.jpeg",
-          "username": "Janusz Batorski",
-          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae ",
-          "grade": 5
-        },
-        {
-          "image": "qwe4.jpeg",
-          "username": "Stefan Batorski",
-          "content": "Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
-          "grade": 4
-        },
-        {
-          "image": "qwe3.jpeg",
-          "username": "Stefan Batorski",
-          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
-          "grade": 5
-        }
-      ]
+      "reviews": []
     },
     {
       "title": "Kurs programowania Java 2 (mid++) [ Bookify ]",
       "content": "<h5>Lorem ipsum dolor sit amet</h5>, <p>consectetur adipiscing elit. Cras eu dolor convallis, lobortis risus at, porta ante.</p> <p>Sed finibus urna ut ligula vulputate, et egestas nulla ultrices. Quisque suscipit nisl lacus, quis luctus ante mattis non. Donec pulvinar placerat iaculis. Vivamus id tincidunt leo. <b>Morbi et</b> eros magna.</p> <p> Praesent sit amet lorem ligula. Maecenas accumsan diam vitae dolor tristique pulvinar. Integer pulvinar hendrerit efficitur. Etiam sed lacus urna.</p> <p>Cras cursus, turpis eget ultrices bibendum, nibh <i>lorem ultricies felis, vitae auctor erat</i> enim ut neque.</p>",
       "image": "corpo.jpg",
       "duration": "30 tygodni",
-      "price": "1 weekend 476 PLN [119 PLN / H] [ Sobota 8-12 ]",
+      "price": "1 tydzień 476 PLN [119 PLN / H] [ Sobota 8-12 ]",
       "shortDescription": "Dla Ciebie nazwa Bookify nic nie znaczy, ale dla wielu ludzi to jedno z najgorszych słow jakie istnieją na ziemi. Wielu programistów odeszlo z powodu Bookify. W tym  miejscu będziemy sprawiać aby świat stał się lepszym miejscem i napiszemy Bookify 2 ",
       "video": {
         "link": "https://www.youtube.com/embed/aA8uRIm71Yw",
-        "title" : "Bookify",
-        "shortDescription" : "Projekt [ Bookify]  jest najtudniejszym z naszych projektów gdy już zdobędziesz prace jako Java Developer i chcesz się dalej rozwijać. Tutaj przepisujemy od nowa wielką, potężną, zarabiającą duże miliony dolarów aplikację, która jest się sprzedała, ale jest kompletnie źle napisana."
+        "title": "Bookify",
+        "shortDescription": "Projekt [ Bookify]  jest najtudniejszym z naszych projektów gdy już zdobędziesz prace jako Java Developer i chcesz się dalej rozwijać. Tutaj przepisujemy od nowa wielką, potężną, zarabiającą duże miliony dolarów aplikację, która jest się sprzedała, ale jest kompletnie źle napisana."
       },
       "technologies": [
         {
@@ -244,66 +203,6 @@
         }
       ],
       "reviews": [
-        {
-          "image": "qwe1.jpeg",
-          "username": "asd",
-          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
-          "grade": 4
-        },
-        {
-          "image": "qwe2.jpeg",
-          "username": "Janusz Batorski",
-          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae ",
-          "grade": 5
-        },
-        {
-          "image": "qwe4.jpeg",
-          "username": "Stefan Batorski",
-          "content": "Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
-          "grade": 4
-        },
-        {
-          "image": "qwe3.jpeg",
-          "username": "Stefan Batorski",
-          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
-          "grade": 5
-        },
-        {
-          "image": "qwe3.jpeg",
-          "username": "Stefan Batorski",
-          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
-          "grade": 5
-        },
-        {
-          "image": "qwe3.jpeg",
-          "username": "Stefan Batorski",
-          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
-          "grade": 5
-        },
-        {
-          "image": "qwe3.jpeg",
-          "username": "Stefan Batorski",
-          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
-          "grade": 5
-        },
-        {
-          "image": "qwe3.jpeg",
-          "username": "Stefan Batorski",
-          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
-          "grade": 5
-        },
-        {
-          "image": "qwe3.jpeg",
-          "username": "Stefan Batorski",
-          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
-          "grade": 5
-        },
-        {
-          "image": "qwe3.jpeg",
-          "username": "Stefan Batorski",
-          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum purus nec elit commodo malesuada vel in elit. Nam ex ante, tincidunt et ultricies et, pretium vitae massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus arcu augue, eleifend vitae posuere in, scelerisque at magna. ",
-          "grade": 5
-        }
       ]
     }
   ],

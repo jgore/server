@@ -1,5 +1,6 @@
-const mongoose = require('mongoose')
-const {Schema} = mongoose
+const mongoose = require("mongoose");
+const Reviews = require("./Review");
+const { Schema } = mongoose;
 
 const courseSchema = new Schema({
   title: {
@@ -42,10 +43,8 @@ const courseSchema = new Schema({
   technologies: {
     type: Array
   },
-  reviews: {
-    type: Array
-  }
-})
+  reviews: [Reviews]
+});
 
-const CoursesCollection = mongoose.model('courses', courseSchema)
-module.exports = CoursesCollection
+const CoursesCollection = mongoose.model("courses", courseSchema);
+module.exports = CoursesCollection;

@@ -28,17 +28,10 @@ passport.use(new GoogleStrategy({
   if (existingUser) {
     done(null, existingUser)
   } else {
-    let emails = profile.emails
-    let email
-    if (emails && emails.size !==0 )
-    {
-      email = emails[0].value
-    }
     const user = await new User(
       {
         googleId: profile.id,
         name: profile.displayName,
-        email
       })
       .save()
     done(null, user)

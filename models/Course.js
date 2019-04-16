@@ -7,6 +7,11 @@ const courseSchema = new Schema({
     type: String,
     required: true
   },
+  shortTitle: {
+    type: String,
+    unique: true,
+    required: true
+  },
   video: {
     link: {
       type: String,

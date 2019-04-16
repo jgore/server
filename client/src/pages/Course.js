@@ -24,7 +24,7 @@ class Course extends React.Component {
 
     componentDidMount() {
         Axios({
-            url: `/api/courses/${this.props.match.params.courseId}`,
+            url: `/api/courses/${this.props.match.params.shortTitle}`,
             method: "get"
         }).then((res) => {
             console.log(res.data)

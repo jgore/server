@@ -7,9 +7,9 @@ module.exports = (app) => {
             res.send(docs)
         })
     })
-    app.get("/api/courses/:courseId", (req, res) => {
+    app.get("/api/courses/:shortTitle", (req, res) => {
         CourseCollection.findOne({
-            _id: req.params.courseId
+            shortTitle: req.params.shortTitle
         }).then((doc) => {
             if (!doc) {
                 return res.status(404).send()

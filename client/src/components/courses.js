@@ -72,6 +72,9 @@ const Course = ({
       </Card.Title>
       <Card.Body>
         <p>
+          <b>Projekt</b>: {shortTitle}
+        </p>
+        <p>
           <b>Cena</b>: {price}
         </p>
         <p>

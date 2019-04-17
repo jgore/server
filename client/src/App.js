@@ -7,6 +7,7 @@ import Main from "./components/Main";
 import Footer from "./components/Footer";
 import WindowEvents from "./utils/WindowEvents";
 import dotenv from "dotenv";
+import Axios from 'axios'
 
 let GlobalContext = React.createContext();
 

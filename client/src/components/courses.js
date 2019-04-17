@@ -105,9 +105,13 @@ const Course = ({
         <LinkContainer to={`/course/${shortTitle}`}>
           <Button variant="warning">Zobacz szczegóły</Button>
         </LinkContainer>
-        <Button onClick={() => modalOpen(reviews)}>
-          Opinie ({reviews.length})
-        </Button>
+        {reviews.length > 0 ? (
+          <Button onClick={() => modalOpen(reviews)}>
+            Opinie ({reviews.length})
+          </Button>
+        ) : (
+          <Button>Brak opini</Button>
+        )}
       </Card.Footer>
     </Card>
   );

@@ -35,13 +35,13 @@ const Opinions = ({ reviews }) => {
   );
 };
 
-export const Opinion = ({ username, content, grade, path, createdAt }) => (
+export const Opinion = ({ user, content, grade, path, createdAt }) => (
   <div className="opinion">
     <div className="opinion__image">
       <Image src={path} rounded />
     </div>
     <div className="opinion__content">
-      <h5>{username}</h5>
+      <h5>{user.name}</h5>
       <StarRating
         className="opinion__content__stars"
         size={25}
@@ -69,7 +69,9 @@ Opinions.propTypes = {
 export default ({ reviews, ...props }) => {
   return (
     <CustomModal
-      Body={() => Opinions({ reviews })}
+      Body={function() {
+        return Opinions({ reviews });
+      }}
       Header={() => Header({ title: "Opinie o kursie" })}
       Footer={props => Footer(props)}
       size="lg"

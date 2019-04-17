@@ -1,7 +1,6 @@
 import React from 'react'
 
 export const Toggle = ({ title, titleOnDrop, isDrop, onClick, ...props }) => {
-    console.log(isDrop)
     return (
         <div>
             {

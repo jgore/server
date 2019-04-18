@@ -2,7 +2,6 @@ const { getFromRedis } = require("../../config/connectToCache");
 const { getFromJWT } = require("../../services/jwt");
 
 exports.privateRoute = (req, res, next) => {
-  console.log(req.headers);
   if (!req.headers.token) {
     return res.status(401).send();
   }
@@ -12,7 +11,7 @@ exports.privateRoute = (req, res, next) => {
     }
     try {
       let decoded = getFromJWT(secret);
-      req.decoded = decoded;
+      req.session = decoded;
       next();
     } catch (err) {
       return res.status(401).send();

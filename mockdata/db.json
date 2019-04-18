@@ -73,12 +73,6 @@
         }
       ],
       "reviews": [
-        {
-          "image": "guest.png",
-          "username" : "Filip",
-          "content" : "Zajęcia z Pawłem są prowadzone w świetny sposób. Szczególnie ciekawe jest to, że od początku realizujemy projekt dzięki czemu pomijamy realizowanie bezsensownych zadań. Jak najbardziej polecam :)",
-          "grade": 5
-        }
       ]
     },
     {
@@ -121,12 +115,7 @@
         }
       ],
       "reviews": [
-        {
-          "image": "guest.png",
-          "username" : "Marcin",
-          "content" : "Dobrze mi się z Pawłem współpracuje - Polecam.",
-          "grade": 5
-        }
+       
       ]
     },
     {
@@ -160,12 +149,7 @@
           ]
         }
       ],
-      "reviews": [   {
-        "image": "gore.jpg",
-        "username" : "Paweł",
-        "content" : "Ten kurs jest lekko zmienionym 3-cim etapem rekrutacji w jednej z firm do której rekrutowałem - zadanie techniczne. Zapraszam ",
-        "grade": 5
-      }]
+      "reviews": [   ]
     },
     {
       "title": "Kurs programowania Java 2 (mid++)",

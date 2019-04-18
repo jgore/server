@@ -70,6 +70,7 @@ class Course extends React.Component {
       }
     })
       .then(res => {
+        console.log(res);
         this.setState({
           ...this.state,
           isAddModalOpen: false,

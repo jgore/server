@@ -84,7 +84,7 @@
     {
       "title": "Kurs programowania Java 1 (junior)",
       "shortTitle":"Shop",
-      "content": "<h5>Opis projektu</h5>, <p> Shop jest już miejscem gdzie możemy sprawdzić siebie i przetestować to czego sie nauczyliśmy. Tworzymy Java Backend API w TDD. Każda kolejna warstwa ma testy albo jednostkowe albo integracyjn. Po zbudowaniu i przestestowaniu aplikacji w JAVA postaramy się przejsc do <b>części frontwendowej</b> [ dla chętnych ].</p> <p> Shop jest sklepem internetowym umożliwiającym użytkownikom sprzedaz produktów. </p>",
+      "content": "<h5>Opis projektu</h5> <p> Shop jest już miejscem gdzie możemy sprawdzić siebie i przetestować to czego sie nauczyliśmy. Tworzymy Java Backend API w TDD. Każda kolejna warstwa ma testy albo jednostkowe albo integracyjn. Po zbudowaniu i przestestowaniu aplikacji w JAVA postaramy się przejsc do <b>części frontwendowej</b> [ dla chętnych ].</p> <p> Shop jest sklepem internetowym umożliwiającym użytkownikom sprzedaz produktów. To prawdziwy produkt, który w ramach kursu wydajemy na produkcje, co jest ostatecznym testem czy napisaliśmy go poprawnie. </p>",
       "image": "sala.jpg",
       "duration": "12 tygodni",
       "price": "1 tydzień 276PLN [ 69 PLN / H ] [ Sobota 8-12 ]",

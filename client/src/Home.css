@@ -36,6 +36,9 @@
         box-shadow: none;
 }
 
+.opinion__image img {
+    border: 1px solid rgba(0, 0, 0, 0.246);
+}
 
 @media screen and (min-width: 1001px) {
     .opinion {

@@ -39,6 +39,37 @@
         }
       ],
       "reviews": [
+        {
+          "image": "guest.png",
+          "username": "Łukasz",
+          "content": "Z usług Pawła korzystam już od jakiegoś czasu i z czystym sumieniem mogę go polecić, jako nauczyciela i mentora. Prócz potężnej wiedzy, posiada on również umiejętność jej przekazywania, co przełożyło się na znalezienie lepszej oferty pracy ;)",
+          "grade": 5
+        },
+        {
+          "image": "guest.png",
+          "username": "Jacek",
+          "content": "Kiedy poznałem Pawła miałem wiedzę teoretyczną z zakresu Javy, ale brakowało mi rozeznania w zakresie architektury oprogramowania. Paweł z łatwością pomógł mi się ‘ogarnąć’ w kodzie złożonego programu. To prawdziwy pasjonat programowania, mający jednocześnie duże praktyczne doświadczenie w pracy dla największych firm IT. Nie przekazuje oderwanej od praktyki teorii, ale uczy jak pisać kod. Dzięki niemu udało mi się utrzymać w pierwszej pracy w branży i dziś mogę powiedzieć o sobie, że jestem już doświadczonym programistą.",
+          "grade": 5
+        },
+        {
+          "image": "guest.png",
+          "username": "Pawel",
+          "content": "Już od pierwszych zajęć dało się wyczuć, że Paweł bardzo angażuje się w pomoc przy nauce Javy, a swój poziom dopasowuje do poziomu kursanta. Pomoc ze strony Pawła jest dostępna w zasadzie bez przerwy - komunikacja odbywa się za pomocą komunikatora slack, co daje poczucie oparcia przez cały czas trwania kursu.Na zajęciach wspólnie realizujemy projekt od podstaw co pozwala na przejście przez wszystkie etapy nauki. Bardzo polecam zajęcia z Pawłem.",
+          "grade": 5
+        },
+        {
+          "image": "guest.png",
+          "username": "Łukasz",
+          "content" : "Paweł jest bardzo pozytywną osobą z ogromną wiedzą. Potrafi tę wiedzę przekazać, a co więcej widać u niego duże zaangażowanie jeśli chodzi o pomoc w zrozumieniu omawianej na korepetycjach tematyki. Polecam :-)",
+          "grade": 5
+        },
+        {
+          "image": "guest.png",
+          "username" : "Filip",
+          "content" : "Zajęcia z Pawłem są prowadzone w świetny sposób. Szczególnie ciekawe jest to, że od początku realizujemy projekt dzięki czemu pomijamy realizowanie bezsensownych zadań. Jak najbardziej polecam :)",
+          "grade": 5
+        }
+
       ]
     },
     {

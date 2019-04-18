@@ -4,6 +4,7 @@ import { MdClose } from 'react-icons/md'
 import PropTypes from 'prop-types'
 
 const CustomModal = ({ Body, Header, Footer, isModal, handleClose, ...options }) => {
+    console.log(handleClose)
     return (
         <Modal onHide={() => handleClose()} show={isModal} {...options}>
             <Modal.Header>

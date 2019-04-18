@@ -28,6 +28,7 @@ class App extends Component {
     Axios(`/api/current_user`)
       .then(res => {
         console.log(res.data);
+        localStorage.setItem("token", res.data.token);
         this.setState({
           auth: res.data || false,
           error: null
@@ -62,12 +63,13 @@ class App extends Component {
     this.setState({
       auth: false
     });
+    localStorage.removeItem("token");
   }
 
   componentDidMount() {
     Axios(`/api/current_user`)
       .then(res => {
-        console.log(res);
+        localStorage.setItem("token", res.data.token);
         this.setState({
           auth: res.data || false,
           error: null

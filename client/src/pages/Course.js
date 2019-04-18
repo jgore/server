@@ -21,7 +21,8 @@ class Course extends React.Component {
       isDrop: false,
       isAddModalOpen: false,
       opinion: {
-        grade: 0
+        grade: 0,
+        content: ""
       }
     };
     this.ratingChanged = this.ratingChanged.bind(this);
@@ -55,31 +56,85 @@ class Course extends React.Component {
     });
   };
 
-  addOpinion = auth => {
-    Axios({
-      url: `${API_URL}/api/reviews`,
-      method: "POST",
-      data: {
-        opinion: {
-          ...this.state.opinion,
-          shortTitle: this.props.match.params.shortTitle
+  addOpinion = (auth, logout) => {
+    console.log(this.state.opinion);
+    let ask;
+    if (this.state.isReviewed) {
+      ask = Axios({
+        url: `${API_URL}/api/courses/${this.props.match.params.shortTitle}`,
+        method: "PUT",
+        data: {
+          opinion: {
+            ...this.state.opinion
+          }
+        },
+        headers: {
+          token: auth.token
         }
-      },
-      headers: {
-        token: auth.token
-      }
-    })
-      .then(res => {
-        console.log(res);
+      }).then(res => {
+        let averageRate = "Brak opinii";
+        for (let i = 0; i < res.data.reviews.length; i++) {
+          if (i == 0) {
+            averageRate = res.data.reviews[i].grade;
+          } else {
+            averageRate += res.data.reviews[i].grade;
+          }
+        }
+
+        if (typeof averageRate == "number") {
+          averageRate = averageRate / res.data.reviews.length;
+        }
         this.setState({
           ...this.state,
           isAddModalOpen: false,
-          opinion: {}
+          course: {
+            ...this.state.course,
+            averageRate,
+            reviews: res.data.reviews
+          }
         });
-      })
-      .catch(err => {
-        console.log(err);
       });
+    } else {
+      ask = Axios({
+        url: `${API_URL}/api/reviews`,
+        method: "POST",
+        data: {
+          opinion: {
+            ...this.state.opinion,
+            shortTitle: this.props.match.params.shortTitle
+          }
+        },
+        headers: {
+          token: auth.token
+        }
+      }).then(res => {
+        let averageRate = "Brak Opinii";
+        for (let i = 0; i < res.data.course.reviews.length; i++) {
+          if (i == 0) {
+            averageRate = res.data.course.reviews[i].grade;
+          } else {
+            averageRate += res.data.course.reviews[i].grade;
+          }
+        }
+        if (typeof averageRate == "number") {
+          res.data.course.averageRate =
+            averageRate / res.data.course.reviews.length;
+        } else {
+          res.data.course.averageRate = averageRate;
+        }
+        this.setState({
+          ...this.state,
+          isAddModalOpen: false,
+          isReviewed: true,
+          course: res.data.course
+        });
+      });
+    }
+    ask.catch(err => {
+      if (err.response.status == 401) {
+        logout();
+      }
+    });
   };
 
   onDropDown() {
@@ -89,27 +144,58 @@ class Course extends React.Component {
   }
 
   componentDidMount() {
-    Axios({
-      url: `/api/courses/${this.props.match.params.shortTitle}`,
-      method: "get"
-    }).then(res => {
+    let ask;
+    if (localStorage.getItem("token")) {
+      ask = Axios({
+        url: `/api/courses/${this.props.match.params.shortTitle}`,
+        method: "get",
+        headers: {
+          token: localStorage.getItem("token")
+        }
+      }).then(res => {
+        if (res.data.isReviewed) {
+          this.setState({
+            opinion: {
+              ...res.data.opinion.reviews,
+              _id: res.data.opinion._id
+            }
+          });
+        }
+        return res;
+      });
+    } else {
+      ask = Axios({
+        url: `/api/courses/${this.props.match.params.shortTitle}`,
+        method: "get"
+      });
+    }
+    ask.then(res => {
+      console.log(res.data);
       let averageRate = "Brak Opinii";
-      for (let i = 0; i < res.data.reviews.length; i++) {
+      for (let i = 0; i < res.data.course.reviews.length; i++) {
         if (i == 0) {
-          averageRate = res.data.reviews[i].grade;
+          averageRate = res.data.course.reviews[i].grade;
         } else {
-          averageRate += res.data.reviews[i].grade;
+          averageRate += res.data.course.reviews[i].grade;
         }
       }
       if (typeof averageRate == "number") {
-        res.data.averageRate = averageRate / res.data.reviews.length;
+        res.data.course.averageRate =
+          averageRate / res.data.course.reviews.length;
       } else {
-        res.data.averageRate = averageRate;
+        res.data.course.averageRate = averageRate;
       }
+      console.log(this.state.opinion, 153);
       this.setState({
-        course: res.data
+        ...this.state,
+        course: res.data.course,
+        isReviewed: res.data.isReviewed
       });
-    });
+    }).catch(err => {
+      if(err.response.status == 401) {
+        localStorage.removeItem("token")
+      }
+    })
   }
 
   ratingChanged(newRating) {
@@ -136,7 +222,7 @@ class Course extends React.Component {
   render() {
     return (
       <AuthContext.Consumer>
-        {({ auth }) => (
+        {({ auth, logout }) => (
           <div className="Course">
             {this.state.course ? (
               <React.Fragment>
@@ -192,13 +278,16 @@ class Course extends React.Component {
                             marginLeft: "0.5rem",
                             marginTop: "1rem",
                             fontSize: "26px",
-                            fontWeight: "500"
+                            fontWeight: "500",
+                            boxShadow: "0px 0px 5px 1px rgba(0,0,0,0.75)"
                           }}
                           onClick={this.handleAddModalOpen.bind(this)}
                           variant="success"
                         >
                           <MdOpenInNew />
-                          Dodaj Opinię
+                          {this.state.isReviewed
+                            ? "Edytuj Opinię"
+                            : "Dodaj Opinię"}
                         </Button>
                         <AddOpinionModal
                           handleClose={this.handleAddModalClose}
@@ -208,6 +297,9 @@ class Course extends React.Component {
                           grade={this.state.opinion.grade}
                           addOpinion={this.addOpinion}
                           auth={auth}
+                          logout={logout}
+                          isReviewed={this.state.isReviewed}
+                          review={this.state.opinion}
                         />
                       </React.Fragment>
                     ) : (

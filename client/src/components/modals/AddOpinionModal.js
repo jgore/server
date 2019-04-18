@@ -7,11 +7,13 @@ export default ({
   isOpen,
   onChange,
   onRatingChange,
-  grade,
   addOpinion,
-  auth
+  auth,
+  logout,
+  review,
+  isReviewed
 }) => {
-  console.log(auth)
+  console.log(auth);
   return (
     <Modal show={isOpen} onHide={handleClose}>
       <Modal.Header closeButton>
@@ -24,6 +26,7 @@ export default ({
           aria-label="With textarea"
           style={{ height: 200, resize: "none" }}
           onChange={onChange}
+          value={review.content}
           name="content"
         />
         <Form.Label style={{ marginTop: "3rem" }}>Ocena</Form.Label>
@@ -33,12 +36,12 @@ export default ({
           count={5}
           onChange={onRatingChange}
           edit={true}
-          value={grade}
+          value={review.grade}
         />
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="primary" onClick={() => addOpinion(auth)}>
-          Dodaj
+        <Button variant="primary" onClick={() => addOpinion(auth, logout)}>
+          {isReviewed ? "Edytuj" : "Dodaj"}
         </Button>
         <Button variant="secondary" onClick={handleClose}>
           Zamknij

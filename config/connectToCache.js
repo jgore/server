@@ -6,6 +6,7 @@ const client = redis.createClient(
 );
 
 client.on("error", function(err) {
+  console.log(err);
   throw new Error(`Problem with Redis connection`);
 });
 
@@ -15,6 +16,7 @@ client.on("connect", function() {
 
 const addToRedis = (key, value) => {
   client.set(key, value);
+  client.expire(key, 3600 * 24);
 };
 
 const getFromRedis = (key, callback) => {

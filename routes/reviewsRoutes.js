@@ -41,9 +41,9 @@ module.exports = app => {
             }
           )
             .then(doc => {
-              if (doc.nModified == 1) {
-                return res.send(doc);
-              }
+              CourseCollection.findOne({ shortTitle }).then(course => {
+                res.send({ course });
+              });
             })
             .catch(err => {
               return res.status(400).send();
@@ -53,5 +53,33 @@ module.exports = app => {
           res.status(400).send();
         });
     });
+  });
+
+  app.put("/api/courses/:shortTitle", privateRoute, (req, res) => {
+    console.log(req.params);
+    CourseCollection.updateOne(
+      {
+        shortTitle: req.params.shortTitle,
+        "reviews.user.googleId": req.session.googleId
+      },
+      {
+        $set: {
+          "reviews.$.content": req.body.opinion.content,
+          "reviews.$.grade": req.body.opinion.grade
+        }
+      }
+    )
+      .then(stats => {
+        console.log(stats);
+        CourseCollection.findOne({
+          shortTitle: req.params.shortTitle
+        }).then(doc => {
+          res.status(200).send(doc);
+        });
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(400).send();
+      });
   });
 };

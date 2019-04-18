@@ -9,12 +9,12 @@ module.exports = mongoURI => {
     if (err) {
       throw new Error(`Problem with connect to Mongo Database: ${mongoURI}`);
     }
-    console.log(`Connected to Mongo Database: ${mongoURI}`);
+    console.log(`[MONGODB] Connected to Mongo Database: ${mongoURI}`);
 
     if (process.env.NODE_ENV != "production") {
       fs.readFile(path.join(__dirname, "../mockdata/db.json"), (err, data) => {
         if (err) {
-          console.log(`Problem with load mock data from file`);
+          console.log(`[MONGODB] Problem with load mock data from file`);
         }
 
         const parsed = JSON.parse(data);

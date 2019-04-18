@@ -7,7 +7,7 @@ const VideoCollection = require("../models/Video");
 module.exports = mongoURI => {
   mongoose.connect(mongoURI, { useNewUrlParser: true }, err => {
     if (err) {
-      console.log(`Problem with connect to Mongo Database: ${mongoURI}`);
+      throw new Error(`Problem with connect to Mongo Database: ${mongoURI}`);
     }
     console.log(`Connected to Mongo Database: ${mongoURI}`);
 

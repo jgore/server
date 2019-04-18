@@ -2,7 +2,6 @@ import React, { Component, useContext } from "react";
 import { Button, Nav as NavComponent, Navbar } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import { FaGoogle } from "react-icons/fa";
-import Axios from "axios/index";
 import { AuthContext } from "../App";
 
 class Nav extends Component {
@@ -29,7 +28,7 @@ class Nav extends Component {
     navExpanded: false
   };
 
-  renderContent(auth) {
+  renderContent(auth, logout) {
     switch (auth) {
       case null:
         return "still logging";
@@ -55,7 +54,10 @@ class Nav extends Component {
               className={"waves-effect waves-light btn red"}
               href={"/api/logout"}
             >
-              <Button className="flexible flexible-horizontal-center google-button">
+              <Button
+                className="flexible flexible-horizontal-center google-button"
+                onClick={logout}
+              >
                 <FaGoogle /> Logout
               </Button>{" "}
             </a>
@@ -107,7 +109,7 @@ class Nav extends Component {
                     );
                   })}
                 </NavComponent>
-                {this.renderContent(auth)}
+                {this.renderContent(auth, logout)}
               </Navbar.Collapse>
             </Navbar>
           </div>

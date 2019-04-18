@@ -1,25 +1,42 @@
-const passport = require('passport')
+const passport = require("passport");
+const { createToken, removeToken } = require("../services/token");
 
-module.exports = (app) => {
+module.exports = app => {
+  app.get(
+    "/auth/google",
+    passport.authenticate("google", {
+      scope: ["profile", "email"]
+    })
+  );
 
-  app.get('/auth/google', passport.authenticate('google', {
-    scope: ['profile', 'email']
-  }))
-
-  app.get('/auth/google/callback',
-    passport.authenticate('google'),
-    (req,res) =>{
-    res.redirect("/")
+  app.get(
+    "/auth/google/callback",
+    passport.authenticate("google"),
+    (req, res) => {
+      res.redirect("/");
     }
-  )
+  );
 
-  app.get('/api/current_user', (req, res) => {
-    res.send(req.user)
-  })
+  app.get("/api/current_user", (req, res) => {
+    if (!req.user) {
+      return res.status(401).send();
+    }
+    let googleId = req.user.googleId;
+    let token = createToken({ googleId });
+    res.send({ token });
+  });
 
-  app.get('/api/logout', (req, res) => {
-    req.logout()
-    res.redirect("/")
-  })
+  app.post("/api/logout", (req, res) => {
+    try {
+      removeToken(req.body.token);
+    } catch (err) {
+      res.status(201).send();
+    }
+    res.status(200).send();
+  });
 
-}
+  app.get("/api/logout", (req, res) => {
+    req.logout();
+    res.redirect("/");
+  });
+};

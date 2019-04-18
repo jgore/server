@@ -26,7 +26,7 @@ const Opinions = ({ reviews }) => {
         return (
           <Opinion
             key={index}
-            path={`${PUBLIC_RESOURSES_URL}/${value.image}`}
+            path={`${PUBLIC_RESOURSES_URL}/${value.user.image}`}
             {...value}
           />
         );

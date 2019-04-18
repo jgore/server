@@ -27,7 +27,7 @@ class App extends Component {
   login() {
     Axios(`/api/current_user`)
       .then(res => {
-        console.log(res)
+        console.log(res.data);
         this.setState({
           auth: res.data || false,
           error: null
@@ -52,6 +52,13 @@ class App extends Component {
   }
 
   logout() {
+    Axios({
+      method: "POST",
+      url: "/api/logout",
+      data: {
+        token: this.state.auth.token
+      }
+    });
     this.setState({
       auth: false
     });
@@ -60,7 +67,7 @@ class App extends Component {
   componentDidMount() {
     Axios(`/api/current_user`)
       .then(res => {
-        console.log(res)
+        console.log(res);
         this.setState({
           auth: res.data || false,
           error: null
@@ -91,8 +98,8 @@ class App extends Component {
         <AuthContext.Provider
           value={{
             auth: this.state.auth,
-            logout: this.logout,
-            login: this.login
+            logout: this.logout.bind(this),
+            login: this.login.bind(this)
           }}
         >
           <Router>

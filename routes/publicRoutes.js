@@ -8,12 +8,10 @@ module.exports = app => {
     });
   });
   app.get("/api/courses/:shortTitle", (req, res) => {
-    console.log(req.params.shortTitle);
     CourseCollection.findOne({
       shortTitle: req.params.shortTitle
     })
       .then(doc => {
-        console.log(doc);
         if (!doc) {
           return res.status(404).send();
         }

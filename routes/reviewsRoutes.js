@@ -1,10 +1,11 @@
 const CourseCollection = require("../models/Course");
 const UserCollection = require("../models/User");
+const { privateRoute } = require("./middlewares/authMiddleware");
 
 module.exports = app => {
-  app.post("/api/reviews", (req, res) => {
-    let { shortTitle, content, grade, googleId } = req.body.opinion;
-    console.log(googleId);
+  app.post("/api/reviews", privateRoute, (req, res) => {
+    let { shortTitle, content, grade } = req.body.opinion,
+      googleId = req.decoded.googleId;
     UserCollection.findOne({ googleId })
       .then(user => {
         if (!user) {

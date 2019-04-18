@@ -62,9 +62,11 @@ class Course extends React.Component {
       data: {
         opinion: {
           ...this.state.opinion,
-          shortTitle: this.props.match.params.shortTitle,
-          googleId: auth.googleId
+          shortTitle: this.props.match.params.shortTitle
         }
+      },
+      headers: {
+        token: auth.token
       }
     })
       .then(res => {

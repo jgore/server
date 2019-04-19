@@ -21,9 +21,9 @@ module.exports = app => {
     if (!req.user) {
       return res.status(401).send();
     }
-    let googleId = req.user.googleId;
+    let { googleId, name } = req.user;
     let token = createToken({ googleId });
-    res.send({ token });
+    res.send({ token, name });
   });
 
   app.post("/api/logout", (req, res) => {

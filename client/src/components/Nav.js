@@ -49,7 +49,7 @@ class Nav extends Component {
             style={{ color: "white" }}
             className="flexible flexible-horizontal-center flexible-vertical-space-between"
           >
-            Witaj, {this.state.auth.name}
+            Witaj, {auth.name}
             <a
               className={"waves-effect waves-light btn red"}
               href={"/api/logout"}

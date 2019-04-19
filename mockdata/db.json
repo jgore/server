@@ -32,9 +32,10 @@
         {
           "name": "javascript-technologies",
           "technologies": [
-            "React + Redux",
+            "React",
             "NodeJS",
-            "Express"
+            "Express",
+            "Mongo db"
           ]
         }
       ],
@@ -108,9 +109,10 @@
         {
           "name": "javascript-technologies",
           "technologies": [
-            "React + Redux",
+            "React",
             "NodeJS",
-            "Express"
+            "Express",
+            "Mongo db"
           ]
         }
       ],

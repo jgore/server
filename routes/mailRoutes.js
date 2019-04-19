@@ -16,7 +16,8 @@ module.exports = (app) => {
         subject: req.body.subject,
         text: req.body.text,
         email: req.body.email,
-        phone: req.body.phone
+        phone: req.body.phone,
+        online: req.body.online
       }).save(function (err, message) {
       if (err) console.log(err)
       return message
@@ -27,7 +28,8 @@ module.exports = (app) => {
       subject: req.body.subject,
       text: req.body.text,
       email: req.body.email,
-      phone : req.body.phone
+      phone : req.body.phone,
+      online: req.body.online
     }
     sendEmail(options, function (error, info) {
       if (error) {

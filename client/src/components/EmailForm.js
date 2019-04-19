@@ -14,26 +14,14 @@ class EmailForm extends Component {
       courses: [],
       isLoading: true,
       error: null,
-      isVerified: null
+      isVerified: null,
+      online: null,
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleCaptcha = this.handleCaptcha.bind(this)
   }
-
-  handleCaptcha(response) {
-    if (response) {
-      this.setState({
-        isVerified: "VERIFIED"
-      })
-    } else {
-      this.setState({
-        isVerified: "UNVERIFIED"
-      })
-    }
-  }
-
 
   render() {
     return (
@@ -45,7 +33,7 @@ class EmailForm extends Component {
             <h2 className="header">Formularz kontaktowy</h2>
             <label className="mr-sm-2" htmlFor="subject">Temat</label>
             <select onChange={this.handleChange} className="custom-select mr-sm-2" id="subject">
-              <option selected>Wybierz kurs...</option>
+              <option defaultValue>Wybierz kurs...</option>
               <option value="java00">Kurs Programowania Java 00 - Korepetycje [ 0 lat doświadczenia ]</option>
               <option value="java0">Kurs Programowania Java 0 - Company [ 0 lat doświadczenia ]</option>
               <option value="java1">Kurs Programowania Java 1 - Shop [ 0,1,2 lat doświadczenia ]</option>
@@ -60,6 +48,11 @@ class EmailForm extends Component {
             <textarea required value={this.state.text} onChange={this.handleChange} cols={40} rows={10}
               className="form-control" id="text"
               placeholder="text" />
+          </div>
+
+          <div style={{ margin: 20 }} className="form-group form-check">
+            <input onChange={this.handleChange} type="checkbox" className="form-check-input" id="online" />
+            <label className="form-check-label" htmlFor="online">Czy kurs ma być Online ?</label>
           </div>
 
           <div style={{ margin: 20 }} className="form-group">
@@ -109,8 +102,6 @@ class EmailForm extends Component {
     )
   }
 
-
-
   recaptchaLoaded() {
     console.log("Captcha loaded")
   }
@@ -119,7 +110,7 @@ class EmailForm extends Component {
     if (event.target.type === "text") {
       this.setState({ phone: event.target.value })
     }
-    if (event.target.type === "email") {
+    else if (event.target.type === "email") {
       this.setState({ email: event.target.value })
     }
     else if (event.target.type === "textarea") {
@@ -127,6 +118,9 @@ class EmailForm extends Component {
     }
     else if (event.target.type === 'select-one') {
       this.setState({ subject: event.target.value });
+    }
+    else if (event.target.type === 'checkbox') {
+      this.setState({ online: event.target.value });
     }
   }
 
@@ -138,7 +132,8 @@ class EmailForm extends Component {
         subject: this.state.subject,
         text: this.state.text,
         email: this.state.email,
-        phone: this.state.phone
+        phone: this.state.phone,
+        online: this.state.online
       })
         .then((res) => {
           alert('Email was sent')
@@ -168,6 +163,18 @@ class EmailForm extends Component {
     } else {
       this.setState({
         isVerified: false
+      })
+    }
+  }
+
+  handleCaptcha(response) {
+    if (response) {
+      this.setState({
+        isVerified: "VERIFIED"
+      })
+    } else {
+      this.setState({
+        isVerified: "UNVERIFIED"
       })
     }
   }

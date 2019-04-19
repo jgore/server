@@ -1,17 +1,17 @@
 import React from "react";
 import Axios from "axios";
-import { PUBLIC_RESOURSES_URL, API_URL } from "../utils/variables";
-import { Row, Col, Image, Jumbotron, Container, Button } from "react-bootstrap";
+import {PUBLIC_RESOURSES_URL} from "../utils/variables";
+import {Button, Col, Container, Image, Jumbotron, Row} from "react-bootstrap";
 import Loading from "../components/Loading";
 import Stars from "../components/ReactStars";
-import { LinkContainer } from "react-router-bootstrap";
-import { GoMegaphone } from "react-icons/go";
-import { Opinion } from "../components/modals/OpinionModal";
-import { Toggle } from "../components/Toggle";
-import { Video } from "../components/Videos";
-import { AuthContext } from "../App";
+import {LinkContainer} from "react-router-bootstrap";
+import {GoMegaphone} from "react-icons/go";
+import {Opinion} from "../components/modals/OpinionModal";
+import {Toggle} from "../components/Toggle";
+import {Video} from "../components/Videos";
+import {AuthContext} from "../App";
 import AddOpinionModal from "../components/modals/AddOpinionModal";
-import { MdOpenInNew } from "react-icons/md";
+import {MdOpenInNew} from "react-icons/md";
 
 class Course extends React.Component {
   constructor() {
@@ -61,7 +61,7 @@ class Course extends React.Component {
     let ask;
     if (this.state.isReviewed) {
       ask = Axios({
-        url: `${API_URL}/api/courses/${this.props.match.params.shortTitle}`,
+        url: `/api/courses/${this.props.match.params.shortTitle}`,
         method: "PUT",
         data: {
           opinion: {
@@ -74,14 +74,14 @@ class Course extends React.Component {
       }).then(res => {
         let averageRate = "Brak opinii";
         for (let i = 0; i < res.data.reviews.length; i++) {
-          if (i == 0) {
+          if (i === 0) {
             averageRate = res.data.reviews[i].grade;
           } else {
             averageRate += res.data.reviews[i].grade;
           }
         }
 
-        if (typeof averageRate == "number") {
+        if (typeof averageRate === "number") {
           averageRate = averageRate / res.data.reviews.length;
         }
         this.setState({
@@ -96,7 +96,7 @@ class Course extends React.Component {
       });
     } else {
       ask = Axios({
-        url: `${API_URL}/api/reviews`,
+        url: `/api/reviews`,
         method: "POST",
         data: {
           opinion: {
@@ -110,13 +110,13 @@ class Course extends React.Component {
       }).then(res => {
         let averageRate = "Brak Opinii";
         for (let i = 0; i < res.data.course.reviews.length; i++) {
-          if (i == 0) {
+          if (i === 0) {
             averageRate = res.data.course.reviews[i].grade;
           } else {
             averageRate += res.data.course.reviews[i].grade;
           }
         }
-        if (typeof averageRate == "number") {
+        if (typeof averageRate === "number") {
           res.data.course.averageRate =
             averageRate / res.data.course.reviews.length;
         } else {
@@ -131,7 +131,7 @@ class Course extends React.Component {
       });
     }
     ask.catch(err => {
-      if (err.response.status == 401) {
+      if (err.response.status === 401) {
         logout();
       }
     });
@@ -173,13 +173,13 @@ class Course extends React.Component {
       console.log(res.data);
       let averageRate = "Brak Opinii";
       for (let i = 0; i < res.data.course.reviews.length; i++) {
-        if (i == 0) {
+        if (i === 0) {
           averageRate = res.data.course.reviews[i].grade;
         } else {
           averageRate += res.data.course.reviews[i].grade;
         }
       }
-      if (typeof averageRate == "number") {
+      if (typeof averageRate === "number") {
         res.data.course.averageRate =
           averageRate / res.data.course.reviews.length;
       } else {
@@ -192,7 +192,7 @@ class Course extends React.Component {
         isReviewed: res.data.isReviewed
       });
     }).catch(err => {
-      if(err.response.status == 401) {
+      if(err.response.status === 401) {
         localStorage.removeItem("token")
       }
     })
@@ -246,7 +246,7 @@ class Course extends React.Component {
                     <div className="flexible flexible-horizontal-center">
                       <b>Średnia ocena: </b>
                       {this.state.course.averageRate}
-                      {typeof this.state.course.averageRate == "number" ? (
+                      {typeof this.state.course.averageRate === "number" ? (
                         <React.Fragment>
                           <Stars
                             size={20}
@@ -355,7 +355,7 @@ class Course extends React.Component {
                 </Row>
                 <Row>
                   <Col sm="12">
-                    {this.state.course.reviews.length != 0 ? (
+                    {this.state.course.reviews.length !== 0 ? (
                       <Opinion
                         path={`../${PUBLIC_RESOURSES_URL}/${
                           this.state.course.reviews[0].user.image
@@ -377,7 +377,7 @@ class Course extends React.Component {
                         >
                           {this.state.course.reviews.map((value, index) => (
                             <React.Fragment key={index}>
-                              {index != 0 ? (
+                              {index !== 0 ? (
                                 <Opinion
                                   path={`../${PUBLIC_RESOURSES_URL}/${
                                     value.user.image

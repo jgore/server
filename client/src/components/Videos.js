@@ -1,5 +1,4 @@
-import React, { useContext } from 'react'
-import { Global } from '../App'
+import React from 'react'
 
 const Videos = ({ videos }) => (
     <div className="flexible flexible-column flexible-horizontal-center">
@@ -27,6 +26,7 @@ const Video = ({ video: { link, title, shortDescription } }) => {
     return (
         <div className="card video-card">
             <iframe
+                title={shortDescription}
                 width={width}
                 height={height}
                 src={link}

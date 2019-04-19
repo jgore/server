@@ -8,10 +8,11 @@ var transporter = nodemailer.createTransport({
   }
 });
 
-var sendEmail = function ({subject, text, email, phone}, callback) {
+var sendEmail = function ({subject, text, email, phone, online}, callback) {
 
   text += `\n\n email : ${email}`
   text += `\n\n phone : ${phone}`
+  text += `\n\n online : ${online}`
   text += `\n\n Pozdrawiamy,  \n Zespól GJava \n http://gjava.pl  \n tel : 535 106 204`
 
 

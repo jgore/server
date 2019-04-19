@@ -22,7 +22,6 @@ const Opinions = ({ reviews }) => {
   return (
     <div>
       {reviews.map((value, index) => {
-        console.log(value);
         return (
           <Opinion
             key={index}

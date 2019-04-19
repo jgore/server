@@ -17,7 +17,6 @@ module.exports = app => {
         }
       }
     ]).then(rows => {
-      console.log(rows);
       if (rows.length > 0) {
         return res.status(409).send();
       }
@@ -26,7 +25,6 @@ module.exports = app => {
           if (!user) {
             return res.status(401).send();
           }
-          console.log(user);
           CourseCollection.updateOne(
             { shortTitle },
             {
@@ -56,7 +54,6 @@ module.exports = app => {
   });
 
   app.put("/api/courses/:shortTitle", privateRoute, (req, res) => {
-    console.log(req.params);
     CourseCollection.updateOne(
       {
         shortTitle: req.params.shortTitle,
@@ -70,7 +67,6 @@ module.exports = app => {
       }
     )
       .then(stats => {
-        console.log(stats);
         CourseCollection.findOne({
           shortTitle: req.params.shortTitle
         }).then(doc => {

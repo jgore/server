@@ -13,7 +13,6 @@ export default ({
   review,
   isReviewed
 }) => {
-  console.log(auth);
   return (
     <Modal show={isOpen} onHide={handleClose}>
       <Modal.Header closeButton>

@@ -126,7 +126,6 @@ class EmailForm extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    console.log(this.state.isVerified)
     if (this.state.isVerified) {
       Axios.post(`/api/sendEmail`, {
         subject: this.state.subject,

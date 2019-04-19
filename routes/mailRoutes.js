@@ -9,8 +9,6 @@ module.exports = (app) => {
 
   app.post('/api/sendEmail', (req, res) => {
 
-    console.log("POST SEND EMAIL ")
-
     const message = new Message(
       {
         subject: req.body.subject,
@@ -36,7 +34,6 @@ module.exports = (app) => {
         console.log(error);
         res.end("problem appeared when sending email")
       } else {
-        console.log('Email sent: ' + info.response);
         res.end("email sent correctly")
       }
     })

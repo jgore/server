@@ -14,7 +14,6 @@ let errors = [
 ]
 
 const Error = ({ errorCode }) => {
-    console.log(errorCode)
     return (
         <Jumbotron>
             <h1>Error: {errorCode}</h1>

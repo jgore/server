@@ -20,9 +20,7 @@ const Video = ({ video: { link, title, shortDescription } }) => {
 
     // globalContext.windowEvents.on("resize", function (e) {
     //     dim = onResizeFrame(width, height)
-    //     console.log(dim)
     // })
-    // console.log(dim)
     return (
         <div className="card video-card">
             <iframe

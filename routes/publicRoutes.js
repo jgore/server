@@ -11,7 +11,6 @@ module.exports = app => {
     });
   });
   app.get("/api/courses/:shortTitle", (req, res) => {
-    console.log("Asd")
     let promise1;
     if (req.headers.token) {
       promise1 = new Promise((resolve, reject) => {
@@ -22,18 +21,15 @@ module.exports = app => {
           if (!secret) {
             reject();
           }
-          console.log(secret)
           try {
             var decoded = getFromJWT(secret);
           } catch (err) {
             throw err;
           }
-          console.log(decoded)
           UserCollection.findOne({
             googleId: decoded.googleId
           })
             .then(user => {
-              console.log(user)
               CourseCollection.aggregate([
                 {
                   $unwind: "$reviews"
@@ -83,7 +79,6 @@ module.exports = app => {
     if (promise1) {
       Promise.all([promise1, promise2])
         .then(results => {
-          console.log(results);
           let document;
           if (results[0] != undefined && results[0]) {
             document = {
@@ -101,7 +96,6 @@ module.exports = app => {
               course: results[1]
             };
           }
-          console.log(JSON.stringify({}, undefined, 5));
           return document;
         })
         .then(document => {

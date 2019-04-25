@@ -5,22 +5,36 @@ import Stars from "../../helpers/ReactStars";
 import { LinkContainer } from "react-router-bootstrap";
 import { GoMegaphone } from "react-icons/go";
 import AddOpinionModal from "../../modals/AddOpinionModal";
-import { MdOpenInNew } from "react-icons/md";
+import { MdOpenInNew, MdStarBorder } from "react-icons/md";
 import PropTypes from "prop-types";
+import OpinionModal from "../../modals/OpinionModal";
 
 const CourseOverview = ({
-  course: { image, title, price, duration, averageRate, shortDescription },
+  course: {
+    image,
+    title,
+    price,
+    duration,
+    averageRate,
+    shortDescription,
+    reviews
+  },
   isReviewed,
   isAddModalOpen,
   opinion,
   auth,
   logout,
-  opinionModalEvents: {
+  addOpinionModalEvents: {
     handleAddModalOpen,
     handleAddModalClose,
     onChangeAddModal,
     onRatingChangeAddModal,
     addOpinion
+  },
+  opinionModalEvents: {
+    handleOpinionModalOpen,
+    handleOpinionModalClose,
+    isOpinionModalOpen
   }
 }) => {
   console.log(isAddModalOpen);
@@ -97,7 +111,29 @@ const CourseOverview = ({
         ) : (
           ""
         )}
+        {reviews.length > 0 ? (
+          <Button
+            className="flexible flexible-horizontal-center call-button"
+            style={{
+              marginLeft: ".5rem",
+              marginTop: "1rem",
+              background: "#007bff"
+            }}
+            onClick={handleOpinionModalOpen}
+          >
+            <MdStarBorder />
+            Pokaż opinie
+          </Button>
+        ) : (
+          ""
+        )}
       </Col>
+      <OpinionModal
+        isModal={isOpinionModalOpen}
+        reviews={reviews}
+        handleClose={handleOpinionModalClose}
+        imagePath={`../${PUBLIC_RESOURSES_URL}`}
+      />
     </Row>
   );
 };

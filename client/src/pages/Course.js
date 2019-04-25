@@ -16,6 +16,7 @@ class Course extends React.Component {
       course: null,
       isDrop: false,
       isAddModalOpen: false,
+      isOpinionModalOpen: false,
       opinion: {
         grade: 0,
         content: ""
@@ -24,6 +25,8 @@ class Course extends React.Component {
     this.ratingChanged = this.ratingChanged.bind(this);
     this.onChangeAddModal = this.onChangeAddModal.bind(this);
     this.onRatingChangeAddModal = this.onRatingChangeAddModal.bind(this);
+    this.handleOpinionModalClose = this.handleOpinionModalClose.bind(this);
+    this.handleAddModalOpen = this.handleAddModalOpen.bind(this);
     this.handleAddModalClose = this.handleAddModalClose.bind(this);
     this.handleAddModalOpen = this.handleAddModalOpen.bind(this);
     this.addOpinion = this.addOpinion.bind(this);
@@ -38,6 +41,18 @@ class Course extends React.Component {
   handleAddModalOpen = () => {
     this.setState({
       isAddModalOpen: true
+    });
+  };
+
+  handleOpinionModalClose = () => {
+    this.setState({
+      isOpinionModalOpen: false
+    });
+  };
+
+  handleOpinionModalOpen = () => {
+    this.setState({
+      isOpinionModalOpen: true
     });
   };
 
@@ -216,6 +231,7 @@ class Course extends React.Component {
   }
 
   render() {
+    console.log(this.state.course);
     return (
       <AuthContext.Consumer>
         {({ auth, logout }) => (
@@ -229,12 +245,17 @@ class Course extends React.Component {
                   opinion={this.state.opinion}
                   auth={auth}
                   logout={logout}
-                  opinionModalEvents={{
+                  addOpinionModalEvents={{
                     handleAddModalOpen: this.handleAddModalOpen,
                     handleAddModalClose: this.handleAddModalClose,
                     onChangeAddModal: this.onChangeAddModal,
                     onRatingChangeAddModal: this.onRatingChangeAddModal,
                     addOpinion: this.addOpinion
+                  }}
+                  opinionModalEvents={{
+                    handleOpinionModalOpen: this.handleOpinionModalOpen,
+                    handleOpinionModalClose: this.handleOpinionModalClose,
+                    isOpinionModalOpen: this.state.isOpinionModalOpen
                   }}
                 />
                 <CourseDetails course={this.state.course} />

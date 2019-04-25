@@ -6,15 +6,12 @@ import { PUBLIC_RESOURSES_URL } from "../../utils/variables";
 import StarRating from "../helpers/ReactStars";
 import { Modal } from "react-bootstrap";
 
-const Opinions = ({ reviews }) => (
+const Opinions = ({ reviews, imagePath }) => (
   <div>
     {reviews.map((value, index) => {
+      let path = imagePath ? imagePath : PUBLIC_RESOURSES_URL;
       return (
-        <Opinion
-          key={index}
-          path={`${PUBLIC_RESOURSES_URL}/${value.user.image}`}
-          {...value}
-        />
+        <Opinion key={index} path={`${path}/${value.user.image}`} {...value} />
       );
     })}
   </div>
@@ -52,13 +49,13 @@ Opinion.propTypes = {
   createdAt: PropTypes.string.isRequired
 };
 
-const OpinionModal = ({ reviews, handleClose, ...props }) => (
+const OpinionModal = ({ reviews, handleClose, imagePath, ...props }) => (
   <CustomModal size="lg" centered {...props} handleClose={handleClose}>
     <Modal.Header>
       <Modal.Title>Opinie</Modal.Title>
     </Modal.Header>
     <Modal.Body>
-      <Opinions reviews={reviews} />
+      <Opinions reviews={reviews} imagePath={imagePath} />
     </Modal.Body>
     <Modal.Footer>
       <Button
@@ -76,6 +73,6 @@ const OpinionModal = ({ reviews, handleClose, ...props }) => (
 OpinionModal.propTypes = {
   reviews: PropTypes.array.isRequired,
   handleClose: PropTypes.func.isRequired
-}
+};
 
 export default OpinionModal;

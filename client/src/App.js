@@ -93,8 +93,11 @@ class App extends Component {
       });
   }
 
+  componentDidCatch() {
+    console.log("Błąd")
+  }
+
   render() {
-    console.log(process.env.REACT_APP_TEST, "12");
     return (
       <GlobalContext.Provider value={{ windowEvents: this.state.windowEvents }}>
         <AuthContext.Provider

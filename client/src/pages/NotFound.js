@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Error from '../components/Error'
+import AppError from '../components/AppError'
 import Main from '../components/Main';
 
 class NotFound extends Component {
@@ -7,7 +7,7 @@ class NotFound extends Component {
         return (
             <div className="NotFound">
                 <Main>
-                    <Error
+                    <AppError
                         errorCode={404}
                     />
                 </Main>

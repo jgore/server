@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Videos} from '../components/Videos';
 import Axios from 'axios';
-import Error from '../components/Error'
+import AppError from '../components/AppError'
 import Loading from '../components/Loading'
 
 class Java extends Component {
@@ -44,7 +44,7 @@ class Java extends Component {
             <React.Fragment>
               {
                 this.state.error ?
-                  <Error
+                  <AppError
                     errorCode={this.state.error}
                   />
                   :

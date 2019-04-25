@@ -2,7 +2,7 @@ import React from "react";
 import { Card, Button } from "react-bootstrap";
 import { PUBLIC_RESOURSES_URL } from "../../../utils/variables";
 import PropTypes from "prop-types";
-import Stars from "./../../ReactStars";
+import Stars from "../../helpers/ReactStars";
 import { LinkContainer } from "react-router-bootstrap";
 
 const Course = ({

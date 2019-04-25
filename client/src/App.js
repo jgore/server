@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Pages from "./pages";
-import Nav from "./components/Nav";
-import Main from "./components/Main";
-import Footer from "./components/Footer";
+import Nav from "./components/sections/Nav";
+import Main from "./components/helpers/Main";
+import Footer from "./components/sections/Footer";
 import WindowEvents from "./utils/WindowEvents";
 import dotenv from "dotenv";
 import Axios from "axios";
@@ -94,7 +94,7 @@ class App extends Component {
   }
 
   componentDidCatch() {
-    console.log("Błąd")
+    console.log("Błąd");
   }
 
   render() {

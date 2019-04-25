@@ -1,19 +1,14 @@
-import React, { Component } from 'react';
-import AppError from '../components/errors/AppError'
-import Main from '../components/Main';
+import React, { Component } from "react";
+import AppError from "../components/errors/AppError";
 
 class NotFound extends Component {
-    render() {
-        return (
-            <div className="NotFound">
-                <Main>
-                    <AppError
-                        errorCode={404}
-                    />
-                </Main>
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div className="NotFound">
+        <AppError errorCode={404} />
+      </div>
+    );
+  }
 }
 
 export default NotFound;

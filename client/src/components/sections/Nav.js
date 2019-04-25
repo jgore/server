@@ -1,8 +1,8 @@
-import React, {Component} from "react";
-import {Button, Nav as NavComponent, Navbar} from "react-bootstrap";
-import {LinkContainer} from "react-router-bootstrap";
-import {FaGoogle} from "react-icons/fa";
-import {AuthContext} from "../App";
+import React, { Component } from "react";
+import { Button, Nav as NavComponent, Navbar } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
+import { FaGoogle } from "react-icons/fa";
+import { AuthContext } from "../../App";
 
 class Nav extends Component {
   state = {
@@ -87,7 +87,7 @@ class Nav extends Component {
   render() {
     return (
       <AuthContext.Consumer>
-        {({ auth, login, logout }) => (
+        {({ auth, logout }) => (
           <div className="flexible flexible-vertical-center sticky-nav-top">
             <Navbar
               bg="dark"

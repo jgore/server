@@ -1,8 +1,10 @@
 import React from "react";
 import { Modal, FormControl, Button, Form } from "react-bootstrap";
-import Stars from "../ReactStars";
+import Stars from "../helpers/ReactStars";
+import CustomModal from "./CustomModal";
+import PropTypes from 'prop-types'
 
-export default ({
+const AddOpinionModal = ({
   handleClose,
   isOpen,
   onChange,
@@ -14,7 +16,7 @@ export default ({
   isReviewed
 }) => {
   return (
-    <Modal show={isOpen} onHide={handleClose}>
+    <CustomModal isModal={isOpen} handleClose={handleClose}>
       <Modal.Header closeButton>
         <Modal.Title>Dodaj opinię</Modal.Title>
       </Modal.Header>
@@ -46,6 +48,20 @@ export default ({
           Zamknij
         </Button>
       </Modal.Footer>
-    </Modal>
+    </CustomModal>
   );
 };
+
+AddOpinionModal.propTypes = {
+  handleClose: PropTypes.func.isRequired,
+  isOpen: PropTypes.bool.isRequired,
+  onChange: PropTypes.func.isRequired,
+  onRatingChange: PropTypes.func.isRequired,
+  addOpinion: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
+  logout: PropTypes.func.isRequired,
+  review: PropTypes.object.isRequired,
+  isReviewed: PropTypes.bool.isRequired
+}
+
+export default AddOpinionModal;

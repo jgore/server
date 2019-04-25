@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Axios from "axios";
-import Loading from "../components/Loading";
+import Loading from "../components/helpers/Loading";
 import Courses from "../components/sections/courses/Courses";
 import AppError from "../components/errors/AppError";
 

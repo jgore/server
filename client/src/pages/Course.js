@@ -1,17 +1,17 @@
 import React from "react";
 import Axios from "axios";
-import {PUBLIC_RESOURSES_URL} from "../utils/variables";
-import {Button, Col, Container, Image, Jumbotron, Row} from "react-bootstrap";
-import Loading from "../components/Loading";
-import Stars from "../components/ReactStars";
-import {LinkContainer} from "react-router-bootstrap";
-import {GoMegaphone} from "react-icons/go";
-import {Opinion} from "../components/modals/OpinionModal";
-import {Toggle} from "../components/Toggle";
-import {Video} from "../components/Videos";
-import {AuthContext} from "../App";
+import { PUBLIC_RESOURSES_URL } from "../utils/variables";
+import { Button, Col, Container, Image, Jumbotron, Row } from "react-bootstrap";
+import Loading from "../components/helpers/Loading";
+import Stars from "../components/helpers/ReactStars";
+import { LinkContainer } from "react-router-bootstrap";
+import { GoMegaphone } from "react-icons/go";
+import { Opinion } from "../components/modals/OpinionModal";
+import { Toggle } from "../components/helpers/Toggle";
+import Video from "../components/sections/videos/Video";
+import { AuthContext } from "../App";
 import AddOpinionModal from "../components/modals/AddOpinionModal";
-import {MdOpenInNew} from "react-icons/md";
+import { MdOpenInNew } from "react-icons/md";
 
 class Course extends React.Component {
   constructor() {
@@ -169,33 +169,35 @@ class Course extends React.Component {
         method: "get"
       });
     }
-    ask.then(res => {
-      console.log(res.data);
-      let averageRate = "Brak Opinii";
-      for (let i = 0; i < res.data.course.reviews.length; i++) {
-        if (i === 0) {
-          averageRate = res.data.course.reviews[i].grade;
-        } else {
-          averageRate += res.data.course.reviews[i].grade;
+    ask
+      .then(res => {
+        console.log(res.data);
+        let averageRate = "Brak Opinii";
+        for (let i = 0; i < res.data.course.reviews.length; i++) {
+          if (i === 0) {
+            averageRate = res.data.course.reviews[i].grade;
+          } else {
+            averageRate += res.data.course.reviews[i].grade;
+          }
         }
-      }
-      if (typeof averageRate === "number") {
-        res.data.course.averageRate =
-          averageRate / res.data.course.reviews.length;
-      } else {
-        res.data.course.averageRate = averageRate;
-      }
-      console.log(this.state.opinion, 153);
-      this.setState({
-        ...this.state,
-        course: res.data.course,
-        isReviewed: res.data.isReviewed
+        if (typeof averageRate === "number") {
+          res.data.course.averageRate =
+            averageRate / res.data.course.reviews.length;
+        } else {
+          res.data.course.averageRate = averageRate;
+        }
+        console.log(this.state.opinion, 153);
+        this.setState({
+          ...this.state,
+          course: res.data.course,
+          isReviewed: res.data.isReviewed
+        });
+      })
+      .catch(err => {
+        if (err.response.status === 401) {
+          localStorage.removeItem("token");
+        }
       });
-    }).catch(err => {
-      if(err.response.status === 401) {
-        localStorage.removeItem("token")
-      }
-    })
   }
 
   ratingChanged(newRating) {

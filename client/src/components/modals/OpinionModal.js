@@ -1,37 +1,27 @@
 import React from "react";
-import CustomModal from "../CustomModal";
+import CustomModal from "./CustomModal";
 import PropTypes from "prop-types";
 import { Image, Button } from "react-bootstrap";
 import { PUBLIC_RESOURSES_URL } from "../../utils/variables";
-import StarRating from "../ReactStars";
+import StarRating from "../helpers/ReactStars";
+import { Modal } from "react-bootstrap";
 
-const Header = ({ title }) => <h3>{title}</h3>;
-
-const Footer = ({ onClick }) => (
-  <Button
-    className="fixed-button call-button"
-    size="lg"
-    onClick={e => onClick(e)}
-    style={{ minWidth: 200 }}
-  >
-    Zamknij
-  </Button>
+const Opinions = ({ reviews }) => (
+  <div>
+    {reviews.map((value, index) => {
+      return (
+        <Opinion
+          key={index}
+          path={`${PUBLIC_RESOURSES_URL}/${value.user.image}`}
+          {...value}
+        />
+      );
+    })}
+  </div>
 );
 
-const Opinions = ({ reviews }) => {
-  return (
-    <div>
-      {reviews.map((value, index) => {
-        return (
-          <Opinion
-            key={index}
-            path={`${PUBLIC_RESOURSES_URL}/${value.user.image}`}
-            {...value}
-          />
-        );
-      })}
-    </div>
-  );
+Opinions.propTypes = {
+  reviews: PropTypes.array.isRequired
 };
 
 export const Opinion = ({ user, content, grade, path, createdAt }) => (
@@ -55,27 +45,37 @@ export const Opinion = ({ user, content, grade, path, createdAt }) => (
 );
 
 Opinion.propTypes = {
-  image: PropTypes.string.isRequired,
-  username: PropTypes.string.isRequired,
+  user: PropTypes.object.isRequired,
   content: PropTypes.string.isRequired,
-  grade: PropTypes.number.isRequired
+  grade: PropTypes.number.isRequired,
+  path: PropTypes.string.isRequired,
+  createdAt: PropTypes.string.isRequired
 };
 
-Opinions.propTypes = {
-  reviews: PropTypes.array.isRequired
-};
+const OpinionModal = ({ reviews, handleClose, ...props }) => (
+  <CustomModal size="lg" centered {...props} handleClose={handleClose}>
+    <Modal.Header>
+      <Modal.Title>Opinie</Modal.Title>
+    </Modal.Header>
+    <Modal.Body>
+      <Opinions reviews={reviews} />
+    </Modal.Body>
+    <Modal.Footer>
+      <Button
+        className="fixed-button call-button"
+        size="lg"
+        onClick={e => handleClose(e)}
+        style={{ minWidth: 200 }}
+      >
+        Zamknij
+      </Button>
+    </Modal.Footer>
+  </CustomModal>
+);
 
-export default ({ reviews, ...props }) => {
-  return (
-    <CustomModal
-      Body={function() {
-        return Opinions({ reviews });
-      }}
-      Header={() => Header({ title: "Opinie o kursie" })}
-      Footer={props => Footer(props)}
-      size="lg"
-      centered
-      {...props}
-    />
-  );
-};
+OpinionModal.propTypes = {
+  reviews: PropTypes.array.isRequired,
+  handleClose: PropTypes.func.isRequired
+}
+
+export default OpinionModal;

@@ -1,13 +1,13 @@
 import React from "react";
 import Axios from "axios";
 import { PUBLIC_RESOURSES_URL } from "../utils/variables";
-import { Col, Container, Jumbotron, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import Loading from "../components/helpers/Loading";
 import { Opinion } from "../components/modals/OpinionModal";
 import { Toggle } from "../components/helpers/Toggle";
-import Video from "../components/sections/videos/Video";
 import { AuthContext } from "../App";
 import CourseOverview from "../components/sections/course-page/CourseOverview";
+import CourseDetails from "../components/sections/course-page/CourseDetails";
 
 class Course extends React.Component {
   constructor() {
@@ -237,47 +237,7 @@ class Course extends React.Component {
                     addOpinion: this.addOpinion
                   }}
                 />
-                <Row>
-                  <Col>
-                    <h3>Szczegóły</h3>
-                  </Col>
-                </Row>
-                <Row />
-                <Row>
-                  <Col sm="12" md="5">
-                    <Jumbotron fluid className="technologies">
-                      <Container>
-                        <h4>Technologie:</h4>
-                        <ul>
-                          {this.state.course.technologies.map(
-                            (value, index) => (
-                              <React.Fragment key={index}>
-                                <h6>{value.name}:</h6>
-                                <ul>
-                                  {this.state.course.technologies[
-                                    index
-                                  ].technologies.map((technology, index) => (
-                                    <li key={index}>{technology}</li>
-                                  ))}
-                                </ul>
-                              </React.Fragment>
-                            )
-                          )}
-                        </ul>
-                      </Container>
-                    </Jumbotron>
-                  </Col>
-                  <Col sm="12" md="7">
-                    <Video video={this.state.course.video} />
-                    <div
-                      className={"border border-primary"}
-                      style={{ padding: 20 }}
-                      dangerouslySetInnerHTML={{
-                        __html: this.state.course.content
-                      }}
-                    />
-                  </Col>
-                </Row>
+                <CourseDetails course={this.state.course} />
                 <Row>
                   <Col>
                     <h3>Opinie</h3>

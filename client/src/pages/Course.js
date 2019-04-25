@@ -1,17 +1,13 @@
 import React from "react";
 import Axios from "axios";
 import { PUBLIC_RESOURSES_URL } from "../utils/variables";
-import { Button, Col, Container, Image, Jumbotron, Row } from "react-bootstrap";
+import { Col, Container, Jumbotron, Row } from "react-bootstrap";
 import Loading from "../components/helpers/Loading";
-import Stars from "../components/helpers/ReactStars";
-import { LinkContainer } from "react-router-bootstrap";
-import { GoMegaphone } from "react-icons/go";
 import { Opinion } from "../components/modals/OpinionModal";
 import { Toggle } from "../components/helpers/Toggle";
 import Video from "../components/sections/videos/Video";
 import { AuthContext } from "../App";
-import AddOpinionModal from "../components/modals/AddOpinionModal";
-import { MdOpenInNew } from "react-icons/md";
+import CourseOverview from "../components/sections/course-page/CourseOverview";
 
 class Course extends React.Component {
   constructor() {
@@ -46,7 +42,6 @@ class Course extends React.Component {
   };
 
   onRatingChangeAddModal = newRate => {
-    console.log(newRate);
     this.setState({
       ...this.state,
       opinion: {
@@ -57,7 +52,6 @@ class Course extends React.Component {
   };
 
   addOpinion = (auth, logout) => {
-    console.log(this.state.opinion);
     let ask;
     if (this.state.isReviewed) {
       ask = Axios({
@@ -228,87 +222,21 @@ class Course extends React.Component {
           <div className="Course">
             {this.state.course ? (
               <React.Fragment>
-                <Row>
-                  <Col sm="12" md="5">
-                    <Image
-                      src={`../${PUBLIC_RESOURSES_URL}/${
-                        this.state.course.image
-                      }`}
-                      fluid
-                    />
-                  </Col>
-                  <Col sm="12" md="7">
-                    <h2>{this.state.course.title}</h2>
-                    <p>
-                      <b>Cena:</b> {this.state.course.price}
-                    </p>
-                    <p>
-                      <b>Czas trwania:</b>: {this.state.course.duration}
-                    </p>
-                    <div className="flexible flexible-horizontal-center">
-                      <b>Średnia ocena: </b>
-                      {this.state.course.averageRate}
-                      {typeof this.state.course.averageRate === "number" ? (
-                        <React.Fragment>
-                          <Stars
-                            size={20}
-                            className="starses"
-                            count={5}
-                            value={this.state.course.averageRate}
-                            edit={false}
-                          />
-                        </React.Fragment>
-                      ) : (
-                        ""
-                      )}
-                    </div>
-                    <p>
-                      <b>Opis: </b>
-                      {this.state.course.shortDescription}
-                    </p>
-                    <LinkContainer to="/contact">
-                      <a className="flexible flexible-horizontal-center call-button">
-                        <GoMegaphone />
-                        Zacznij już dziś !!!
-                      </a>
-                    </LinkContainer>
-                    {auth ? (
-                      <React.Fragment>
-                        <Button
-                          size="lg"
-                          style={{
-                            marginLeft: "0.5rem",
-                            marginTop: "1rem",
-                            fontSize: "26px",
-                            fontWeight: "500",
-                            boxShadow: "0px 0px 5px 1px rgba(0,0,0,0.75)"
-                          }}
-                          onClick={this.handleAddModalOpen.bind(this)}
-                          variant="success"
-                        >
-                          <MdOpenInNew />
-                          {this.state.isReviewed
-                            ? "Edytuj Opinię"
-                            : "Dodaj Opinię"}
-                        </Button>
-                        <AddOpinionModal
-                          handleClose={this.handleAddModalClose}
-                          isOpen={this.state.isAddModalOpen}
-                          onChange={this.onChangeAddModal}
-                          onRatingChange={this.onRatingChangeAddModal}
-                          grade={this.state.opinion.grade}
-                          addOpinion={this.addOpinion}
-                          auth={auth}
-                          logout={logout}
-                          isReviewed={this.state.isReviewed}
-                          review={this.state.opinion}
-                        />
-                      </React.Fragment>
-                    ) : (
-                      ""
-                    )}
-                  </Col>
-                </Row>
+                <CourseOverview
+                  course={this.state.course}
+                  isReviewed={this.state.isReviewed}
+                  isAddModalOpen={this.state.isAddModalOpen}
+                  opinion={this.state.opinion}
+                  auth={auth}
+                  logout={logout}
+                  opinionModalEvents={{
+                    handleAddModalOpen: this.handleAddModalOpen,
+                    handleAddModalClose: this.handleAddModalClose,
+                    onChangeAddModal: this.onChangeAddModal,
+                    onRatingChangeAddModal: this.onRatingChangeAddModal,
+                    addOpinion: this.addOpinion
+                  }}
+                />
                 <Row>
                   <Col>
                     <h3>Szczegóły</h3>

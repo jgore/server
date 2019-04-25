@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Videos} from '../components/Videos';
 import Axios from 'axios';
-import AppError from '../components/AppError'
+import AppError from '../components/errors/AppError'
 import Loading from '../components/Loading'
 
 class Java extends Component {

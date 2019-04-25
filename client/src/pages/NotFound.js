@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import AppError from '../components/AppError'
+import AppError from '../components/errors/AppError'
 import Main from '../components/Main';
 
 class NotFound extends Component {

@@ -1,46 +1,9 @@
 import React from "react";
-import { Card, Button, CardDeck } from "react-bootstrap";
-import { PUBLIC_RESOURSES_URL } from "../utils/variables";
+import { Card, Button } from "react-bootstrap";
+import { PUBLIC_RESOURSES_URL } from "../../../utils/variables";
 import PropTypes from "prop-types";
-import OpinionModal from "./modals/OpinionModal";
-import Stars from "./ReactStars";
+import Stars from "../../helpers/ReactStars";
 import { LinkContainer } from "react-router-bootstrap";
-
-class Courses extends React.Component {
-  state = {
-    isModal: false,
-    reviews: []
-  };
-
-  render() {
-    let modalOpen = reviews => this.setState({ isModal: true, reviews });
-    let modalClose = () => this.setState({ isModal: false });
-    return (
-      <React.Fragment>
-        <h1>Kursy</h1>
-        <CardDeck className="section">
-          {this.props.courses.map((value, index) => (
-            <Course
-              key={index}
-              coruse={value}
-              modalOpen={modalOpen}
-              modalClose={modalClose}
-            />
-          ))}
-          {this.state.isModal ? (
-            <OpinionModal
-              isModal={this.state.isModal}
-              reviews={this.state.reviews}
-              handleClose={modalClose}
-            />
-          ) : (
-            ""
-          )}
-        </CardDeck>
-      </React.Fragment>
-    );
-  }
-}
 
 const Course = ({
   coruse: {
@@ -116,18 +79,16 @@ const Course = ({
   );
 };
 
-Courses.propTypes = {
-  courses: PropTypes.array.isRequired
-};
-
 Course.propTypes = {
   course: PropTypes.exact({
     title: PropTypes.string.isRequired,
+    shortTitle: PropTypes.string.isRequired,
     price: PropTypes.string.isRequired,
     duration: PropTypes.string.isRequired,
     shortDescription: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired
+    image: PropTypes.string.isRequired,
+    reviews: PropTypes.array.isRequired
   })
 };
 
-export default Courses;
+export default Course;

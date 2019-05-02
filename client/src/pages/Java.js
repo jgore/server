@@ -1,64 +1,57 @@
-import React, {Component} from 'react';
-import {Videos} from '../components/Videos';
-import Axios from 'axios';
-import Error from '../components/Error'
-import Loading from '../components/Loading'
+import React, { Component } from "react";
+import Videos from "../components/sections/videos/Videos";
+import Axios from "axios";
+import AppError from "../components/errors/AppError";
+import Loading from "../components/helpers/Loading";
 
 class Java extends Component {
-
   state = {
     videos: [],
     isLoading: true,
     error: null
-  }
+  };
 
   componentDidMount() {
     Axios(`/api/videos`)
-      .then((res) => {
+      .then(res => {
         this.setState({
           videos: res.data
-        })
-      }).catch((err) => {
+        });
+      })
+      .catch(err => {
         if (err.response) {
           this.setState({
             error: err.response.status
-          })
+          });
         } else {
           this.setState({
             error: 500
-          })
+          });
         }
-      }).finally(() => {
+      })
+      .finally(() => {
         this.setState({
           isLoading: false
-        })
-      })
+        });
+      });
   }
 
   render() {
     return (
       <div className="Java">
-        {
-          this.state.isLoading ?
-            <Loading /> :
-            <React.Fragment>
-              {
-                this.state.error ?
-                  <Error
-                    errorCode={this.state.error}
-                  />
-                  :
-                  <Videos
-                    videos={this.state.videos}
-                  />
-
-              }
-            </React.Fragment>
-
-        }
+        {this.state.isLoading ? (
+          <Loading />
+        ) : (
+          <React.Fragment>
+            {this.state.error ? (
+              <AppError errorCode={this.state.error} />
+            ) : (
+              <Videos videos={this.state.videos} />
+            )}
+          </React.Fragment>
+        )}
       </div>
-    )
-
+    );
   }
 }
 

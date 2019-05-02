@@ -75,7 +75,7 @@ const CourseOverview = ({
         <LinkContainer to="/contact">
           <a className="flexible flexible-horizontal-center call-button">
             <GoMegaphone />
-            Zacznij już dziś !!!
+            Zapisz sie na kurs !
           </a>
         </LinkContainer>
         {auth ? (

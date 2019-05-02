@@ -48,7 +48,7 @@
       "content": "<h5>Opis projektu</h5> <p>Budujemy od podstaw aplikację z backend API do zarządzania pracownikiem. </p> <p> Jest to nasza pierwsza aplikacja troszke jeszcze szkoleniowa gdzie trudniejsze punkty rozbijamy sobie na łatwe podpunkty</p> <p> Przykładowo robimy sobie własną persistance do pliku .JSON zamiast używać SQL i Hibernate żeby zrozumieć jakie problemy programiści Hibernate musieli rozwiązać. Gdy ten projekt już skończymy będzie mogli wykorzystać to czego się nauczyliśmy w kursie następnym. </p> <p>Ten projekt da Ci świetne wejście w development w JAVA bo napiszesz samodzielnie bardzo dużo kodu, który będzie sprawdzowy przez doświadczonego programistę oraz przetestowany. Wiele się nauczysz.</p>",
       "image": "pawel.jpg",
       "duration": "8 tygodni",
-      "price": "1 tydzień 276PLN  [ 69 PLN / H ] [ Sobota 8-12 ]",
+      "price": " 4 tygodnie 999 PLN [ 62.5 PLN / H ] [ Sobota 8-12 ]",
       "shortDescription": "Jeśli stawiasz swoje pierwsze kroki w programowaniu i chciałbyś się nauczyć od najlepszych to jest właśnie kurs dla Ciebie. Tutaj spokojnie uczymy się pracy z IntelliJ, Git, JAVA. Stopniowo podnosimy poziom trudności, abyś mógł zapisać się na kurs Junior",
       "video": {
         "link": "https://www.youtube.com/embed/aA8uRIm71Yw",
@@ -126,7 +126,7 @@
       "content": "<h5>Lorem ipsum dolor sit amet</h5>, <p>consectetur adipiscing elit. Cras eu dolor convallis, lobortis risus at, porta ante.</p> <p>Sed finibus urna ut ligula vulputate, et egestas nulla ultrices. Quisque suscipit nisl lacus, quis luctus ante mattis non. Donec pulvinar placerat iaculis. Vivamus id tincidunt leo. <b>Morbi et</b> eros magna.</p> <p> Praesent sit amet lorem ligula. Maecenas accumsan diam vitae dolor tristique pulvinar. Integer pulvinar hendrerit efficitur. Etiam sed lacus urna.</p> <p>Cras cursus, turpis eget ultrices bibendum, nibh <i>lorem ultricies felis, vitae auctor erat</i> enim ut neque.</p>",
       "image": "macbook.jpg",
       "duration": "4 tygodnie",
-      "price": "1 tydzień 499 PLN [125 PLN / H] [ Sobota 8-12 ]",
+      "price": "2 tygodnie 999 PLN [125 PLN / H] [ Sobota 8-12 ]",
       "shortDescription": "Przygotowanie stricte pod rozmowę kwalifikacyjną bazując na zdobytej wiedzy. Kurs uzupełniający do kursu Junior",
       "video": {
         "link": "https://www.youtube.com/embed/aA8uRIm71Yw",

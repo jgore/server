@@ -1,12 +1,12 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
-import { PUBLIC_RESOURSES_URL } from "../../../utils/variables";
+import { PUBLIC_RESOURCES_URL } from "../../../utils/variables";
 import PropTypes from "prop-types";
 import Stars from "../../helpers/ReactStars";
 import { LinkContainer } from "react-router-bootstrap";
 
 const Course = ({
-  coruse: {
+  course: {
     title,
     shortTitle,
     image,
@@ -29,7 +29,7 @@ const Course = ({
   averageRate = averageRate / reviews.length;
   return (
     <Card border="dark" style={{ minWidth: "40%" }} className="course__card">
-      <Card.Img variant="top" src={`${PUBLIC_RESOURSES_URL}/${image}`} />
+      <Card.Img variant="top" src={`${PUBLIC_RESOURCES_URL}/${image}`} />
       <Card.Title>
         <h3>{title}</h3>
       </Card.Title>

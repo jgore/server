@@ -1,6 +1,6 @@
 import React from "react";
 import Axios from "axios";
-import { PUBLIC_RESOURSES_URL } from "../utils/variables";
+import { PUBLIC_RESOURCES_URL } from "../utils/variables";
 import { Col, Row } from "react-bootstrap";
 import Loading from "../components/helpers/Loading";
 import { Opinion } from "../components/modals/OpinionModal";
@@ -268,7 +268,7 @@ class Course extends React.Component {
                   <Col sm="12">
                     {this.state.course.reviews.length !== 0 ? (
                       <Opinion
-                        path={`../${PUBLIC_RESOURSES_URL}/${
+                        path={`../${PUBLIC_RESOURCES_URL}/${
                           this.state.course.reviews[0].user.image
                         }`}
                         {...this.state.course.reviews[0]}
@@ -290,7 +290,7 @@ class Course extends React.Component {
                             <React.Fragment key={index}>
                               {index !== 0 ? (
                                 <Opinion
-                                  path={`../${PUBLIC_RESOURSES_URL}/${
+                                  path={`../${PUBLIC_RESOURCES_URL}/${
                                     value.user.image
                                   }`}
                                   {...value}

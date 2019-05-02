@@ -2,14 +2,14 @@ import React from "react";
 import CustomModal from "./CustomModal";
 import PropTypes from "prop-types";
 import { Image, Button } from "react-bootstrap";
-import { PUBLIC_RESOURSES_URL } from "../../utils/variables";
+import { PUBLIC_RESOURCES_URL } from "../../utils/variables";
 import StarRating from "../helpers/ReactStars";
 import { Modal } from "react-bootstrap";
 
 const Opinions = ({ reviews, imagePath }) => (
   <div>
     {reviews.map((value, index) => {
-      let path = imagePath ? imagePath : PUBLIC_RESOURSES_URL;
+      let path = imagePath ? imagePath : PUBLIC_RESOURCES_URL;
       return (
         <Opinion key={index} path={`${path}/${value.user.image}`} {...value} />
       );

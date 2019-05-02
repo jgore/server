@@ -9,11 +9,8 @@ const review = new Schema({
   grade: {
     type: Number
   },
-  image: {
-    type: String
-  },
-  username: {
-    type: String
+  user: {
+    type: Object
   },
   createdAt: {
     type: Date

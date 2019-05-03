@@ -29,7 +29,19 @@ const Course = ({
   averageRate = averageRate / reviews.length;
   return (
     <Card border="dark" style={{ minWidth: "40%" }} className="course__card">
-      <Card.Img variant="top" src={`${PUBLIC_RESOURCES_URL}/${image}`} />
+      <div
+        style={{
+          width: "100%",
+          height: 300,
+          overflow: "hidden",
+          backgroundImage: `url(${PUBLIC_RESOURCES_URL}/${image})`,
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundSize: "cover"
+        }}
+      >
+        {/* <Card.Img variant="top" src={`${PUBLIC_RESOURCES_URL}/${image}`} /> */}
+      </div>
       <Card.Title>
         <h3>{title}</h3>
       </Card.Title>

@@ -1,5 +1,5 @@
 import React from "react";
-import { PUBLIC_RESOURSES_URL } from "../../../utils/variables";
+import { PUBLIC_RESOURCES_URL } from "../../../utils/variables";
 import { Button, Col, Image, Row } from "react-bootstrap";
 import Stars from "../../helpers/ReactStars";
 import { LinkContainer } from "react-router-bootstrap";
@@ -41,7 +41,7 @@ const CourseOverview = ({
   return (
     <Row>
       <Col sm="12" md="5">
-        <Image src={`../${PUBLIC_RESOURSES_URL}/${image}`} fluid />
+        <Image src={`../${PUBLIC_RESOURCES_URL}/${image}`} fluid />
       </Col>
       <Col sm="12" md="7">
         <h2>{title}</h2>
@@ -138,7 +138,7 @@ const CourseOverview = ({
         isModal={isOpinionModalOpen}
         reviews={reviews}
         handleClose={handleOpinionModalClose}
-        imagePath={`../${PUBLIC_RESOURSES_URL}`}
+        imagePath={`../${PUBLIC_RESOURCES_URL}`}
       />
     </Row>
   );

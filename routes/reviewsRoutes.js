@@ -32,7 +32,7 @@ module.exports = app => {
                 reviews: {
                   content,
                   grade,
-                  user,
+                  user: user._doc,
                   createdAt: new Date()
                 }
               }

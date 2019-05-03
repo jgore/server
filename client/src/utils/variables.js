@@ -1,1 +1,1 @@
-export const PUBLIC_RESOURSES_URL = process.env.PUBLIC_URL || "img"
+export const PUBLIC_RESOURCES_URL = process.env.PUBLIC_URL || "img"

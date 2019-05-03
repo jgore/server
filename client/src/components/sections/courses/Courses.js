@@ -20,7 +20,7 @@ class Courses extends React.Component {
           {this.props.courses.map((value, index) => (
             <Course
               key={index}
-              coruse={value}
+              course={value}
               modalOpen={modalOpen}
               modalClose={modalClose}
             />

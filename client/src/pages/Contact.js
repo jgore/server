@@ -1,7 +1,7 @@
 import React from "react";
 import EmailForm from "./../components/forms/EmailForm";
 import { Col, Image, Row } from "react-bootstrap";
-import { PUBLIC_RESOURSES_URL } from "../utils/variables";
+import { PUBLIC_RESOURCES_URL } from "../utils/variables";
 
 const Contact = () => (
   <div style={{ marginTop: 20 }} className="Contact">
@@ -10,7 +10,7 @@ const Contact = () => (
         <Col sm="12" md="5" className="flexible flexible-vertical-center">
           <Image
             className="img-thumbnail"
-            src={`${PUBLIC_RESOURSES_URL}/lesz.jpg`}
+            src={`${PUBLIC_RESOURCES_URL}/lesz.jpg`}
             alt="Gjava building"
           />
         </Col>

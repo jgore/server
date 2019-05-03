@@ -25,7 +25,8 @@
     padding: 0.5rem 1rem;
     border-radius: 0.25rem;
     max-width: 300px;
-    margin-top: 2rem;
+    margin-top: 1rem;
+    width: fit-content;
 }
 
 .Course a:hover {

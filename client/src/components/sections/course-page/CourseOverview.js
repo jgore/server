@@ -72,61 +72,67 @@ const CourseOverview = ({
           <b>Opis: </b>
           {shortDescription}
         </p>
-        <LinkContainer to="/contact">
-          <a className="flexible flexible-horizontal-center call-button">
-            <GoMegaphone />
-            Zacznij już dziś !!!
-          </a>
-        </LinkContainer>
-        {auth ? (
-          <React.Fragment>
+        <div style={{ display: "flex", flexWrap: "wrap" }}>
+          <LinkContainer to="/contact">
+            <a className="flexible flexible-horizontal-center call-button">
+              <GoMegaphone />
+              Zacznij już dziś !!!
+            </a>
+          </LinkContainer>
+          {auth ? (
+            <React.Fragment>
+              <Button
+                size="lg"
+                style={{
+                  marginLeft: "0.5rem",
+                  marginTop: "1rem",
+                  fontSize: "18px",
+                  fontWeight: "500",
+                  boxShadow: "0px 0px 5px 1px rgba(0,0,0,0.75)",
+                  borderRadius: "0.25rem"
+                }}
+                onClick={handleAddModalOpen}
+                variant="success"
+              >
+                <MdOpenInNew />
+                {isReviewed ? "Edytuj Opinię" : "Dodaj Opinię"}
+              </Button>
+
+              <AddOpinionModal
+                handleClose={handleAddModalClose}
+                isOpen={isAddModalOpen}
+                onChange={onChangeAddModal}
+                onRatingChange={onRatingChangeAddModal}
+                grade={opinion.grade}
+                addOpinion={addOpinion}
+                auth={auth}
+                logout={logout}
+                isReviewed={isReviewed}
+                review={opinion}
+              />
+            </React.Fragment>
+          ) : (
+            ""
+          )}
+
+          {reviews.length > 0 ? (
             <Button
-              size="lg"
+              className="flexible flexible-horizontal-center call-button"
               style={{
-                marginLeft: "0.5rem",
+                marginLeft: ".5rem",
                 marginTop: "1rem",
-                fontSize: "26px",
-                fontWeight: "500",
-                boxShadow: "0px 0px 5px 1px rgba(0,0,0,0.75)"
+                background: "#007bff",
+                borderRadius: "0.25rem"
               }}
-              onClick={handleAddModalOpen}
-              variant="success"
+              onClick={handleOpinionModalOpen}
             >
-              <MdOpenInNew />
-              {isReviewed ? "Edytuj Opinię" : "Dodaj Opinię"}
+              <MdStarBorder />
+              Pokaż opinie
             </Button>
-            <AddOpinionModal
-              handleClose={handleAddModalClose}
-              isOpen={isAddModalOpen}
-              onChange={onChangeAddModal}
-              onRatingChange={onRatingChangeAddModal}
-              grade={opinion.grade}
-              addOpinion={addOpinion}
-              auth={auth}
-              logout={logout}
-              isReviewed={isReviewed}
-              review={opinion}
-            />
-          </React.Fragment>
-        ) : (
-          ""
-        )}
-        {reviews.length > 0 ? (
-          <Button
-            className="flexible flexible-horizontal-center call-button"
-            style={{
-              marginLeft: ".5rem",
-              marginTop: "1rem",
-              background: "#007bff"
-            }}
-            onClick={handleOpinionModalOpen}
-          >
-            <MdStarBorder />
-            Pokaż opinie
-          </Button>
-        ) : (
-          ""
-        )}
+          ) : (
+            ""
+          )}
+        </div>
       </Col>
       <OpinionModal
         isModal={isOpinionModalOpen}

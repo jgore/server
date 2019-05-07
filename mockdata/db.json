@@ -2,7 +2,7 @@
   "courses": [
     {
       "title": "Kurs programowania Java 00",
-      "shortTitle":"Korepetycje [1 : 1]",
+      "shortTitle":"Korepetycje",
       "content": "<h5>Opis zajęć</h5> <p> Mamy opracowany taki FLOW, który jest najskuteczniejszy do nauki z resztą jest to nasza realizacja SCRUM. <h3>Daily standup</h3> </p> <ul> <li> 1) Co robiłem wczoraj ?</li> <li> 2) Co będę robił dzisiaj ? </li> <li> 3) Czy mam jakiś problem ?</li> </ul> <p> Zwykle koło 9-10 na SLACK piszesz te 3 rzeczy powyżej jak w SCRUM w pracy.  <h3>Zajęcia 2h </h3> <p> W trakcie zajęć robimy sobie CODE REVIEW i TESTING tego co było zrobione w domu. Dalej robimy IN PROGRESS kolejnego zadania i zadajemy sobie zadanie domowe </p> <h3>Praca własna</h3> <p> W domu należy poświęcić w PN-PT min 1-2 h dziennie na zrobienie zadania domowego żeby był realny PROGRESS. W ramach korepetycji jest support patrz punkt 1.</p>",
       "image": "biuro_brillante.jpg",
       "duration": "2-4 tygodnie",
@@ -44,7 +44,7 @@
     },
     {
       "title": "Kurs programowania Java 0",
-      "shortTitle":"Company [ max 8 os grupa ]",
+      "shortTitle":"Company",
       "content": "<h5>Opis projektu</h5> <p>Budujemy od podstaw aplikację z backend API do zarządzania pracownikiem. </p> <p> Jest to nasza pierwsza aplikacja troszke jeszcze szkoleniowa gdzie trudniejsze punkty rozbijamy sobie na łatwe podpunkty</p> <p> Przykładowo robimy sobie własną persistance do pliku .JSON zamiast używać SQL i Hibernate żeby zrozumieć jakie problemy programiści Hibernate musieli rozwiązać. Gdy ten projekt już skończymy będzie mogli wykorzystać to czego się nauczyliśmy w kursie następnym. </p> <p>Ten projekt da Ci świetne wejście w development w JAVA bo napiszesz samodzielnie bardzo dużo kodu, który będzie sprawdzowy przez doświadczonego programistę oraz przetestowany. Wiele się nauczysz.</p>",
       "image": "pawel.jpg",
       "duration": "8 tygodni",
@@ -78,7 +78,7 @@
     },
     {
       "title": "Kurs programowania Java 1 (junior)",
-      "shortTitle":"Shop [max 8 os grupa]",
+      "shortTitle":"Shop",
       "content": "<h5>Opis projektu</h5> <p> Shop jest już miejscem gdzie możemy sprawdzić siebie i przetestować to czego sie nauczyliśmy. Tworzymy Java Backend API w TDD. Każda kolejna warstwa ma testy albo jednostkowe albo integracyjn. Po zbudowaniu i przestestowaniu aplikacji w JAVA postaramy się przejsc do <b>części frontwendowej</b> [ dla chętnych ].</p> <p> Shop jest sklepem internetowym umożliwiającym użytkownikom sprzedaz produktów. To prawdziwy produkt, który w ramach kursu wydajemy na produkcje, co jest ostatecznym testem czy napisaliśmy go poprawnie. </p>",
       "image": "sala.jpg",
       "duration": "8 tygodni",
@@ -122,7 +122,7 @@
     },
     {
       "title": "Kurs programowania Java 1++ (junior++)",
-      "shortTitle":"Flights [ max 6 os grupa ]",
+      "shortTitle":"Flights",
       "content": "<h5>Lorem ipsum dolor sit amet</h5>, <p>consectetur adipiscing elit. Cras eu dolor convallis, lobortis risus at, porta ante.</p> <p>Sed finibus urna ut ligula vulputate, et egestas nulla ultrices. Quisque suscipit nisl lacus, quis luctus ante mattis non. Donec pulvinar placerat iaculis. Vivamus id tincidunt leo. <b>Morbi et</b> eros magna.</p> <p> Praesent sit amet lorem ligula. Maecenas accumsan diam vitae dolor tristique pulvinar. Integer pulvinar hendrerit efficitur. Etiam sed lacus urna.</p> <p>Cras cursus, turpis eget ultrices bibendum, nibh <i>lorem ultricies felis, vitae auctor erat</i> enim ut neque.</p>",
       "image": "macbook.jpg",
       "duration": "4 tygodnie",
@@ -155,7 +155,7 @@
     },
     {
       "title": "Kurs programowania Java 2 (mid++)",
-      "shortTitle":"Bookify [ max 8 os grupa ]",
+      "shortTitle":"Bookify",
       "content": "<h5>Lorem ipsum dolor sit amet</h5>, <p>consectetur adipiscing elit. Cras eu dolor convallis, lobortis risus at, porta ante.</p> <p>Sed finibus urna ut ligula vulputate, et egestas nulla ultrices. Quisque suscipit nisl lacus, quis luctus ante mattis non. Donec pulvinar placerat iaculis. Vivamus id tincidunt leo. <b>Morbi et</b> eros magna.</p> <p> Praesent sit amet lorem ligula. Maecenas accumsan diam vitae dolor tristique pulvinar. Integer pulvinar hendrerit efficitur. Etiam sed lacus urna.</p> <p>Cras cursus, turpis eget ultrices bibendum, nibh <i>lorem ultricies felis, vitae auctor erat</i> enim ut neque.</p>",
       "image": "corpo.jpg",
       "duration": "30 tygodni",

@@ -6,7 +6,7 @@
       "content": "<h5>Opis zajęć</h5> <p> Mamy opracowany taki FLOW, który jest najskuteczniejszy do nauki z resztą jest to nasza realizacja SCRUM. <h3>Daily standup</h3> </p> <ul> <li> 1) Co robiłem wczoraj ?</li> <li> 2) Co będę robił dzisiaj ? </li> <li> 3) Czy mam jakiś problem ?</li> </ul> <p> Zwykle koło 9-10 na SLACK piszesz te 3 rzeczy powyżej jak w SCRUM w pracy.  <h3>Zajęcia 2h </h3> <p> W trakcie zajęć robimy sobie CODE REVIEW i TESTING tego co było zrobione w domu. Dalej robimy IN PROGRESS kolejnego zadania i zadajemy sobie zadanie domowe </p> <h3>Praca własna</h3> <p> W domu należy poświęcić w PN-PT min 1-2 h dziennie na zrobienie zadania domowego żeby był realny PROGRESS. W ramach korepetycji jest support patrz punkt 1.</p>",
       "image": "biuro_brillante.jpg",
       "duration": "2-4 tygodnie",
-      "price": "1 tydzień 250 PLN PLN  [125 PLN / H ] [ 2h korki + 5 dni support ]",
+      "price": "1 tydzień 250 PLN [125 PLN / H ] [ 2h korki + 5 dni support ]",
       "shortDescription": "Jeśli chcesz z nami realizować trudniejsze kursy, ale jeszcze brak Ci doświadczenia to jest kurs dla Ciebie. Tutaj zajęcia są 1 na 1 gdzie korepetytor prowadzi Cie kroku po kroku jak zainstalowac IntelliJ, Maven, Git. Jak pracować z JAVA żebyś mógł porobić rzeczy trudniejsze.",
       "video": {
         "link": "https://www.youtube.com/embed/aA8uRIm71Yw",
@@ -126,7 +126,7 @@
       "content": "<h5>Lorem ipsum dolor sit amet</h5>, <p>consectetur adipiscing elit. Cras eu dolor convallis, lobortis risus at, porta ante.</p> <p>Sed finibus urna ut ligula vulputate, et egestas nulla ultrices. Quisque suscipit nisl lacus, quis luctus ante mattis non. Donec pulvinar placerat iaculis. Vivamus id tincidunt leo. <b>Morbi et</b> eros magna.</p> <p> Praesent sit amet lorem ligula. Maecenas accumsan diam vitae dolor tristique pulvinar. Integer pulvinar hendrerit efficitur. Etiam sed lacus urna.</p> <p>Cras cursus, turpis eget ultrices bibendum, nibh <i>lorem ultricies felis, vitae auctor erat</i> enim ut neque.</p>",
       "image": "macbook.jpg",
       "duration": "4 tygodnie",
-      "price": "2 tygodnie 999 PLN [125 PLN / H] [ Sobota 8-12 ]",
+      "price": "4 tygodnie 1999 PLN [ 125 PLN / H ] [ Sobota 8-12 ]",
       "shortDescription": "Przygotowanie stricte pod rozmowę kwalifikacyjną bazując na zdobytej wiedzy. Kurs uzupełniający do kursu Junior",
       "video": {
         "link": "https://www.youtube.com/embed/aA8uRIm71Yw",

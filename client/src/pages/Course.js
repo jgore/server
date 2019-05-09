@@ -8,6 +8,7 @@ import { Toggle } from "../components/helpers/Toggle";
 import { AuthContext } from "../App";
 import CourseOverview from "../components/sections/course-page/CourseOverview";
 import CourseDetails from "../components/sections/course-page/CourseDetails";
+import { withRouter } from "react-router-dom";
 
 class Course extends React.Component {
   constructor() {
@@ -203,8 +204,13 @@ class Course extends React.Component {
         });
       })
       .catch(err => {
+        console.log(err);
         if (err.response.status === 401) {
           localStorage.removeItem("token");
+        } else if (err.response.status === 404) {
+          console.log("asd");
+          console.log();
+          this.props.history.replace("/notFound");
         }
       });
   }
@@ -261,32 +267,32 @@ class Course extends React.Component {
                 <CourseDetails course={this.state.course} />
                 <Row>
                   <Col>
-                    <h3>Opinie</h3>
+                    <h3>Komentarze</h3>
                   </Col>
                 </Row>
                 <Row>
                   <Col sm="12">
-                    {this.state.course.reviews.length !== 0 ? (
+                    {this.state.course.comments.length !== 0 ? (
                       <Opinion
                         path={`../${PUBLIC_RESOURCES_URL}/${
-                          this.state.course.reviews[0].user.image
+                          this.state.course.comments[0].user.image
                         }`}
-                        {...this.state.course.reviews[0]}
+                        {...this.state.course.comments[0]}
                       />
                     ) : (
                       ""
                     )}
-                    {this.state.course.reviews.length > 0 ? (
+                    {this.state.course.comments.length > 0 ? (
                       <React.Fragment>
                         <Toggle
-                          title={`Rozwiń jeszcze - ${this.state.course.reviews
+                          title={`Rozwiń jeszcze - ${this.state.course.comments
                             .length - 1} opini`}
-                          titleOnDrop={`Zwiń - ${this.state.course.reviews
+                          titleOnDrop={`Zwiń - ${this.state.course.comments
                             .length - 1} opini`}
                           isDrop={this.state.isDrop}
                           onClick={this.onDropDown.bind(this)}
                         >
-                          {this.state.course.reviews.map((value, index) => (
+                          {this.state.course.comments.map((value, index) => (
                             <React.Fragment key={index}>
                               {index !== 0 ? (
                                 <Opinion
@@ -318,4 +324,4 @@ class Course extends React.Component {
   }
 }
 
-export default Course;
+export default withRouter(Course);

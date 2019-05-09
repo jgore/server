@@ -58,7 +58,7 @@ module.exports = app => {
             });
         });
       }).catch(err => {
-        console.log(err)
+        console.log(err);
         return err;
       });
     }
@@ -72,7 +72,7 @@ module.exports = app => {
         return doc;
       })
       .catch(err => {
-        console.log(err)
+        console.log(err);
         throw err;
       });
 
@@ -102,8 +102,11 @@ module.exports = app => {
           res.send(document);
         })
         .catch(errors => {
-          console.log(errors);
-          res.status(409).send();
+          if (errors.code === 404) {
+            res.status(404).send();
+          } else {
+            res.status(409).send();
+          }
         });
     } else {
       promise2

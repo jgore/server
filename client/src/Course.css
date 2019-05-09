@@ -1,52 +1,87 @@
 .Course b {
-    margin-right: 1rem;
+  margin-right: 1rem;
 }
 
 .Course .row {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 .Course p {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .Course h3 {
-    width: 100%;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid gray;
+  width: 100%;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid gray;
 }
 
 .Course h6 {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .Course a {
-    padding: 0.5rem 1rem;
-    border-radius: 0.25rem;
-    max-width: 300px;
-    margin-top: 1rem;
-    width: fit-content;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  max-width: 300px;
+  margin-top: 1rem;
+  width: fit-content;
 }
 
 .Course a:hover {
-    color: white;
+  color: white;
 }
 
 .Course svg {
-    margin-right: 0.75rem;
-    width: 2rem;
-    height: 2rem;
+  margin-right: 0.75rem;
+  width: 2rem;
+  height: 2rem;
 }
 
 .Course .technologies {
-    border: 5px solid #343A40;
-    border-radius: 5px;
+  border: 5px solid #343a40;
+  border-radius: 5px;
 }
 
+.comment {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid lightgray;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.comment:first-of-type {
+  border-top: none !important;
+}
+
+.comment-content {
+  display: flex;
+  margin-left: 20px;
+  word-wrap: break-word;
+}
+
+.comment img {
+  height: auto;
+  width: 4rem;
+}
+
+.comment p {
+  display: block;
+  max-width: 100%;
+  white-space: pre-wrap;
+}
+
+.comment-content {
+  display: flex;
+  flex-direction: column;
+}
 
 @media screen and (max-width: 767px) {
-    .row:first-child div:first-child {
-        margin-bottom: 2rem;
-    }
+  .row:first-child div:first-child {
+    margin-bottom: 2rem;
+  }
 }

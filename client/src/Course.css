@@ -62,6 +62,7 @@
   display: flex;
   margin-left: 20px;
   word-wrap: break-word;
+  position: relative;
 }
 
 .comment img {
@@ -75,9 +76,22 @@
   white-space: pre-wrap;
 }
 
+.cancel {
+  width: 1.2rem !important;
+  height: auto;
+  position: absolute;
+  top: 7px;
+  right: 20px;
+}
+
+.cancel:hover {
+  cursor: pointer;
+}
+
 .comment-content {
   display: flex;
   flex-direction: column;
+  width: 90%;
 }
 
 @media screen and (max-width: 767px) {

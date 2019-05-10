@@ -90,7 +90,7 @@ class AddComment extends React.Component {
                 <Form.Control
                   as="textarea"
                   rows="6"
-                  style={{ resize: "none", marginBottom: 20 }}
+                  style={{ resize: "none !important", marginBottom: 20 }}
                   placeholder="To jest miejsce na twój komentarz..."
                   onChange={this.onChange.bind(this)}
                   style={{ marginBottom: 10 }}

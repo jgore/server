@@ -65,4 +65,38 @@ module.exports = app => {
         res.status(400).send();
       });
   });
+
+  app.post("/api/comments/delete", privateRoute, (req, res) => {
+    let { shortTitle, _id } = req.body,
+      googleId = req.session.googleId;
+    console.log(shortTitle, _id);
+    UserCollection.findOne({ googleId })
+      .then(user => {
+        if (!user) {
+          return res.status(401).send();
+        }
+        CourseCollection.update(
+          {
+            shortTitle
+          },
+          {
+            $pull: {
+              comments: { _id, "user.googleId": googleId }
+            }
+          }
+        )
+          .then(stats => {
+            if(stats.nModified === 0) {
+              return res.status(304).send()
+            }
+            res.send();
+          })
+          .catch(err => {
+            res.status.send(400);
+          });
+      })
+      .catch(err => {
+        res.status(400).send();
+      });
+  });
 };

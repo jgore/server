@@ -98,6 +98,7 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state.auth);
     return (
       <GlobalContext.Provider value={{ windowEvents: this.state.windowEvents }}>
         <AuthContext.Provider

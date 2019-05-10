@@ -108,7 +108,7 @@ const Comment = ({
     <img src={`../img/${image}`} />
     <div className="comment-content">
       <h6 style={{ marginTop: "0.5rem" }}>{name}</h6>
-      <p style={{ maxWidth: "60vw", textAlign: "justify" }}>{content}</p>
+      <p style={{ maxWidth: "70vw" }}>{content}</p>
       {isCancel ? (
         <img
           src="../img/cancel.svg"
@@ -120,5 +120,5 @@ const Comment = ({
       )}
     </div>
   </div>
-  
+
 );

@@ -26,16 +26,11 @@ module.exports = mongoURI => {
           });
         });
 
-        CourseCollection.countDocuments({}, (err, count) => {
-          if (count === 0) {
-            CourseCollection.insertMany(courses);
-          }
+        CourseCollection.insertMany(courses).catch(err => {
+          console.log("Error while inserting courses (duplication key)");
         });
-
-        VideoCollection.countDocuments({}, (err, count) => {
-          if (count === 0) {
-            VideoCollection.insertMany(videos);
-          }
+        VideoCollection.insertMany(videos).catch(err => {
+          console.log("Error while inserting videos ");
         });
       });
     }

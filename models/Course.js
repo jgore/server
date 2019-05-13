@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const Reviews = require("./Review");
+const Comment = require("./Comment");
 const { Schema } = mongoose;
 
 const courseSchema = new Schema({
@@ -48,7 +49,8 @@ const courseSchema = new Schema({
   technologies: {
     type: Array
   },
-  reviews: [Reviews]
+  reviews: [Reviews],
+  comments: [Comment]
 });
 
 const CoursesCollection = mongoose.model("courses", courseSchema);

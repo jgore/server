@@ -5,7 +5,6 @@ const passport = require("passport");
 const connectToDb = require("./config/connectToDb");
 const keys = require("./config/keys");
 
-
 require("dotenv/config");
 const redisClient = require("./config/connectToCache");
 
@@ -39,6 +38,7 @@ require("./routes/authRoutes")(app);
 require("./routes/mailRoutes")(app);
 require("./routes/publicRoutes")(app);
 require("./routes/reviewsRoutes")(app);
+require("./routes/commentRoutes")(app);
 
 var port = process.env.PORT || 5000;
 

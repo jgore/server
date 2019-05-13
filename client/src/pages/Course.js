@@ -1,13 +1,12 @@
 import React from "react";
 import Axios from "axios";
-import { PUBLIC_RESOURCES_URL } from "../utils/variables";
 import { Col, Row } from "react-bootstrap";
 import Loading from "../components/helpers/Loading";
-import { Opinion } from "../components/modals/OpinionModal";
-import { Toggle } from "../components/helpers/Toggle";
 import { AuthContext } from "../App";
 import CourseOverview from "../components/sections/course-page/CourseOverview";
 import CourseDetails from "../components/sections/course-page/CourseDetails";
+import { withRouter } from "react-router-dom";
+import Comments from "../components/sections/course-page/Comments";
 
 class Course extends React.Component {
   constructor() {
@@ -203,8 +202,14 @@ class Course extends React.Component {
         });
       })
       .catch(err => {
+        console.log(err);
         if (err.response.status === 401) {
           localStorage.removeItem("token");
+          window.location.reload()
+        } else if (err.response.status === 404) {
+          console.log("asd");
+          console.log();
+          this.props.history.replace("/notFound");
         }
       });
   }
@@ -261,50 +266,12 @@ class Course extends React.Component {
                 <CourseDetails course={this.state.course} />
                 <Row>
                   <Col>
-                    <h3>Opinie</h3>
+                    <h3>Komentarze</h3>
                   </Col>
                 </Row>
                 <Row>
-                  <Col sm="12">
-                    {this.state.course.reviews.length !== 0 ? (
-                      <Opinion
-                        path={`../${PUBLIC_RESOURCES_URL}/${
-                          this.state.course.reviews[0].user.image
-                        }`}
-                        {...this.state.course.reviews[0]}
-                      />
-                    ) : (
-                      ""
-                    )}
-                    {this.state.course.reviews.length > 0 ? (
-                      <React.Fragment>
-                        <Toggle
-                          title={`Rozwiń jeszcze - ${this.state.course.reviews
-                            .length - 1} opini`}
-                          titleOnDrop={`Zwiń - ${this.state.course.reviews
-                            .length - 1} opini`}
-                          isDrop={this.state.isDrop}
-                          onClick={this.onDropDown.bind(this)}
-                        >
-                          {this.state.course.reviews.map((value, index) => (
-                            <React.Fragment key={index}>
-                              {index !== 0 ? (
-                                <Opinion
-                                  path={`../${PUBLIC_RESOURCES_URL}/${
-                                    value.user.image
-                                  }`}
-                                  {...value}
-                                />
-                              ) : (
-                                ""
-                              )}
-                            </React.Fragment>
-                          ))}
-                        </Toggle>
-                      </React.Fragment>
-                    ) : (
-                      ""
-                    )}
+                  <Col sm="12" className="comments">
+                    <Comments comments={this.state.course.comments} shortTitle={this.state.course.shortTitle}/>
                   </Col>
                 </Row>
               </React.Fragment>
@@ -318,4 +285,4 @@ class Course extends React.Component {
   }
 }
 
-export default Course;
+export default withRouter(Course);

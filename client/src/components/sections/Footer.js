@@ -33,6 +33,9 @@ export default () => (
             <a href="http://reactjs.com">ReactJS</a>
           </li>
         </ul>
+        <a href="https://www.facebook.com/gjavapl" target="_blank" className="social-button fb">
+          <img src="img/facebook.svg"/>
+        </a>
       </Col>
     </Row>
     <Row>

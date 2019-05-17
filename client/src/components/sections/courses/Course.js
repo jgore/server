@@ -4,6 +4,7 @@ import { PUBLIC_RESOURCES_URL } from "../../../utils/variables";
 import PropTypes from "prop-types";
 import Stars from "../../helpers/ReactStars";
 import { LinkContainer } from "react-router-bootstrap";
+import { withRouter } from "react-router-dom";
 
 const Course = ({
   course: {
@@ -17,7 +18,8 @@ const Course = ({
     maxMembers,
     _id
   },
-  modalOpen
+  modalOpen,
+  history
 }) => {
   let averageRate = null;
   for (let i = 0; i < reviews.length; i++) {
@@ -84,16 +86,29 @@ const Course = ({
         </div>
       </Card.Body>
       <Card.Footer style={{ background: "#343A40" }}>
-        <LinkContainer to={`/course/${shortTitle}`}>
-          <Button variant="warning">Zobacz szczegóły</Button>
+        <LinkContainer to={`/course/${shortTitle}`} style={{ marginTop: 10 }}>
+          <Button variant="warning" >
+            Zobacz szczegóły
+          </Button>
         </LinkContainer>
         {reviews.length > 0 ? (
-          <Button onClick={() => modalOpen(reviews)}>
+          <Button onClick={() => modalOpen(reviews)} style={{ marginTop: 10 }}>
             Opinie ({reviews.length})
           </Button>
         ) : (
-          <Button>Brak opini</Button>
+          <Button style={{ marginTop: 10 }}>Brak opini</Button>
         )}
+        <Button
+          style={{ marginTop: 10 }}
+          onClick={() =>
+            history.push({
+              pathname: `/course/${shortTitle}`,
+              state: { scrollToComments: true }
+            })
+          }
+        >
+          Komentarze
+        </Button>
       </Card.Footer>
     </Card>
   );
@@ -111,4 +126,4 @@ Course.propTypes = {
   })
 };
 
-export default Course;
+export default withRouter(Course);

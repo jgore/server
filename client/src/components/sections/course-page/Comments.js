@@ -20,7 +20,6 @@ export default class Comments extends React.Component {
 
   deleteComment(_id, logout, auth, shortTitle) {
     return () => {
-      console.log(_id, logout);
       Axios({
         url: `/api/comments/delete`,
         method: "POST",
@@ -33,7 +32,6 @@ export default class Comments extends React.Component {
         }
       })
         .then(res => {
-          console.log(res);
           let array = this.state.comments.filter(comment => {
             return comment._id !== _id;
           });
@@ -60,7 +58,6 @@ export default class Comments extends React.Component {
   }
 
   render() {
-    console.log(this.props.comments);
     return (
       <React.Fragment>
         <AddComment

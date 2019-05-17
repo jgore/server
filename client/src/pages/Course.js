@@ -7,10 +7,11 @@ import CourseOverview from "../components/sections/course-page/CourseOverview";
 import CourseDetails from "../components/sections/course-page/CourseDetails";
 import { withRouter } from "react-router-dom";
 import Comments from "../components/sections/course-page/Comments";
+import jump from "jump.js";
 
 class Course extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       course: null,
       isDrop: false,
@@ -21,6 +22,7 @@ class Course extends React.Component {
         content: ""
       }
     };
+    this.comments = React.createRef();
     this.ratingChanged = this.ratingChanged.bind(this);
     this.onChangeAddModal = this.onChangeAddModal.bind(this);
     this.onRatingChangeAddModal = this.onRatingChangeAddModal.bind(this);
@@ -29,6 +31,80 @@ class Course extends React.Component {
     this.handleAddModalClose = this.handleAddModalClose.bind(this);
     this.handleAddModalOpen = this.handleAddModalOpen.bind(this);
     this.addOpinion = this.addOpinion.bind(this);
+  }
+
+  componentDidMount() {
+    let ask;
+    if (localStorage.getItem("token")) {
+      ask = Axios({
+        url: `/api/courses/${this.props.match.params.shortTitle}`,
+        method: "get",
+        headers: {
+          token: localStorage.getItem("token")
+        }
+      }).then(res => {
+        if (res.data.isReviewed) {
+          this.setState({
+            opinion: {
+              ...res.data.opinion.reviews,
+              _id: res.data.opinion._id
+            }
+          });
+        }
+        return res;
+      });
+    } else {
+      ask = Axios({
+        url: `/api/courses/${this.props.match.params.shortTitle}`,
+        method: "get"
+      });
+    }
+    ask
+      .then(res => {
+        let averageRate = "Brak Opinii";
+        for (let i = 0; i < res.data.course.reviews.length; i++) {
+          if (i === 0) {
+            averageRate = res.data.course.reviews[i].grade;
+          } else {
+            averageRate += res.data.course.reviews[i].grade;
+          }
+        }
+        if (typeof averageRate === "number") {
+          res.data.course.averageRate =
+            averageRate / res.data.course.reviews.length;
+        } else {
+          res.data.course.averageRate = averageRate;
+        }
+        this.setState({
+          ...this.state,
+          course: res.data.course,
+          isReviewed: res.data.isReviewed
+        });
+      })
+      .catch(err => {
+        console.log(err);
+        if (err.response.status === 401) {
+          localStorage.removeItem("token");
+          window.location.reload();
+        } else if (err.response.status === 404) {
+          this.props.history.replace("/notFound");
+        }
+      });
+    console.log(this.comments.current);
+    if (
+      this.props.location.state &&
+      this.props.location.state.scrollToComments
+    ) {
+      setTimeout(() => {
+        console.log(this.comments.current);
+        if (this.comments.current) {
+          jump(this.comments.current, {
+            duration: 500,
+            offset: -70
+          });
+        }
+      }, 450);
+    }
   }
 
   handleAddModalClose = () => {
@@ -151,71 +227,7 @@ class Course extends React.Component {
     });
   }
 
-  componentDidMount() {
-    let ask;
-    if (localStorage.getItem("token")) {
-      ask = Axios({
-        url: `/api/courses/${this.props.match.params.shortTitle}`,
-        method: "get",
-        headers: {
-          token: localStorage.getItem("token")
-        }
-      }).then(res => {
-        if (res.data.isReviewed) {
-          this.setState({
-            opinion: {
-              ...res.data.opinion.reviews,
-              _id: res.data.opinion._id
-            }
-          });
-        }
-        return res;
-      });
-    } else {
-      ask = Axios({
-        url: `/api/courses/${this.props.match.params.shortTitle}`,
-        method: "get"
-      });
-    }
-    ask
-      .then(res => {
-        console.log(res.data);
-        let averageRate = "Brak Opinii";
-        for (let i = 0; i < res.data.course.reviews.length; i++) {
-          if (i === 0) {
-            averageRate = res.data.course.reviews[i].grade;
-          } else {
-            averageRate += res.data.course.reviews[i].grade;
-          }
-        }
-        if (typeof averageRate === "number") {
-          res.data.course.averageRate =
-            averageRate / res.data.course.reviews.length;
-        } else {
-          res.data.course.averageRate = averageRate;
-        }
-        console.log(this.state.opinion, 153);
-        this.setState({
-          ...this.state,
-          course: res.data.course,
-          isReviewed: res.data.isReviewed
-        });
-      })
-      .catch(err => {
-        console.log(err);
-        if (err.response.status === 401) {
-          localStorage.removeItem("token");
-          window.location.reload()
-        } else if (err.response.status === 404) {
-          console.log("asd");
-          console.log();
-          this.props.history.replace("/notFound");
-        }
-      });
-  }
-
   ratingChanged(newRating) {
-    console.log(newRating);
     this.setState({
       opinion: {
         ...this.state.opinion,
@@ -225,7 +237,6 @@ class Course extends React.Component {
   }
 
   onChangeAddModal(e) {
-    console.log(e.target.value);
     this.setState({
       ...this.state,
       opinion: {
@@ -236,7 +247,6 @@ class Course extends React.Component {
   }
 
   render() {
-    console.log(this.state.course);
     return (
       <AuthContext.Consumer>
         {({ auth, logout }) => (
@@ -266,12 +276,16 @@ class Course extends React.Component {
                 <CourseDetails course={this.state.course} />
                 <Row>
                   <Col>
-                    <h3>Komentarze</h3>
+                    <h3 ref={this.comments}>Komentarze</h3>
                   </Col>
                 </Row>
                 <Row>
+                  <br />
                   <Col sm="12" className="comments">
-                    <Comments comments={this.state.course.comments} shortTitle={this.state.course.shortTitle}/>
+                    <Comments
+                      comments={this.state.course.comments}
+                      shortTitle={this.state.course.shortTitle}
+                    />
                   </Col>
                 </Row>
               </React.Fragment>

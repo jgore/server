@@ -38,7 +38,6 @@ const CourseOverview = ({
     isOpinionModalOpen
   }
 }) => {
-  console.log(isAddModalOpen);
   return (
     <Row>
       <Col sm="12" md="5">

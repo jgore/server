@@ -44,3 +44,5 @@ var port = process.env.PORT || 5000;
 
 console.log(port);
 app.listen(port, "0.0.0.0");
+
+module.exports = app;

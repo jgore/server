@@ -20,12 +20,15 @@ module.exports = app => {
           { shortTitle },
           {
             $push: {
-              comments: {
-                content,
-                user: user._doc,
-                createdAt: new Date()
-              }
-            }
+                comments: {
+                    $each:[ {
+                        content,
+                        user: user._doc,
+                        createdAt: new Date(),
+                    }],
+                    $position: 0,
+                },
+              },
           }
         )
           .then(doc => {

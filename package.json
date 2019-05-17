@@ -12,7 +12,8 @@
     "server": "nodemon --inspect index.js",
     "client": "cd client && yarn start",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "test": "nodemon --exec ./node_modules/.bin/mocha --require babel-core/register --recursive"
+    "test": "./node_modules/.bin/mocha --require babel-core/register --recursive",
+    "test:watch": "nodemon --exec ./node_modules/.bin/mocha --require babel-core/register --recursive"
   },
   "dependencies": {
     "body-parser": "^1.18.3",

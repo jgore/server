@@ -14,6 +14,7 @@ const Course = ({
     price,
     shortDescription,
     reviews,
+    maxMembers,
     _id
   },
   modalOpen
@@ -57,6 +58,9 @@ const Course = ({
         </p>
         <p>
           <b>Opis:</b> {shortDescription}
+        </p>
+        <p>
+          <b>Grupa:</b> {maxMembers} osób
         </p>
         <div className="offert__stars">
           {averageRate ? (

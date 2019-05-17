@@ -29,7 +29,7 @@ module.exports = app => {
           try {
             var decoded = getFromJWT(secret);
           } catch (err) {
-            throw err;
+            return err;
           }
           UserCollection.findOne({
             googleId: decoded.googleId

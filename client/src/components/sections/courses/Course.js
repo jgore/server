@@ -100,6 +100,7 @@ const Course = ({
         )}
         <Button
           style={{ marginTop: 10 }}
+          variant="outline-warning"
           onClick={() =>
             history.push({
               pathname: `/course/${shortTitle}`,

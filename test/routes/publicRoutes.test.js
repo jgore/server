@@ -38,7 +38,7 @@ describe("get comment by shortTitle", function() {
       });
   });
 
-  it("should return 404 without shortTitle", function(done) {
+  it("should return 404", function(done) {
     chai
       .request(server)
       .get("/api/courses/niema")

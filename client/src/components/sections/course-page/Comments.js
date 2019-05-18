@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, Button } from "react-bootstrap";
+import { Image, Button, Modal } from "react-bootstrap";
 import AddComment from "../../forms/AddComment";
 import { AuthContext } from "../../../App";
 import Axios from "axios";
@@ -8,7 +8,9 @@ export default class Comments extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      comments: []
+      comments: [],
+      isDeleteModalOpen: false,
+      toDelete: {}
     };
   }
 
@@ -18,37 +20,45 @@ export default class Comments extends React.Component {
     });
   }
 
-  deleteComment(_id, logout, auth, shortTitle) {
+  changeDeleteModalOpen(state, data = {}) {
     return () => {
-      Axios({
-        url: `/api/comments/delete`,
-        method: "POST",
-        data: {
-          shortTitle,
-          _id
-        },
-        headers: {
-          token: auth.token
-        }
-      })
-        .then(res => {
-          let array = this.state.comments.filter(comment => {
-            return comment._id !== _id;
-          });
-          this.setState({
-            comments: array
-          });
-        })
-        .catch(err => {
-          if (err.status === 304) {
-            window.location.reload();
-          } else if (err.status === 401) {
-            logout();
-          } else {
-            window.location.reload();
-          }
-        });
+      this.setState({
+        isDeleteModalOpen: state,
+        toDelete: data
+      });
     };
+  }
+
+  deleteComment({ _id, logout, auth, shortTitle }) {
+    Axios({
+      url: `/api/comments/delete`,
+      method: "POST",
+      data: {
+        shortTitle,
+        _id
+      },
+      headers: {
+        token: auth.token
+      }
+    })
+      .then(res => {
+        let array = this.state.comments.filter(comment => {
+          return comment._id !== _id;
+        });
+        this.setState({
+          comments: array
+        });
+      })
+      .catch(err => {
+        if (err.status === 304) {
+          window.location.reload();
+        } else if (err.status === 401) {
+          logout();
+        } else {
+          window.location.reload();
+        }
+      });
+    this.changeDeleteModalOpen(false)();
   }
 
   refreshComments(comments) {
@@ -74,17 +84,40 @@ export default class Comments extends React.Component {
                       key={index}
                       comment={value}
                       isCancel={true}
-                      onClose={this.deleteComment(
-                        value._id,
+                      onClose={this.changeDeleteModalOpen(true, {
+                        _id: value._id,
                         logout,
                         auth,
-                        this.props.shortTitle
-                      )}
+                        shortTitle: this.props.shortTitle
+                      })}
                     />
                   );
                 }
                 return <Comment key={index} comment={value} />;
               })}
+              <Modal
+                show={this.state.isDeleteModalOpen}
+                onHide={this.changeDeleteModalOpen(false)}
+                centered
+              >
+                <Modal.Header closeButton>
+                  <Modal.Title>Czy na pewno chcesz usunąć ?</Modal.Title>
+                </Modal.Header>
+                <Modal.Footer>
+                  <Button
+                    variant="secondary"
+                    onClick={() => this.deleteComment(this.state.toDelete)}
+                  >
+                    Usuń
+                  </Button>
+                  <Button
+                    variant="primary"
+                    onClick={this.changeDeleteModalOpen(false)}
+                  >
+                    Zamknij
+                  </Button>
+                </Modal.Footer>
+              </Modal>
             </React.Fragment>
           )}
         </AuthContext.Consumer>
@@ -117,5 +150,4 @@ const Comment = ({
       )}
     </div>
   </div>
-
 );

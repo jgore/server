@@ -18,7 +18,7 @@ const app = express();
 const bodyParser = require("body-parser");
 
 process.on("uncaughtException", function(err) {
-  console.log(err instanceof Error)
+  console.log(err instanceof Error);
   if (err instanceof Error === false) {
     logWriteStream.write(
       `\r\n[Error] ${JSON.stringify(err, undefined, 2)}\r\n`
@@ -30,12 +30,12 @@ process.on("uncaughtException", function(err) {
   logWriteStream.end(
     "\r\n -------------------------------END-------------------------------"
   );
+  process.exit(1);
 });
 
 process.on("exit", function() {
   logWriteStream.end();
 });
-
 
 app.use(cors());
 app.use((req, res, next) => {

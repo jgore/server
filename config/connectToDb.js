@@ -29,8 +29,12 @@ module.exports = mongoURI => {
         CourseCollection.insertMany(courses).catch(err => {
           console.log("Error while inserting courses (duplication key)");
         });
-        VideoCollection.insertMany(videos).catch(err => {
-          console.log("Error while inserting videos ");
+        VideoCollection.count({}, (err, count) => {
+          if (count === 0) {
+            VideoCollection.insertMany(videos).catch(err => {
+              console.log("Error while inserting videos ");
+            });
+          }
         });
       });
     }

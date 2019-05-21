@@ -13,6 +13,7 @@
         "title": "Korepetycje",
         "shortDescription": "Filmiki obrazuje jak wyglądają nasze korepetycje z programowania."
       },
+      "maxMembers":"1/8",
       "technologies": [
         {
           "name": "java-technologies",
@@ -55,6 +56,7 @@
         "title": "Company",
         "shortDescription": "Projekt [ Company ] jest projektem wprowadzającym w trudniejsze, większe projekty nie mniej jednak używa tej samej architektury i tych samych narzędzi co projekty trudniejsze nie mniej jednak w mniej skomplikowany sposób. Świetny na start w towrzeniu aplikacji w JAVA. "
       },
+      "maxMembers":"1/5",
       "technologies": [
         {
           "name": "java-technologies",
@@ -89,6 +91,7 @@
         "title": "Shop",
         "shortDescription": "Projekt [ Shop] Jest już pierwszą realną, prawdziwą, działajacą na prdoukcji, aplikacją jaka stworzysz. Mamy też swoją własną wersję produkcyjna projektu SHOP natomiast tutaj razem z Toba piszemy ja od nowa."
       },
+      "maxMembers":"1/9",
       "technologies": [
         {
           "name": "java-technologies",
@@ -133,6 +136,7 @@
         "title": "Flights",
         "shortDescription": "Projekt [ Flights]  jest projektem uzupełniającym do poprzednich i jest już stricte przygotowaniem do zdobycia pracy jako Java Developer. Rozmowa rekrutacjna. Odpowiedzi na pytania rekrutacyjne. Projekt rekrutacyjny taki sam jak w firmach do której będziesz aplikował."
       },
+      "maxMembers":"3/8",
       "technologies": [
         {
           "name": "java-technologies",
@@ -166,6 +170,7 @@
         "title": "Bookify",
         "shortDescription": "Projekt [ Bookify]  jest najtudniejszym z naszych projektów gdy już zdobędziesz prace jako Java Developer i chcesz się dalej rozwijać. Tutaj przepisujemy od nowa wielką, potężną, zarabiającą duże miliony dolarów aplikację, która jest się sprzedała, ale jest kompletnie źle napisana."
       },
+      "maxMembers":"1/8",
       "technologies": [
         {
           "name": "java-technologies",

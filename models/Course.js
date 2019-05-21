@@ -49,6 +49,9 @@ const courseSchema = new Schema({
   technologies: {
     type: Array
   },
+  maxMembers: {
+    type: String
+  },
   reviews: [Reviews],
   comments: [Comment]
 });

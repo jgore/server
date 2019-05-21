@@ -17,7 +17,8 @@ const CourseOverview = ({
     duration,
     averageRate,
     shortDescription,
-    reviews
+    reviews,
+    maxMembers
   },
   isReviewed,
   isAddModalOpen,
@@ -37,7 +38,6 @@ const CourseOverview = ({
     isOpinionModalOpen
   }
 }) => {
-  console.log(isAddModalOpen);
   return (
     <Row>
       <Col sm="12" md="5">
@@ -50,6 +50,9 @@ const CourseOverview = ({
         </p>
         <p>
           <b>Czas trwania:</b>: {duration}
+        </p>
+        <p>
+          <b>Grupa:</b> {maxMembers} osób
         </p>
         <div className="flexible flexible-horizontal-center">
           <b>Średnia ocena: </b>

@@ -27,7 +27,6 @@ class App extends Component {
   login() {
     Axios(`/api/current_user`)
       .then(res => {
-        console.log(res.data);
         localStorage.setItem("token", res.data.token);
         this.setState({
           auth: res.data || false,
@@ -98,7 +97,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.auth);
     return (
       <GlobalContext.Provider value={{ windowEvents: this.state.windowEvents }}>
         <AuthContext.Provider

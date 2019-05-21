@@ -11,34 +11,36 @@ module.exports = app => {
     });
   });
   app.get("/api/courses/:shortTitle", (req, res) => {
-    console.log(req.params.shortTitle);
     let promise1;
-    if (!req.params.shortTitle) {
+    if (!req.params.shortTitle || req.params.shortTitle.length == 0) {
       return res.status(404).send();
     }
 
     if (req.headers.token) {
+      
       promise1 = new Promise((resolve, reject) => {
         getFromRedis(req.headers.token, (err, secret) => {
+          
           if (err) {
-            reject();
+            return reject();
           }
-          if (!secret) {
-            reject();
+          if (secret === null) {
+            return reject();
           }
+          
           try {
             var decoded = getFromJWT(secret);
           } catch (err) {
-            throw err;
+            return err;
           }
           UserCollection.findOne({
             googleId: decoded.googleId
           })
             .then(user => {
+              console.log("asd")
               if (!user) {
                 return res.status(401).send();
               }
-              console.log(user, 38);
               CourseCollection.aggregate([
                 {
                   $unwind: "$reviews"
@@ -67,7 +69,6 @@ module.exports = app => {
             });
         });
       }).catch(err => {
-        console.log(err);
         return err;
       });
     }
@@ -81,7 +82,6 @@ module.exports = app => {
         return doc;
       })
       .catch(err => {
-        console.log(err);
         throw err;
       });
 
@@ -108,7 +108,6 @@ module.exports = app => {
           return document;
         })
         .then(document => {
-          console.log(document);
           res.send(document);
         })
         .catch(errors => {
@@ -121,13 +120,11 @@ module.exports = app => {
     } else {
       promise2
         .then(document => {
-          console.log(document);
           res.send({
             course: document
           });
         })
         .catch(err => {
-          console.log(err);
           res.status(404).send();
         });
     }

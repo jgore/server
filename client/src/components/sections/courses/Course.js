@@ -4,6 +4,7 @@ import { PUBLIC_RESOURCES_URL } from "../../../utils/variables";
 import PropTypes from "prop-types";
 import Stars from "../../helpers/ReactStars";
 import { LinkContainer } from "react-router-bootstrap";
+import { withRouter } from "react-router-dom";
 
 const Course = ({
   course: {
@@ -14,9 +15,11 @@ const Course = ({
     price,
     shortDescription,
     reviews,
+    maxMembers,
     _id
   },
-  modalOpen
+  modalOpen,
+  history
 }) => {
   let averageRate = null;
   for (let i = 0; i < reviews.length; i++) {
@@ -58,6 +61,9 @@ const Course = ({
         <p>
           <b>Opis:</b> {shortDescription}
         </p>
+        <p>
+          <b>Grupa:</b> {maxMembers} osób
+        </p>
         <div className="offert__stars">
           {averageRate ? (
             <div className="flexible flexible-horizontal-center">
@@ -80,11 +86,29 @@ const Course = ({
         </div>
       </Card.Body>
       <Card.Footer style={{ background: "#343A40" }}>
-        <LinkContainer to={`/course/${shortTitle}`}>
-          <Button variant="warning">Zobacz szczegóły</Button>
+        <LinkContainer to={`/course/${shortTitle}`} style={{ marginTop: 10 }}>
+          <Button variant="warning" >
+            Zobacz szczegóły
+          </Button>
         </LinkContainer>
-        <Button onClick={() => modalOpen(reviews)}>
-          Opinie ({reviews.length})
+        {reviews.length > 0 ? (
+          <Button onClick={() => modalOpen(reviews)} style={{ marginTop: 10 }}>
+            Opinie ({reviews.length})
+          </Button>
+        ) : (
+          <Button style={{ marginTop: 10 }}>Brak opini</Button>
+        )}
+        <Button
+          style={{ marginTop: 10 }}
+          variant="outline-warning"
+          onClick={() =>
+            history.push({
+              pathname: `/course/${shortTitle}`,
+              state: { scrollToComments: true }
+            })
+          }
+        >
+          Komentarze
         </Button>
       </Card.Footer>
     </Card>
@@ -103,4 +127,4 @@ Course.propTypes = {
   })
 };
 
-export default Course;
+export default withRouter(Course);

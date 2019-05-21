@@ -2,7 +2,7 @@ import React from "react";
 import { Modal, FormControl, Button, Form } from "react-bootstrap";
 import Stars from "../helpers/ReactStars";
 import CustomModal from "./CustomModal";
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
 const AddOpinionModal = ({
   handleClose,
@@ -41,11 +41,19 @@ const AddOpinionModal = ({
         />
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="primary" onClick={() => addOpinion(auth, logout)}>
+        <Button
+          variant="primary"
+          onClick={() => addOpinion(auth, logout)}
+          style={{ position: "absolute", left: "18px" }}
+        >
           {isReviewed ? "Edytuj" : "Dodaj"}
         </Button>
-        <Button variant="secondary" onClick={handleClose}>
-          Zamknij
+        <Button
+          variant="danger"
+          style={{ background: "red" }}
+          onClick={handleClose}
+        >
+          Anuluj
         </Button>
       </Modal.Footer>
     </CustomModal>
@@ -62,6 +70,6 @@ AddOpinionModal.propTypes = {
   logout: PropTypes.func.isRequired,
   review: PropTypes.object.isRequired,
   isReviewed: PropTypes.bool.isRequired
-}
+};
 
 export default AddOpinionModal;

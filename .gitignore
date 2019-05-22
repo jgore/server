@@ -2,3 +2,4 @@ node_modules/
 keys/*
 .idea/*
 yarn.lock
+log.txt

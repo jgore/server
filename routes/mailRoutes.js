@@ -22,7 +22,7 @@ module.exports = (app) => {
     })
 
 
-    var options = {
+    let options = {
       subject: req.body.subject,
       text: req.body.text,
       email: req.body.email,
@@ -34,6 +34,7 @@ module.exports = (app) => {
         console.log(error);
         res.end("problem appeared when sending email")
       } else {
+
         res.end("email sent correctly")
       }
     })

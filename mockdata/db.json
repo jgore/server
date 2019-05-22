@@ -126,15 +126,15 @@
     {
       "title": "Kurs programowania Java 1++ (junior++)",
       "shortTitle":"Flights",
-      "content": "<h5>Lorem ipsum dolor sit amet</h5>, <p>consectetur adipiscing elit. Cras eu dolor convallis, lobortis risus at, porta ante.</p> <p>Sed finibus urna ut ligula vulputate, et egestas nulla ultrices. Quisque suscipit nisl lacus, quis luctus ante mattis non. Donec pulvinar placerat iaculis. Vivamus id tincidunt leo. <b>Morbi et</b> eros magna.</p> <p> Praesent sit amet lorem ligula. Maecenas accumsan diam vitae dolor tristique pulvinar. Integer pulvinar hendrerit efficitur. Etiam sed lacus urna.</p> <p>Cras cursus, turpis eget ultrices bibendum, nibh <i>lorem ultricies felis, vitae auctor erat</i> enim ut neque.</p>",
+      "content": "<h5>Flights to aplikacja umozliwiająca znalezienie lotu - z jednego lotniska na drugie w jakies konkretne dni z wyliczeniem ceny i generacją faktury. Rezerwacje też mają swoją logikę biznesową która trzeba zaimplenetować. </h5></p>",
       "image": "macbook.jpg",
       "duration": "4 tygodnie",
       "price": "4 tygodnie 1499 PLN [ 93.75 PLN / H ] [ Sobota 8-12 ]",
-      "shortDescription": "Przygotowanie stricte pod rozmowę kwalifikacyjną bazując na zdobytej wiedzy. Kurs uzupełniający do kursu Junior",
+      "shortDescription": "Kurs podobnie trudny co Java 1 (junior) ale o zupelnie innej logice i bez wejscia na produkcje.",
       "video": {
         "link": "https://www.youtube.com/embed/aA8uRIm71Yw",
         "title": "Flights",
-        "shortDescription": "Projekt [ Flights]  jest projektem uzupełniającym do poprzednich i jest już stricte przygotowaniem do zdobycia pracy jako Java Developer. Rozmowa rekrutacjna. Odpowiedzi na pytania rekrutacyjne. Projekt rekrutacyjny taki sam jak w firmach do której będziesz aplikował."
+        "shortDescription": "Projekt [Fligts] jest projektem który piszemy przygotowując się na rozmowe kwalifikacyjną szlifując swoje umiejetności w JAVA."
       },
       "maxMembers":"3/8",
       "technologies": [

@@ -8,6 +8,7 @@ import { withRouter } from "react-router-dom";
 
 const Course = ({
   course: {
+    comments,
     title,
     shortTitle,
     image,
@@ -87,9 +88,7 @@ const Course = ({
       </Card.Body>
       <Card.Footer style={{ background: "#343A40" }}>
         <LinkContainer to={`/course/${shortTitle}`} style={{ marginTop: 10 }}>
-          <Button variant="warning" >
-            Zobacz szczegóły
-          </Button>
+          <Button variant="warning">Zobacz szczegóły</Button>
         </LinkContainer>
         {reviews.length > 0 ? (
           <Button onClick={() => modalOpen(reviews)} style={{ marginTop: 10 }}>
@@ -108,7 +107,7 @@ const Course = ({
             })
           }
         >
-          Komentarze
+          Komentarze ({comments.length})
         </Button>
       </Card.Footer>
     </Card>

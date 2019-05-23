@@ -18,11 +18,11 @@ class Nav extends Component {
       },
       {
         name: "Konto",
-        path: "/account"
+        path: "/konto"
       },
       {
         name: "Kontakt",
-        path: "/contact"
+        path: "/kontakt"
       }
     ],
     navExpanded: false

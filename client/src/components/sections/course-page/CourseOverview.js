@@ -76,7 +76,7 @@ const CourseOverview = ({
           {shortDescription}
         </p>
         <div style={{ display: "flex", flexWrap: "wrap" }}>
-          <LinkContainer to="/contact">
+          <LinkContainer to="/kontakt">
             <a className="flexible flexible-horizontal-center call-button">
               <GoMegaphone />
               Zacznij już dziś !!!

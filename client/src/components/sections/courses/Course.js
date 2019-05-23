@@ -87,7 +87,7 @@ const Course = ({
         </div>
       </Card.Body>
       <Card.Footer style={{ background: "#343A40" }}>
-        <LinkContainer to={`/course/${shortTitle}`} style={{ marginTop: 10 }}>
+        <LinkContainer to={`/kursy/${shortTitle}`} style={{ marginTop: 10 }}>
           <Button variant="warning">Zobacz szczegóły</Button>
         </LinkContainer>
         {reviews.length > 0 ? (
@@ -102,7 +102,7 @@ const Course = ({
           variant="outline-warning"
           onClick={() =>
             history.push({
-              pathname: `/course/${shortTitle}`,
+              pathname: `/kursy/${shortTitle}`,
               state: { scrollToComments: true }
             })
           }

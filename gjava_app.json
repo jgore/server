@@ -1,0 +1,11 @@
+{
+  "apps": [
+    {
+      "name": "gjava",
+      "script": "yarn",
+      "args" : "prod"
+    }
+  ]
+}
+
+

@@ -1,3 +1,5 @@
+process.env.NODE_ENV = 'test';
+
 const chai = require("chai");
 const server = require("../../index");
 const chaiHttp = require("chai-http");
@@ -37,6 +39,8 @@ describe("get comment by shortTitle", function() {
         done();
       });
   });
+
+
 
   it("should return 404", function(done) {
     chai

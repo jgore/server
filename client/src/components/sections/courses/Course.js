@@ -8,6 +8,7 @@ import { withRouter } from "react-router-dom";
 
 const Course = ({
   course: {
+    comments,
     title,
     shortTitle,
     image,
@@ -86,10 +87,8 @@ const Course = ({
         </div>
       </Card.Body>
       <Card.Footer style={{ background: "#343A40" }}>
-        <LinkContainer to={`/course/${shortTitle}`} style={{ marginTop: 10 }}>
-          <Button variant="warning" >
-            Zobacz szczegóły
-          </Button>
+        <LinkContainer to={`/kursy/${shortTitle}`} style={{ marginTop: 10 }}>
+          <Button variant="warning">Zobacz szczegóły</Button>
         </LinkContainer>
         {reviews.length > 0 ? (
           <Button onClick={() => modalOpen(reviews)} style={{ marginTop: 10 }}>
@@ -103,12 +102,12 @@ const Course = ({
           variant="outline-warning"
           onClick={() =>
             history.push({
-              pathname: `/course/${shortTitle}`,
+              pathname: `/kursy/${shortTitle}`,
               state: { scrollToComments: true }
             })
           }
         >
-          Komentarze
+          Komentarze ({comments.length})
         </Button>
       </Card.Footer>
     </Card>

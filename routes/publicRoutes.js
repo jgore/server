@@ -12,10 +12,11 @@ module.exports = app => {
   });
   app.get("/api/courses/:shortTitle", (req, res) => {
     let promise1;
+    
     if (!req.params.shortTitle || req.params.shortTitle.length == 0) {
       return res.status(404).send();
     }
-
+    
     if (req.headers.token) {
       
       promise1 = new Promise((resolve, reject) => {
@@ -37,7 +38,6 @@ module.exports = app => {
             googleId: decoded.googleId
           })
             .then(user => {
-              console.log("asd")
               if (!user) {
                 return res.status(401).send();
               }

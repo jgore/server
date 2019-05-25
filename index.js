@@ -17,31 +17,34 @@ connectToDb(keys.mongoURI);
 const app = express();
 const bodyParser = require("body-parser");
 
-process.on("uncaughtException", function(err) {
-  console.log(err instanceof Error);
-  if (err instanceof Error === false) {
-    logWriteStream.write(
-      `\r\n[Error] ${JSON.stringify(err, undefined, 2)}\r\n`
+if (process.env.NODE_ENV == "production") {
+  process.on("uncaughtException", function(err) {
+    console.log(err instanceof Error);
+    if (err instanceof Error === false) {
+      logWriteStream.write(
+        `\r\n[Error] ${JSON.stringify(err, undefined, 2)}\r\n`
+      );
+    } else {
+      logWriteStream.write(`\r\n[Error] ${err}\r\n`);
+    }
+
+    logWriteStream.end(
+      "\r\n -------------------------------END-------------------------------"
     );
-  } else {
-    logWriteStream.write(`\r\n[Error] ${err}\r\n`);
-  }
+    process.exit(1);
+  });
 
-  logWriteStream.end(
-    "\r\n -------------------------------END-------------------------------"
-  );
-  process.exit(1);
-});
-
-process.on("exit", function() {
-  logWriteStream.end();
-});
+  process.on("exit", function() {
+    logWriteStream.end();
+  });
+  app.use((req, res, next) => {
+    logWriteStream.write(`\r\n[${req.method}] ${req.url}`);
+    next();
+  });
+}
 
 app.use(cors());
-app.use((req, res, next) => {
-  logWriteStream.write(`\r\n[${req.method}] ${req.url}`);
-  next();
-});
+
 app.use(bodyParser.json());
 app.use(
   bodyParser.urlencoded({

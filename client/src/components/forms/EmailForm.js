@@ -14,7 +14,8 @@ class EmailForm extends Component {
       isLoading: true,
       error: null,
       isVerified: null,
-      online: null
+      online: null,
+      city: null
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -27,19 +28,21 @@ class EmailForm extends Component {
   }
 
   handleChange(event) {
-    if (event.target.type === "text") {
-      this.setState({ phone: event.target.value });
+    if (event.target.id === "city" ) {
+      this.setState({city: event.target.value});
     } else if (event.target.type === "email") {
-      this.setState({ email: event.target.value });
+      this.setState({email: event.target.value});
     } else if (event.target.type === "textarea") {
-      this.setState({ text: event.target.value });
+      this.setState({text: event.target.value});
     } else if (event.target.type === "select-one") {
-      this.setState({ subject: event.target.value });
+      this.setState({subject: event.target.value});
     } else if (event.target.type === "checkbox") {
-      this.setState({ online: event.target.value });
+      this.setState({online: event.target.value});
+    }else if (event.target.type === "text"){
+      this.setState({phone: event.target.value})
     }
-  }
 
+  }
   handleSubmit(event) {
     event.preventDefault();
     if (this.state.isVerified) {
@@ -48,7 +51,8 @@ class EmailForm extends Component {
         text: this.state.text,
         email: this.state.email,
         phone: this.state.phone,
-        online: this.state.online
+        online: this.state.online,
+        city: this.state.city
       })
         .then(res => {
           alert("Email was sent");
@@ -171,6 +175,20 @@ class EmailForm extends Component {
             <small id="emailHelp" className="form-text text-muted">
               We'll never share your email with anyone else.
             </small>
+          </div>
+
+          <div style={{ margin: 20 }} className="form-group">
+            <label htmlFor="city">City</label>
+            <input
+              required
+              value={this.state.city}
+              onChange={this.handleChange}
+              type="city"
+              className="form-control"
+              id="city"
+              placeholder="Enter city"
+            />
+            
           </div>
 
           <div style={{ margin: 20 }} className="form-group">

@@ -9,26 +9,28 @@ module.exports = app => {
       googleId = req.session.googleId;
     console.log(req.body);
     if (!shortTitle || !content) {
-      return res.status(400).send();
+      return res.status(400).send({});
     }
     UserCollection.findOne({ googleId })
       .then(user => {
         if (!user) {
-          return res.status(401).send();
+          return res.status(401).send({});
         }
         CourseCollection.updateOne(
           { shortTitle },
           {
             $push: {
-                comments: {
-                    $each:[ {
-                        content,
-                        user: user._doc,
-                        createdAt: new Date(),
-                    }],
-                    $position: 0,
-                },
-              },
+              comments: {
+                $each: [
+                  {
+                    content,
+                    user: user._doc,
+                    createdAt: new Date()
+                  }
+                ],
+                $position: 0
+              }
+            }
           }
         )
           .then(doc => {
@@ -37,11 +39,11 @@ module.exports = app => {
             });
           })
           .catch(err => {
-            return res.status(400).send();
+            return res.status(400).send({});
           });
       })
       .catch(err => {
-        res.status(400).send();
+        res.status(400).send({});
       });
   });
 
@@ -65,7 +67,7 @@ module.exports = app => {
         });
       })
       .catch(err => {
-        res.status(400).send();
+        res.status(400).send({});
       });
   });
 
@@ -76,7 +78,7 @@ module.exports = app => {
     UserCollection.findOne({ googleId })
       .then(user => {
         if (!user) {
-          return res.status(401).send();
+          return res.status(401).send({});
         }
         CourseCollection.update(
           {
@@ -89,17 +91,17 @@ module.exports = app => {
           }
         )
           .then(stats => {
-            if(stats.nModified === 0) {
-              return res.status(304).send()
+            if (stats.nModified === 0) {
+              return res.status(304).send({});
             }
             res.send();
           })
           .catch(err => {
-            res.status.send(400);
+            res.status(400).send({});
           });
       })
       .catch(err => {
-        res.status(400).send();
+        res.status(400).send({});
       });
   });
 };

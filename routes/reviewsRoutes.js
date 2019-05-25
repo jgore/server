@@ -6,6 +6,9 @@ module.exports = app => {
   app.post("/api/reviews", privateRoute, (req, res) => {
     let { shortTitle, content, grade } = req.body.opinion,
       googleId = req.session.googleId;
+    if (!shortTitle) {
+      return res.status(400).send({});
+    }
     CourseCollection.aggregate([
       {
         $unwind: "$reviews"
@@ -18,12 +21,12 @@ module.exports = app => {
       }
     ]).then(rows => {
       if (rows.length > 0) {
-        return res.status(409).send();
+        return res.status(409).send({});
       }
       UserCollection.findOne({ googleId })
         .then(user => {
           if (!user) {
-            return res.status(401).send();
+            return res.status(401).send({});
           }
           CourseCollection.updateOne(
             { shortTitle },
@@ -37,15 +40,14 @@ module.exports = app => {
                 }
               }
             }
-          )
-            .then(doc => {
-              CourseCollection.findOne({ shortTitle }).then(course => {
-                res.send({ course });
-              });
-            })
-            .catch(err => {
-              return res.status(400).send();
+          ).then(doc => {
+            CourseCollection.findOne({ shortTitle }).then(course => {
+              if (!course) {
+                return res.status(404).send({});
+              }
+              res.send({ course });
             });
+          });
         })
         .catch(err => {
           res.status(400).send();
@@ -54,6 +56,9 @@ module.exports = app => {
   });
 
   app.put("/api/courses/:shortTitle", privateRoute, (req, res) => {
+    if (!req.params.shortTitle) {
+      return res.status(400).send({});
+    }
     CourseCollection.updateOne(
       {
         shortTitle: req.params.shortTitle,
@@ -75,7 +80,7 @@ module.exports = app => {
       })
       .catch(err => {
         console.log(err);
-        res.status(400).send();
+        res.status(400).send({});
       });
   });
 };

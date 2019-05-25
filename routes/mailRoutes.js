@@ -28,7 +28,7 @@ module.exports = app => {
           message: "Problem with send email"
         });
       } else {
-        res.send();
+        res.send({});
       }
     });
   });

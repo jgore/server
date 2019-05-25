@@ -12,23 +12,21 @@ module.exports = app => {
   });
   app.get("/api/courses/:shortTitle", (req, res) => {
     let promise1;
-    
+
     if (!req.params.shortTitle || req.params.shortTitle.length == 0) {
-      return res.status(404).send();
+      return res.status(404).send({});
     }
-    
+
     if (req.headers.token) {
-      
       promise1 = new Promise((resolve, reject) => {
         getFromRedis(req.headers.token, (err, secret) => {
-          
           if (err) {
             return reject();
           }
           if (secret === null) {
             return reject();
           }
-          
+
           try {
             var decoded = getFromJWT(secret);
           } catch (err) {
@@ -39,7 +37,7 @@ module.exports = app => {
           })
             .then(user => {
               if (!user) {
-                return res.status(401).send();
+                return res.status(401).send({});
               }
               CourseCollection.aggregate([
                 {
@@ -112,9 +110,9 @@ module.exports = app => {
         })
         .catch(errors => {
           if (errors.code === 404) {
-            res.status(404).send();
+            res.status(404).send({});
           } else {
-            res.status(409).send();
+            res.status(409).send({});
           }
         });
     } else {
@@ -125,7 +123,7 @@ module.exports = app => {
           });
         })
         .catch(err => {
-          res.status(404).send();
+          res.status(404).send({});
         });
     }
   });

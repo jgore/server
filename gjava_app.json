@@ -3,7 +3,8 @@
     {
       "name": "gjava",
       "script": "yarn",
-      "args" : "prod"
+      "args" : "prod",
+      "interpreter" : "bash"
     }
   ]
 }

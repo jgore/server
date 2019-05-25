@@ -7,7 +7,6 @@ module.exports = app => {
   app.post("/api/comments", privateRoute, (req, res) => {
     let { shortTitle, content } = req.body.opinion,
       googleId = req.session.googleId;
-    console.log(req.body);
     if (!shortTitle || !content) {
       return res.status(400).send({});
     }
@@ -35,6 +34,9 @@ module.exports = app => {
         )
           .then(doc => {
             CourseCollection.findOne({ shortTitle }).then(course => {
+              if (!course) {
+                return res.status(404).send({});
+              }
               res.send({ course });
             });
           })
@@ -48,6 +50,9 @@ module.exports = app => {
   });
 
   app.put("/api/comments/:shortTitle", privateRoute, (req, res) => {
+    if (!req.body.content) {
+      return res.status(400).send({});
+    }
     CourseCollection.updateOne(
       {
         shortTitle: req.params.shortTitle,
@@ -63,6 +68,9 @@ module.exports = app => {
         CourseCollection.findOne({
           shortTitle: req.params.shortTitle
         }).then(doc => {
+          if (!doc) {
+            return res.status(404).send({});
+          }
           res.status(200).send(doc);
         });
       })
@@ -74,7 +82,9 @@ module.exports = app => {
   app.post("/api/comments/delete", privateRoute, (req, res) => {
     let { shortTitle, _id } = req.body,
       googleId = req.session.googleId;
-    console.log(shortTitle, _id);
+    if (!shortTitle || !_id) {
+      return res.status(400).send({});
+    }
     UserCollection.findOne({ googleId })
       .then(user => {
         if (!user) {
@@ -91,10 +101,13 @@ module.exports = app => {
           }
         )
           .then(stats => {
-            if (stats.nModified === 0) {
+            console.log(stats);
+            if (stats.n === 0) {
+              return res.status(404).send({});
+            } else if (stats.nModified === 0) {
               return res.status(304).send({});
             }
-            res.send();
+            res.send({});
           })
           .catch(err => {
             res.status(400).send({});

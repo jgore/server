@@ -55,7 +55,7 @@ class Home extends Component {
             {this.state.error ? (
               <AppError errorCode={this.state.error} />
             ) : (
-              <Courses courses={this.state.courses} />
+              <Courses courses={this.state.courses}/>
             )}
           </React.Fragment>
         )}

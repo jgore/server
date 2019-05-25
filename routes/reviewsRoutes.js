@@ -50,7 +50,7 @@ module.exports = app => {
           });
         })
         .catch(err => {
-          res.status(400).send();
+          res.status(400).send({});
         });
     });
   });
@@ -75,6 +75,9 @@ module.exports = app => {
         CourseCollection.findOne({
           shortTitle: req.params.shortTitle
         }).then(doc => {
+          if (!doc) {
+            return res.status(404).send({});
+          }
           res.status(200).send(doc);
         });
       })

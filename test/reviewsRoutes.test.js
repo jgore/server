@@ -17,7 +17,7 @@ function validResponse(err, res, status) {
   expect(res).to.be.json;
 }
 
-describe("post reviews", function() {
+describe("post review", function() {
   let token;
   before(done => {
     Course.remove({})
@@ -170,4 +170,137 @@ describe("post reviews", function() {
         done();
       });
   });
+});
+
+describe("update review", function() {
+  let token;
+  before(done => {
+    Course.remove({})
+      .then(r => {
+        User.remove({}).then(stat => {
+          User.create({
+            googleId: "googleId",
+            name: "name",
+            email: "email@email.com",
+            phone: "000000000"
+          }).then(user => {
+            token = createToken({ googleId: user.googleId });
+            Course.create({
+              title: "Tytuł",
+              shortTitle: "Korepetycje",
+              video: {
+                link: "http://",
+                title: "Tytuł",
+                shortDescription: "video desc"
+              },
+              content: "zawartość",
+              image: "gosc.jpg",
+              duration: "2 tygonie",
+              price: "120zł/h",
+              shortDescription: "Krótki opis",
+              technologies: ["Java", "Javascript"],
+              maxMembers: "12/12",
+              reviews: [],
+              comments: []
+            }).then(course => {
+              Course.update(
+                { _id: course._id },
+                {
+                  $push: {
+                    reviews: {
+                      content: "Zawartość",
+                      grade: 5,
+                      user: {
+                        googleId: "googleId",
+                        name: "name",
+                        email: "email@email.com",
+                        phone: "000000000"
+                      }
+                    }
+                  }
+                }
+              ).then(() => {
+                done();
+              });
+            });
+          });
+        });
+      })
+      .catch(err => {
+        console.log(err);
+        done(err);
+      });
+  });
+
+  it("should update review",function(done) {
+    chai
+    .request(server)
+    .put(`/api/courses/Korepetycje`)
+    .set("token", token)
+    .send({
+      opinion: {
+        content: "TO jest dobry kurs",
+        grade: 10
+      }
+    })
+    .end((err, res) => {
+      validResponse(err, res, 200);
+      expect(res.body).to.be.an("object");
+      done();
+    });
+  })
+
+  it("should not update review with missing token",function(done) {
+    chai
+    .request(server)
+    .put(`/api/courses/Korepetycje`)
+    .send({
+      opinion: {
+        content: "TO jest dobry kurs",
+        grade: 10
+      }
+    })
+    .end((err, res) => {
+      validResponse(err, res, 401);
+      expect(res.body).to.be.an("object");
+      done();
+    });
+  })
+
+  it("should not update review with invalid token", function(done) {
+    chai
+    .request(server)
+    .put(`/api/courses/Korepetycje`)
+    .set("token", "invalid")
+    .send({
+      opinion: {
+        content: "TO jest dobry kurs",
+        grade: 10
+      }
+    })
+    .end((err, res) => {
+      validResponse(err, res, 401);
+      expect(res.body).to.be.an("object");
+      done();
+    });
+  })
+
+  it("should not update review with not existing course", function(done) {
+    chai
+      .request(server)
+      .put(`/api/courses/nieistnieje`)
+      .set("token", token)
+      .send({
+        opinion: {
+          content: "TO jest dobry kurs",
+          grade: 10
+        }
+      })
+      .end((err, res) => {
+        validResponse(err, res, 404);
+        expect(res.body).to.be.an("object");
+        done();
+      });
+  });
+
 });

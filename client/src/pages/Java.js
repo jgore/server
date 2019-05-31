@@ -3,6 +3,7 @@ import Videos from "../components/sections/videos/Videos";
 import Axios from "axios";
 import AppError from "../components/errors/AppError";
 import Loading from "../components/helpers/Loading";
+import { Helmet } from "react-helmet";
 
 class Java extends Component {
   state = {
@@ -39,6 +40,10 @@ class Java extends Component {
   render() {
     return (
       <div className="Java">
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>My Title</title>
+        </Helmet>
         {this.state.isLoading ? (
           <Loading />
         ) : (

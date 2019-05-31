@@ -3,6 +3,7 @@ import Axios from "axios";
 import Loading from "../components/helpers/Loading";
 import Courses from "../components/sections/courses/Courses";
 import AppError from "../components/errors/AppError";
+import { Helmet } from "react-helmet";
 
 class Home extends Component {
   state = {
@@ -18,7 +19,7 @@ class Home extends Component {
           courses: res.data,
           error: null
         });
-        console.log(res)
+        console.log(res);
       })
       .catch(err => {
         if (err.response) {
@@ -48,6 +49,10 @@ class Home extends Component {
     console.log(this.state.courses);
     return (
       <div className="Home">
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>My Title</title>
+        </Helmet>
         {this.state.isLoading ? (
           <Loading />
         ) : (
@@ -55,7 +60,7 @@ class Home extends Component {
             {this.state.error ? (
               <AppError errorCode={this.state.error} />
             ) : (
-              <Courses courses={this.state.courses}/>
+              <Courses courses={this.state.courses} />
             )}
           </React.Fragment>
         )}

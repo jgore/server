@@ -2,9 +2,14 @@ import React from "react";
 import EmailForm from "./../components/forms/EmailForm";
 import { Col, Image, Row } from "react-bootstrap";
 import { PUBLIC_RESOURCES_URL } from "../utils/variables";
+import { Helmet } from "react-helmet";
 
 const Contact = () => (
   <div style={{ marginTop: 20 }} className="Contact">
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>My Title</title>
+    </Helmet>
     <div className="custom-contact">
       <Row>
         <Col sm="12" md="5" className="flexible flexible-vertical-center">

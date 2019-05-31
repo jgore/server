@@ -5,6 +5,7 @@ const cookieSession = require("cookie-session");
 const passport = require("passport");
 const connectToDb = require("./config/connectToDb");
 const keys = require("./config/keys");
+const path = require("path")
 
 require("dotenv/config");
 const redisClient = require("./config/connectToCache");
@@ -66,6 +67,11 @@ require("./routes/mailRoutes")(app);
 require("./routes/publicRoutes")(app);
 require("./routes/reviewsRoutes")(app);
 require("./routes/commentRoutes")(app);
+
+app.use(express.static(path.join(__dirname, "client/build")));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname + "/client/build/index.html"));
+});
 
 var port = process.env.PORT || 5000;
 

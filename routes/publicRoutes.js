@@ -5,10 +5,9 @@ const { getFromRedis } = require("../config/connectToCache");
 const { getFromJWT } = require("../services/jwt");
 
 module.exports = app => {
-  app.get("/api/courses", (req, res) => {
-    CourseCollection.find({}, (err, docs) => {
-      res.send(docs);
-    });
+  app.get("/api/courses", async (req, res) => {
+    const courses = await CourseCollection.find({});
+    res.send(courses);
   });
   app.get("/api/courses/:shortTitle", (req, res) => {
     let promise1;
@@ -128,9 +127,8 @@ module.exports = app => {
     }
   });
 
-  app.get("/api/videos", (req, res) => {
-    VideoCollection.find({}, (err, docs) => {
-      res.send(docs);
-    });
+  app.get("/api/videos", async (req, res) => {
+    const videos = await VideoCollection.find({});
+    res.send(videos);
   });
 };

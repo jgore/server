@@ -12,7 +12,7 @@
     "server": "nodemon --inspect index.js",
     "client": "cd client && yarn start",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "production": "npm start && cd client && npm install && npm run build",
+    "production": "cd client && yarn install && yarn run build && cd .. && npm start",
     "test": "NODE_ENV=test ./node_modules/.bin/mocha --require babel-core/register --recursive",
     "test:watch": "NODE_ENV=test nodemon --exec ./node_modules/.bin/mocha --require babel-core/register --recursive",
     "test-coverage": "NODE_ENV=test nyc mocha test/*"
